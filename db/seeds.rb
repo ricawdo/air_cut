@@ -5,8 +5,8 @@ Service.destroy_all
 
 puts 'Create Users...'
 
-pierre = User.new(first_name: "Pierre", last_name: "Luce", email:"pierre.luce@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
-luc = User.new(first_name: "Luc", last_name: "Daniel", email:"luc.daniel@gmail.com", phone_number: "0648398674", password: "123456", gender: "homme", role: "client")
+pierre = User.new(first_name: "Pierre", last_name: "Luce", email:"pierre.luce@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client").save!
+luc = User.new(first_name: "Luc", last_name: "Daniel", email:"luc.daniel@gmail.com", phone_number: "0648398674", password: "123456", gender: "homme", role: "client").save!
 damien = User.new(first_name: "Damien", last_name: "Rolland", email:"damien.rolland@gmail.com", phone_number: "0648593714", password: "123456", gender: "homme", role: "client")
 camille = User.new(first_name: "Camille", last_name: "Dune", email:"camille.dune@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 marie = User.new(first_name: "Marie", last_name: "Lota", email:"marie.lota@gmail.com", phone_number: "0698482857", password: "123456", gender: "femme", role: "client")
