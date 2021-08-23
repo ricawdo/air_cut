@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_145732) do
+ActiveRecord::Schema.define(version: 2021_08_23_150421) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,18 @@ ActiveRecord::Schema.define(version: 2021_08_23_145732) do
     t.string "gender"
   end
 
+  create_table "shop_services", force: :cascade do |t|
+    t.bigint "service_id", null: false
+    t.bigint "barber_shop_id", null: false
+    t.integer "price"
+    t.integer "duration"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["barber_shop_id"], name: "index_shop_services_on_barber_shop_id"
+    t.index ["service_id"], name: "index_shop_services_on_service_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -55,4 +67,6 @@ ActiveRecord::Schema.define(version: 2021_08_23_145732) do
   end
 
   add_foreign_key "barber_shops", "users"
+  add_foreign_key "shop_services", "barber_shops"
+  add_foreign_key "shop_services", "services"
 end
