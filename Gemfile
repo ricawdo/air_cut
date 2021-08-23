@@ -34,6 +34,8 @@ gem 'simple_form'
 # gem for secret key cloudinary:
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
+# gem for devise:
+gem 'devise'
 
 group :development, :test do
   gem 'pry-byebug'
