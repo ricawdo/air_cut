@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2021_08_23_150839) do
     t.string "name"
     t.string "address"
     t.boolean "remote", default: false
-    t.date "opening_days"
-    t.date "closing_days"
+    t.text "opening_days", default: [], array: true
+    t.date "closing_days", default: [], array: true
     t.time "opening_hours"
     t.float "latitude"
     t.float "longitude"
