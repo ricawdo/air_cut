@@ -10,15 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_23_143102) do
+ActiveRecord::Schema.define(version: 2021_08_23_145732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "barber_shops", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.boolean "remote", default: false
+    t.date "opening_days"
+    t.date "closing_days"
+    t.time "opening_hours"
+    t.float "latitude"
+    t.float "longitude"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_barber_shops_on_user_id"
+  end
 
   create_table "services", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "gender"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,4 +54,5 @@ ActiveRecord::Schema.define(version: 2021_08_23_143102) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "barber_shops", "users"
 end
