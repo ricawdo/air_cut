@@ -3,6 +3,14 @@
 </div>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1611313151697-d626e818dddf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);">
   <div class="container">
-    <a class="btn-brown" href="#">Rechercher</a>
+    <h3>Prenez rendez-vous</h3>
+    <%= form_tag barber_shops_path, method: :get, class: "form-inline md-form mr-auto mb-4" do %>
+      <%= text_field_tag :adress,
+        params[:adress],
+        class: "form-control mr-sm-2",
+        placeholder: "Adresse"
+      %>
+      <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0" %>
+    <% end %>
   </div>
 </div>
