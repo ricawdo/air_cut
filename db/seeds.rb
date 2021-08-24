@@ -1,7 +1,9 @@
+require "open-uri"
+
 puts 'Cleaning database...'
-User.destroy_all
-BarberShop.destroy_all
 Service.destroy_all
+BarberShop.destroy_all
+User.destroy_all
 
 puts 'Create Users...'
 
@@ -39,7 +41,11 @@ valentin = User.create(first_name: "Valentin", last_name: "clerambot", email: "v
 florian = User.create(first_name: "Florian", last_name: "goyer", email: "florian.goyer@gmail.com", phone_number: "0639728032", password: "123456", gender: "homme" ,role: "barber")
 
 puts 'Create barber_shops...'
-BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
+labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
+file = URI.open('https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80')
+labo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file = URI.open('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: cecile)
 BarberShop.create(name: "Ciseaux d'Argile", address: "Allée Alexandre Vialatte Paris", remote: false, opening_days: %w[lundi mardi jeudi vendredi samedi], closing_days: "[mercredi dimanche]", opening_hours: "", user: thibault)
 BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: franck)
