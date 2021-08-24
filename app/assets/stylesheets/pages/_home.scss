@@ -1,1 +1,30 @@
-// Specific CSS for your home-page
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.navbar h1 {
+  font-size: 30px;
+  color: $brown;
+}
+
+body {
+  background: linear-gradient($gray, rgb(71, 71, 71));
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.form-control {
+  width: 70%;
+  height: 27px;
+  margin-left: 18px;
+}
+
+.container h3 {
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-left: 61px;
+}

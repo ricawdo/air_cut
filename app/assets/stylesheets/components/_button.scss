@@ -1,0 +1,14 @@
+.btn-brown {
+  color: white;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient($yellow, $brown);
+  transition: background 0.3s ease;
+  font-size: 10px;
+}
+
+.btn-brown:hover {
+  background: linear-gradient(#9c8163, #806b36);
+  color: white;
+}

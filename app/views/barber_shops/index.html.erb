@@ -1,6 +1,34 @@
+
 <div class="container">
   <div id ="total-barbershops">
-
+    <h1>
+      <%= @barber_shops.count %> résultats:
+    </h1>
+  </div>
+  <div class="cards">
+    <% @barber_shops.each do |barber_shop|  %>
+      <div class="one-barbershop">
+        <div id="big-picture-landscape" >
+          <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629803085/louisse-lemuel-enad-7GH0B02mBtU-unsplash_fymsnf.jpg") %>
+        </div>
+        <div id="small-picture-square">
+          <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+          <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+          <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+          <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+        </div>
+        <h1>
+          <div id="name-barbershop">
+            <%= barber_shop.name %>
+          </div>
+        </h1>
+        <h2>
+          <div id="address-barbershop">
+            <%= barber_shop.address %>
+          </div>
+        </h2>
+      </div>
+    <% end %>
   </div>
 
 </div>
