@@ -36,6 +36,8 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 # gem for devise:
 gem 'devise'
+#gem for pundit
+gem 'pundit'
 
 group :development, :test do
   gem 'pry-byebug'
