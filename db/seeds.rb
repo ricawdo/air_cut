@@ -1,3 +1,4 @@
+
 puts 'Cleaning database...'
 User.destroy_all
 BarberShop.destroy_all

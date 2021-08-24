@@ -13,13 +13,33 @@
   }
 }
 
-#big-picture-landscape
+#big-picture-landscape {
   img {
   width: 349px;
   height: 150px;
   object-fit: cover;
   object-position: center;
-
+  display: flex;
+  border-top-left-radius: 8px 8px;
+  border-top-right-radius: 8px 8px;
+  margin-top: 20px;
+}
+  #reviews-bs{
+    position: absolute;
+    right: 11px;
+    top: 48px;
+    background-color: rgba(0, 0, 0, 0.01);
+    border-top-right-radius: 8px 8px;
+    opacity: 0.5;
+    color: white;
+      #rating-bs {
+        font-size: 20px;
+        text-align: center;
+    }
+      #number-reviews-bs{
+        font-size: 10px;
+      }
+  }
 }
 
 #small-picture-square {
@@ -27,10 +47,28 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3px;
 }
-  img {
+
+#first-img{
+  border-bottom-left-radius: 8px 8px;
+}
+#last-img {
+  border-bottom-right-radius: 8px 8px
+}
+
+img {
   margin-top: 3px;
   width: 85px;
   height: 85px;
   object-fit: cover;
   object-position: center;
+}
+
+#address-barbershop {
+  border-bottom: 1px solid rgba(172, 172, 172, 0.564);
+  padding-bottom: 10px;
+}
+
+#name-barbershop {
+  margin-top: 5px;
+
 }
