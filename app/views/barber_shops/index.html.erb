@@ -8,6 +8,7 @@
   <div class="cards">
     <% @barber_shops.each do |barber_shop|  %>
       <div class="one-barbershop">
+      <div id="container-index">
         <div id="big-picture-landscape" >
           <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629803085/louisse-lemuel-enad-7GH0B02mBtU-unsplash_fymsnf.jpg") %>
         </div>
@@ -17,6 +18,7 @@
           <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
           <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
         </div>
+      </div>
         <h1>
           <div id="name-barbershop">
             <%= barber_shop.name %>

@@ -38,6 +38,8 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'devise'
 #gem for pundit
 gem 'pundit'
+#gem for geocoder
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'
