@@ -69,7 +69,10 @@ barber_buffy = BarberShop.create(name: "Buffy coiffure", address: "16 villa gaud
 barber_valentin = BarberShop.create(name: "Absolut", address: "3, boulevard de sébastopol", remote: true, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: valentin)
 
 puts 'Create services...'
-Service.create(name: "lissage brésilien", gender: "femme")
+lissage = Service.create(name: "lissage brésilien", gender: "femme")
 Service.create(name: "dégradé bas", gender: "homme")
 Service.create(name: "dégradé haut", gender: "homme")
 Service.create(name: "brushing", gender: "femme")
+
+
+ShopService.create(price: 10, duration: 60, description: "Suprer lissage", service_id: lissage.id, barber_shop_id: labo.id)

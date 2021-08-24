@@ -7,21 +7,23 @@
     </div>
   </div>
 
-  <hr>
-  <ul class="nav nav-pills mb-1 d-flex justify-content-between" id="pills-tab" role="tablist">
-    <li class="nav-item" role="presentation">
-      <a class="nav-link active" id="pills-coiffures-tab" data-bs-toggle="pill" data-bs-target="#pills-coiffures" type="button" role="tab" aria-controls="pills-coiffures" aria-selected="true">Coiffures</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="pills-portfolio-tab" data-bs-toggle="pill" data-bs-target="#pills-portfolio" type="button" role="tab" aria-controls="pills-portfolio" aria-selected="false">Portfolio</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="pills-notes-tab" data-bs-toggle="pill" data-bs-target="#pills-notes" type="button" role="tab" aria-controls="pills-notes" aria-selected="false">Notes</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="pills-details-tab" data-bs-toggle="pill" data-bs-target="#pills-details" type="button" role="tab" aria-controls="pills-details" aria-selected="false">Détails</a>
-    </li>
-  </ul>
+  <div class="tabs">
+    <ul class="nav nav-pills mb-1 d-flex justify-content-between" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="pills-coiffures-tab" data-bs-toggle="pill" data-bs-target="#pills-coiffures" type="button" role="tab" aria-controls="pills-coiffures" aria-selected="true">Coiffures</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-portfolio-tab" data-bs-toggle="pill" data-bs-target="#pills-portfolio" type="button" role="tab" aria-controls="pills-portfolio" aria-selected="false">Portfolio</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-notes-tab" data-bs-toggle="pill" data-bs-target="#pills-notes" type="button" role="tab" aria-controls="pills-notes" aria-selected="false">Notes</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-details-tab" data-bs-toggle="pill" data-bs-target="#pills-details" type="button" role="tab" aria-controls="pills-details" aria-selected="false">Détails</a>
+      </li>
+    </ul>
+  </div>
+
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-coiffures" role="tabpanel" aria-labelledby="pills-coiffures-tab">
       <div class="show-services">
@@ -38,18 +40,23 @@
       <div class="btn-service">
         <a class="btn btn-flat" href="#">Book</a>
       </div>
-
+      <p class="underline"></p>
     </div>
 
     </div>
+
     <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
       <div class="realisations">
-      <div class="photo-barber">
-        <p>J'aime</p>
-        <p>Commenter</p>
+        <div class="photo-barber">
+          <% @barber_shop.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 200, crop: :fill, %>
+          <% end %>
+          <p>J'aime</p>
+          <p>Commenter</p>
+        </div>
       </div>
     </div>
-    </div>
+
     <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
       <div class="card-review">
       </div>
