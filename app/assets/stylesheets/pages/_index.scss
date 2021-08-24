@@ -15,10 +15,12 @@
 
 #big-picture-landscape {
   img {
-  width: 349px;
+  width: 350px;
   height: 150px;
   object-fit: cover;
   object-position: center;
+  margin-top: 0px;
+
   display: flex;
   border-top-left-radius: 8px 8px;
   border-top-right-radius: 8px 8px;
@@ -26,7 +28,7 @@
 }
   #reviews-bs{
     position: absolute;
-    right: 11px;
+    right: 13px;
     top: 48px;
     background-color: rgba(0, 0, 0, 0.01);
     border-top-right-radius: 8px 8px;
@@ -45,22 +47,40 @@
 #small-picture-square {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 3px;
 }
 
 #first-img{
-  border-bottom-left-radius: 8px 8px;
+  border-right: 2px solid white;
+  border-top: 2px solid white;
+  img {  
+  border-bottom-left-radius: 8px;
+    }
 }
+#second-img {
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+
+#third-img {
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+
 #last-img {
-  border-bottom-right-radius: 8px 8px
+  border-top: 2px solid white;
+  img {  
+    border-bottom-right-radius: 8px;
+    }
 }
 
 img {
-  margin-top: 3px;
-  width: 85px;
-  height: 85px;
+  width: 86px;
+  height: 86px;
   object-fit: cover;
   object-position: center;
+}
+#name-barbershop, #address-barbershop {
+  color: white;
 }
 
 #address-barbershop {
@@ -70,5 +90,7 @@ img {
 
 #name-barbershop {
   margin-top: 5px;
-
+}
+.one-barbershop {
+  margin-left: -3px;
 }

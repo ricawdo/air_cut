@@ -1,7 +1,7 @@
 
 puts 'Cleaning database...'
-User.destroy_all
 BarberShop.destroy_all
+User.destroy_all
 Service.destroy_all
 puts 'Create Users...'
 
