@@ -1,0 +1,27 @@
+.tabbar {
+  background-color: $gray;
+  border-top: 1px, solid, $brown;
+  padding: 7px 19px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px 0 rgba(#fff, 0.075);
+  width:100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.link {
+  color: white;
+}
+
+.link p {
+  font-size: 12px;
+}
+
+
+.link i {
+  font-size: 30px;
+}
+.link-logo {
+  text-align: center;
+}

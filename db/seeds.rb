@@ -2,7 +2,6 @@ puts 'Cleaning database...'
 User.destroy_all
 BarberShop.destroy_all
 Service.destroy_all
-
 puts 'Create Users...'
 
 pierre = User.create(first_name: "Pierre", last_name: "Luce", email:"pierre.luce@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
