@@ -8,28 +8,40 @@
     <% @barber_shops.each do |barber_shop|  %>
       <div class="one-barbershop">
         <div id="big-picture-landscape" >
-          <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629803085/louisse-lemuel-enad-7GH0B02mBtU-unsplash_fymsnf.jpg") %>
+        <%# barber_shop.photos.first => va récupérer directement l'image principale liée à chaque barber shop %>
+        <%= cl_image_tag barber_shop.photos.first.key if barber_shop.photos.attached? %>
+          <% # cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629803085/louisse-lemuel-enad-7GH0B02mBtU-unsplash_fymsnf.jpg") %>
           <div id="reviews-bs">
             <div id="rating-bs">
-              5,0
+               <%= barber_shop.reviews.pluck(:rating).reduce%>⭐️
             </div>
             <div id="number-reviews-bs">
-              100 reviews
+              <%= barber_shop.reviews.pluck(:rating).count%> reviews
             </div>
 
           </div>
         </div>
         <div id="small-picture-square">
+          <%# itérer sur barber_shop.porfolios pour afficher chacune des images portfolios du barber_shop %>
           <div id= "first-img" >
-            <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+          <% if barber_shop.photos.attached?%>
+            <%= cl_image_tag barber_shop.portfolios.first.key %>
+          <% end %>
           </div>
           <div id="second-img">
-            <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
-          </div><div id="third-img">
-            <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+          <% if barber_shop.photos.attached?%>
+            <%= cl_image_tag barber_shop.portfolios.second.key %>
+            <% end %>
+          </div>
+          <div id="third-img">
+          <% if barber_shop.photos.attached?%>
+            <%= cl_image_tag barber_shop.portfolios.third.key %>
+            <% end %>
           </div>
           <div id="last-img">
-            <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
+          <% if barber_shop.photos.attached?%>
+            <%= cl_image_tag barber_shop.portfolios.fourth.key %>
+            <% end %>
           </div>
         </div>
         <h1>
@@ -47,3 +59,5 @@
   </div>
 
 </div>
+
+<% console %>
