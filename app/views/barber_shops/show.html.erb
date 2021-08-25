@@ -1,0 +1,92 @@
+<div>
+  <%= render 'shared/carousel' %>
+  <div class="card-info-barber">
+    <div class="info-barber">
+      <h2><%= @barber_shop.name %></h2>
+      <p><i class="fas fa-home"></i> <%= @barber_shop.address %></p>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <ul class="nav nav-pills mb-1 d-flex justify-content-between" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="pills-coiffures-tab" data-bs-toggle="pill" data-bs-target="#pills-coiffures" type="button" role="tab" aria-controls="pills-coiffures" aria-selected="true">Coiffures</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-portfolio-tab" data-bs-toggle="pill" data-bs-target="#pills-portfolio" type="button" role="tab" aria-controls="pills-portfolio" aria-selected="false">Portfolio</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-notes-tab" data-bs-toggle="pill" data-bs-target="#pills-notes" type="button" role="tab" aria-controls="pills-notes" aria-selected="false">Notes</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="pills-details-tab" data-bs-toggle="pill" data-bs-target="#pills-details" type="button" role="tab" aria-controls="pills-details" aria-selected="false">Détails</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-coiffures" role="tabpanel" aria-labelledby="pills-coiffures-tab">
+      <div class="show-services">
+      <div class="service-details">
+        <div>
+          <% @barber_shop.shop_services.each do |shop_service| %>
+            <h3><%= shop_service.service.name %></h3>
+            <p><%= shop_service.description %></p>
+              <div class="text-right">
+                <p><strong><%= shop_service.price %> €</strong></p>
+                <p><%= shop_service.duration %>mn</p>
+          <% end %>
+              </div>
+        </div>
+      </div>
+      <div class="btn-service">
+        <a class="btn btn-flat" href="#">Book</a>
+      </div>
+      <p class="underline"></p>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
+      <div class="realisations">
+        <% @barber_shop.portfolios.each do |photo| %>
+          <%= cl_image_tag photo.key, height:100, crop: :fill %>
+            <div class="text-photo-barber">
+              <p>J'aime</p>
+              <p>Commenter</p>
+            </div>
+        <% end %>
+      </div>
+    </div>
+
+    <% console %>
+
+    <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
+      <div class="card-review">
+        <div class="moyenne-rating">
+          <div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">
+      <div class="card-map">
+        <p><%= @barber_shop.address %></p>
+      </div>
+      <br>
+      <p>numero</p>
+      <br>
+      <div class="opening-hours">
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+</div>

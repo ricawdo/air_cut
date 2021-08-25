@@ -1,0 +1,91 @@
+.card-info-barber {
+  border: 1px solid gray;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-top: -10px;
+  background-color: white;
+  position: relative;
+  padding: 15px;
+  margin-bottom: 35px;
+}
+
+.show-services {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.service-details {
+  display: flex;
+  border: 1px solid $brown;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  width: 80%;
+  border-radius: 8px;
+  margin: 20px 15px;
+  height: 90px;
+  color: white;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.service-details h3 {
+font-size: 20px;
+font-weight: bold;
+}
+
+.service-details p {
+margin-bottom: 0px;
+font-size: 15px;
+font-weight: lighter;
+}
+
+.btn-service .btn {
+  padding: 15px 10px;
+  margin-right: 12px;
+  align-items: center;
+  background-color: $brown;
+}
+
+.nav-link {
+  color: $brown;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: black;
+  background-color: $brown;
+}
+
+.carousel-item img {
+  height: 200px;
+  margin-top: 0px;
+}
+
+.underline {
+  border: 0.5px solid $brown;
+  margin-top:15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  opacity: 0.3;
+}
+
+.realisations {
+  border: 3px solid white;
+  width: 40%;
+  margin-left: 10px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+.text-photo-barber {
+  color: $brown;
+  display: flex;
+}
+
+.moyenne-rating {
+  border: 1px solid white;
+  height: 150px;
+  width: 80%;
+  margin: 20px 10px;
+  text-align: center;
+}
