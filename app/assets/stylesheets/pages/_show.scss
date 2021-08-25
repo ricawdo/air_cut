@@ -72,17 +72,18 @@ font-weight: lighter;
 }
 
 .realisations {
-  border: 1px solid white;
   width: 42%;
   margin-left: 20px;
-  height: 130px;
+  height: 150px;
   margin-top: 20px;
 }
 
 .realisations img {
   width: 85%;
-  margin: 5px 10px;
+  margin: 10px 10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .text-photo-barber {
@@ -93,15 +94,8 @@ font-weight: lighter;
   font-size: 18px;
 }
 
-.moyenne-rating {
-  border: 1px solid white;
-  height: 150px;
-  width: 80%;
-  margin: 20px 10px;
-  text-align: center;
-}
 
-#pills-portfolio {
+.portfolio_wrap {
   display: flex;
   flex-wrap: wrap;
 }

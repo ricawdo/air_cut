@@ -87,4 +87,6 @@ Service.create(name: "brushing", gender: "femme")
 ShopService.create(price: 10, duration: 60, description: "Super degrade", service_id: degrade_bas.id, barber_shop_id: labo.id)
 
 
-Review.create(rating: 5, comment: "Toujours aussi bien accueilli, prix abordable et prestation de qualité", user_id: pierre.id)
+Booking.create!(user: User.first)
+Review.create!(rating: 5, comment: "Toujours aussi bien accueilli, prix abordable et prestation de qualité", user: User.last, booking: Booking.last)
+# Review.create(user: User.first, booking: Booking.first)

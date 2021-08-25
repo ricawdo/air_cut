@@ -47,28 +47,49 @@
     </div>
 
     <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
-      <% @barber_shop.portfolios.each do |photo| %>
-        <div class="realisations">
-          <%= cl_image_tag photo.key, height:100, crop: :fill %>
-            <div class="text-photo-barber">
-              <p><i class="far fa-heart"></i></p>
-              <p><i class="far fa-comment"></i></p>
-              <p><i class="fas fa-share"></i></p>
-            </div>
-        </div>
-      <% end %>
+      <div class="portfolio_wrap">
+        <% @barber_shop.portfolios.each do |photo| %>
+          <div class="realisations">
+            <%= cl_image_tag photo.key, height:100, crop: :fill %>
+              <div class="text-photo-barber">
+                <p><i class="far fa-heart"></i></p>
+                <p><i class="far fa-comment"></i></p>
+                <p><i class="fas fa-share"></i></p>
+              </div>
+          </div>
+        <% end %>
+      </div>
     </div>
-
-    <% console %>
 
     <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
       <div class="card-review">
         <div class="moyenne-rating">
-          <div>
+          <div class="moyenne">
+            <p>Note moyenne</p>
           </div>
-          <div>
+          <div class="star-rating">
+            <p>5 <i class="far fa-star"></i></p>
+            <p>4 <i class="far fa-star"></i></p>
+            <p>3 <i class="far fa-star"></i></p>
+            <p>2 <i class="far fa-star"></i></p>
+            <p>1 <i class="far fa-star"></i></p>
+            <p>0 <i class="far fa-star"></i></p>
           </div>
         </div>
+      </div>
+      <div class="comment-rating">
+        <ul>
+          <% @barber_shop.reviews.each do |review| %>
+            <div class="notification">
+              <div class="notification-content">
+                <img src='https://img1.freepng.fr/20180319/epw/kisspng-india-login-computer-icons-emoticon-medicine-user-login-icon-5ab05c8bc2f8d1.4479395815215074677986.jpg' class="avatar" />
+                <li><% review.user.first_name %> <%= review.user.last_name %></li>
+                <li><% review.rating %></li>
+                <p id='comment-user'><%= review.comment %></p>
+              </div>
+            </div>
+          <% end %>
+        </ul>
       </div>
     </div>
 
@@ -81,12 +102,6 @@
       <br>
       <div class="opening-hours">
       </div>
-
     </div>
   </div>
-
-
-
-
-
 </div>
