@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :barber_shops, only: [:index]
+  get "/search", to: 'barber_shops#search'
 end

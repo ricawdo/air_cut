@@ -1,0 +1,14 @@
+   <%= form_tag [barber_shops_path, service_path], method: :get, class: "form-inline md-form mr-auto mb-4" do %>
+      <%= text_field_tag :gender,
+        params[:gender],
+        class: "form-control mr-sm-2",
+        placeholder: "Gender"
+      %>
+      <%= text_field_tag :service,
+        params[:service],
+        class: "form-control mr-sm-2",
+        placeholder: "Service"
+      %>
+      <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0" %>  
+    <% end %>
+      
