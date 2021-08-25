@@ -1,4 +1,10 @@
+require 'open-uri'
+
+img_barber_fabien = %w[https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg]
+
 puts 'Cleaning database...'
+Review.destroy_all
+Booking.destroy_all
 BarberShop.destroy_all
 User.destroy_all
 Service.destroy_all
@@ -40,6 +46,8 @@ puts 'Ok Users! 💇🏽‍♂️'
 
 puts 'Create barber_shops...'
 barber_fabien = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
+barber_fabien.photo.attach(io: URI.open(img_barber_fabien[0]), filename: 'image')
+barber_fabien.save!
 barber_cecile = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: cecile)
 barber_thibault = BarberShop.create(name: "Ciseaux d'Argile", address: "Allée Alexandre Vialatte Paris", remote: false, opening_days: %w[lundi mardi jeudi vendredi samedi], closing_days: "[mercredi dimanche]", opening_hours: "", user: thibault)
 barber_franck = BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: franck)
@@ -68,7 +76,12 @@ Service.create(name: "lissage brésilien", gender: "femme")
 Service.create(name: "dégradé bas", gender: "homme")
 Service.create(name: "dégradé haut", gender: "homme")
 Service.create(name: "brushing", gender: "femme")
-puts 'Ok services ! ✂'
+puts 'Ok services ! ✂️'
+
+puts 'Create bookings...'
+booking_pierre = Booking.create(user: pierre, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
+puts 'Ok bookings! 📅'
 
 puts 'Create reviews...'
-Review.create(rating: rand(0..5), )
+Review.create(rating: rand(0..5), comment: "Excellente coiffure ! Au top !", user: pierre, booking: booking_pierre)
+puts 'Ok reviews! ⭐️ '

@@ -8,10 +8,11 @@
     <% @barber_shops.each do |barber_shop|  %>
       <div class="one-barbershop">
         <div id="big-picture-landscape" >
+        <%# barber_shop.photos.first => va récupérer directement l'image principale liée à chaque barber shop %>
           <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629803085/louisse-lemuel-enad-7GH0B02mBtU-unsplash_fymsnf.jpg") %>
           <div id="reviews-bs">
             <div id="rating-bs">
-              5,0
+              5,0 <%=  %>
             </div>
             <div id="number-reviews-bs">
               100 reviews
@@ -20,6 +21,7 @@
           </div>
         </div>
         <div id="small-picture-square">
+          <%# itérer sur barber_shop.porfolios pour afficher chacune des images portfolios du barber_shop %>
           <div id= "first-img" >
             <%= cl_image_tag("https://res.cloudinary.com/ricawdo/image/upload/v1629808314/obi-onyeador--sRVfY0f2d8-unsplash_lrhu1d.jpg") %>
           </div>
@@ -47,3 +49,5 @@
   </div>
 
 </div>
+
+<% console %>
