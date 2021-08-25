@@ -10,13 +10,6 @@ BarberShop.destroy_all
 User.destroy_all
 
 Service.destroy_all
-<<<<<<< HEAD
-=======
-BarberShop.destroy_all
-User.destroy_all
-
-puts 'Create Users...'
->>>>>>> f179e4a2c58208f5c685b61f0551d0324fb7e236
 
 puts 'Create Users...'
 pierre = User.create(first_name: "Pierre", last_name: "Luce", email:"pierre.luce@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
@@ -54,24 +47,6 @@ florian = User.create(first_name: "Florian", last_name: "goyer", email: "florian
 puts 'Ok Users! 💇🏽‍♂️'
 
 puts 'Create barber_shops...'
-<<<<<<< HEAD
-barber_fabien = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
-barber_fabien.photo.attach(io: URI.open(img_barber_fabien[0]), filename: 'image')
-barber_fabien.save!
-barber_cecile = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: cecile)
-barber_thibault = BarberShop.create(name: "Ciseaux d'Argile", address: "Allée Alexandre Vialatte Paris", remote: false, opening_days: %w[lundi mardi jeudi vendredi samedi], closing_days: "[mercredi dimanche]", opening_hours: "", user: thibault)
-barber_franck = BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: franck)
-barber_claude = BarberShop.create(name: "Barber Bros", address: "Allée de l'Espérance Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: claude)
-barber_didier = BarberShop.create(name: "La mode Galente", address: "Allée de la Reine-Marguerite Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: didier)
-barber_pascal = BarberShop.create(name: "Top Barber", address: "Allée de la Garance Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: pascal)
-barber_morgan = BarberShop.create(name: "Magique Barber", address: "Allée de Longchamp Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: morgan)
-barber_cedric = BarberShop.create(name: "Classe Barber", address: "Allée des Lapins Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: cedric)
-barber_pauletta = BarberShop.create(name: "Fresh Air", address: "Allée des Poteaux Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: pauletta)
-barber_renald = BarberShop.create(name: "Good style", address: "Allée des Quatre Carrefours Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: renald)
-barber_clement = BarberShop.create(name: "Les Gentils mens", address: "Allée des Vergers Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: clement)
-barber_leo = BarberShop.create(name: "Nouvelle coupe", address: "Allée Diane-de-Poitiers Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: leo)
-barber_samuel = BarberShop.create(name: "Casse la demarche", address: "Allée du Bord-de-l'Eau Paris", remote: false, opening_days: %W[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: samuel)
-=======
 labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
 file1 = URI.open('https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80')
 labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
@@ -99,7 +74,6 @@ BarberShop.create(name: "Good style", address: "Allée des Quatre Carrefours Par
 BarberShop.create(name: "Les Gentils mens", address: "Allée des Vergers Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: clement)
 BarberShop.create(name: "Nouvelle coupe", address: "Allée Diane-de-Poitiers Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: leo)
 BarberShop.create(name: "Casse la demarche", address: "Allée du Bord-de-l'Eau Paris", remote: false, opening_days: %W[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: samuel)
->>>>>>> f179e4a2c58208f5c685b61f0551d0324fb7e236
 barber_diana = BarberShop.create(name: "Medley Rive Droite", address: "21 Rue Vieille du Temple", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: diana)
 barber_clodine = BarberShop.create(name: "Le Loft Barber shop - Châtelet", address: "3, Rue du Plat d'Étain", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: clodine)
 barber_oneal = BarberShop.create(name: "Prestige Barber Paris", address: "6, Rue des Prêcheurs", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: oneal)
@@ -115,7 +89,6 @@ lissage = Service.create(name: "lissage brésilien", gender: "femme")
 degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
 Service.create(name: "dégradé haut", gender: "homme")
 Service.create(name: "brushing", gender: "femme")
-<<<<<<< HEAD
 puts 'Ok services ! ✂️'
 
 puts 'Create bookings...'
@@ -125,11 +98,9 @@ puts 'Ok bookings! 📅'
 puts 'Create reviews...'
 Review.create(rating: rand(0..5), comment: "Excellente coiffure ! Au top !", user: pierre, booking: booking_pierre)
 puts 'Ok reviews! ⭐️ '
-=======
 
-
+puts "seed en cours gwen"
 ShopService.create(price: 10, duration: 60, description: "Super degrade", service_id: degrade_bas.id, barber_shop_id: labo.id)
 
 
 Review.create(rating: 5, comment: "Toujours aussi bien accueilli, prix abordable et prestation de qualité", user_id: pierre.id)
->>>>>>> f179e4a2c58208f5c685b61f0551d0324fb7e236
