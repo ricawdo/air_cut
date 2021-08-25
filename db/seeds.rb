@@ -42,10 +42,19 @@ florian = User.create(first_name: "Florian", last_name: "goyer", email: "florian
 
 puts 'Create barber_shops...'
 labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
-file = URI.open('https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80')
-labo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-file = URI.open('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
-labo.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+file1 = URI.open('https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80')
+labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://images.unsplash.com/photo-1568339434357-18719cd7f25b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80')
+labo.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+file5 = URI.open('https://images.unsplash.com/photo-1589985494639-69e60c82cab2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
+labo.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+labo.save!
 BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: cecile)
 BarberShop.create(name: "Ciseaux d'Argile", address: "Allée Alexandre Vialatte Paris", remote: false, opening_days: %w[lundi mardi jeudi vendredi samedi], closing_days: "[mercredi dimanche]", opening_hours: "", user: thibault)
 BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: franck)
@@ -70,9 +79,12 @@ barber_valentin = BarberShop.create(name: "Absolut", address: "3, boulevard de s
 
 puts 'Create services...'
 lissage = Service.create(name: "lissage brésilien", gender: "femme")
-Service.create(name: "dégradé bas", gender: "homme")
+degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
 Service.create(name: "dégradé haut", gender: "homme")
 Service.create(name: "brushing", gender: "femme")
 
 
-ShopService.create(price: 10, duration: 60, description: "Suprer lissage", service_id: lissage.id, barber_shop_id: labo.id)
+ShopService.create(price: 10, duration: 60, description: "Super degrade", service_id: degrade_bas.id, barber_shop_id: labo.id)
+
+
+Review.create(rating: 5, comment: "Toujours aussi bien accueilli, prix abordable et prestation de qualité", user_id: pierre.id)

@@ -3,7 +3,7 @@
   <div class="card-info-barber">
     <div class="info-barber">
       <h2><%= @barber_shop.name %></h2>
-      <p><%= @barber_shop.address %></p>
+      <p><i class="fas fa-home"></i> <%= @barber_shop.address %></p>
     </div>
   </div>
 
@@ -29,12 +29,14 @@
       <div class="show-services">
       <div class="service-details">
         <div>
-          <h3>Nom du service</h3>
-          <p>Détails</p>
-        </div>
-        <div class="text-right">
-          <p>Price</p>
-          <p>Durée</p>
+          <% @barber_shop.shop_services.each do |shop_service| %>
+            <h3><%= shop_service.service.name %></h3>
+            <p><%= shop_service.description %></p>
+              <div class="text-right">
+                <p><strong><%= shop_service.price %> €</strong></p>
+                <p><%= shop_service.duration %>mn</p>
+          <% end %>
+              </div>
         </div>
       </div>
       <div class="btn-service">
@@ -47,20 +49,29 @@
 
     <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
       <div class="realisations">
-        <div class="photo-barber">
-          <% @barber_shop.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 200, crop: :fill, %>
-          <% end %>
-          <p>J'aime</p>
-          <p>Commenter</p>
+        <% @barber_shop.portfolios.each do |photo| %>
+          <%= cl_image_tag photo.key, height:100, crop: :fill %>
+            <div class="text-photo-barber">
+              <p>J'aime</p>
+              <p>Commenter</p>
+            </div>
+        <% end %>
+      </div>
+    </div>
+
+    <% console %>
+
+    <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
+      <div class="card-review">
+        <div class="moyenne-rating">
+          <div>
+          </div>
+          <div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="tab-pane fade" id="pills-notes" role="tabpanel" aria-labelledby="pills-notes-tab">
-      <div class="card-review">
-      </div>
-    </div>
     <div class="tab-pane fade" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">
       <div class="card-map">
         <p><%= @barber_shop.address %></p>
