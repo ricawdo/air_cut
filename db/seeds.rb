@@ -1,6 +1,9 @@
-require "open-uri"
 
+require "open-uri"
 puts 'Cleaning database...'
+BarberShop.destroy_all
+User.destroy_all
+
 Service.destroy_all
 BarberShop.destroy_all
 User.destroy_all
