@@ -26,37 +26,37 @@
 
   <div class="tab-content" id="pills-tabContent">
     <div class="tab-pane fade show active" id="pills-coiffures" role="tabpanel" aria-labelledby="pills-coiffures-tab">
-      <div class="show-services">
-      <div class="service-details">
-        <div>
-          <% @barber_shop.shop_services.each do |shop_service| %>
-            <h3><%= shop_service.service.name %></h3>
-            <p><%= shop_service.description %></p>
-              <div class="text-right">
-                <p><strong><%= shop_service.price %> €</strong></p>
-                <p><%= shop_service.duration %>mn</p>
-          <% end %>
-              </div>
+      <% @barber_shop.shop_services.each do |shop_service| %>
+        <div class="show-services">
+          <div class="service-details">
+            <div>
+              <h3><%= shop_service.service.name %></h3>
+              <p><%= shop_service.description %></p>
+            </div>
+            <div class="text-right">
+              <p><strong><%= shop_service.price %> €</strong></p>
+              <p><i class="far fa-clock"></i>  <%= shop_service.duration %>mn</p>
+            </div>
+          </div>
+          <div class="btn-service">
+            <a class="btn btn-flat" href="#">Book</a>
+          </div>
+          <p class="underline"></p>
         </div>
-      </div>
-      <div class="btn-service">
-        <a class="btn btn-flat" href="#">Book</a>
-      </div>
-      <p class="underline"></p>
-    </div>
-
+      <% end %>
     </div>
 
     <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
-      <div class="realisations">
-        <% @barber_shop.portfolios.each do |photo| %>
+      <% @barber_shop.portfolios.each do |photo| %>
+        <div class="realisations">
           <%= cl_image_tag photo.key, height:100, crop: :fill %>
             <div class="text-photo-barber">
-              <p>J'aime</p>
-              <p>Commenter</p>
+              <p><i class="far fa-heart"></i></p>
+              <p><i class="far fa-comment"></i></p>
+              <p><i class="fas fa-share"></i></p>
             </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
 
     <% console %>
