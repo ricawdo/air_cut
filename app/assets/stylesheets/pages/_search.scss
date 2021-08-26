@@ -22,7 +22,7 @@
 }
 
 .category-item-service label {
-  width: 205%;
+  width: 208%;
 }
 
 .services h2 {
@@ -49,6 +49,8 @@ label img {
   position: absolute;
   top: 4%;
   left: 30%;
+  padding-left: 50px;
+  width: -webkit-fill-available;
 }
 
 .category-item-homme {
@@ -80,5 +82,8 @@ label img {
   grid-template-columns: 1fr;
   grid-gap: 10px;
   margin-top: 90px;
-  padding: 13px;
+  padding: 36px;
+  margin-right: -137px;
+  position: absolute;
+  width: 217px;
 }
