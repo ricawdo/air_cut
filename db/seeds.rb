@@ -77,7 +77,7 @@ puts 'Ok Users! 💇🏽‍♂️'
 
 puts 'Create barber_shops...'
 puts 'Create Labo à barbe'
-labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
+labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '08:00 - 19:00', phone_number: "0143578420", user: fabien)
 file1 = URI.open('https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80')
 labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
@@ -92,7 +92,7 @@ file6 = URI.open('https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?i
 labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 labo.save!
 puts 'Create barber2'
-barber2 = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: cecile)
+barber2 = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", phone_number: "0141518420", user: cecile)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899115/nicolas-flor-RbyHJAjgGx8-unsplash_bmj2g7.jpg')
 barber2.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899215/valeriia-kogan-PD2RYMtsGhc-unsplash_swyk7x.jpg')
@@ -129,8 +129,21 @@ barber_valentin = BarberShop.create(name: "Absolut", address: "3, boulevard de s
 puts 'Ok Barbershops ! 💈'
 
 puts 'Create services...'
-lissage = Service.create(name: "lissage brésilien", gender: "femme")
-degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
+service_one = Service.create(name: "Coupe Homme", gender: "homme")
+ShopService.create(barber_shop: barber_diana, service: service_one)
+service_second = Service.create(name: "Barbier", gender: "homme")
+ShopService.create(barber_shop: barber_clodine, service: service_second)
+service_three = Service.create(name: "Coiffure Afro", gender: "homme")
+ShopService.create(barber_shop: barber_oneal, service: service_three)
+service_four = Service.create(name: "Permanente", gender: "femme")
+ShopService.create(barber_shop: barber_michel, service: service_four)
+service_five = Service.create(name: "Coloration", gender: "femme")
+ShopService.create(barber_shop: barber_florian, service: service_five)
+service_six = Service.create(name: "lissage/Défrisage", gender: "femme")
+ShopService.create(barber_shop: barber_anna, service: service_six)
+service_seven = Service.create(name: "Coupe enfant", gender: "homme")
+ShopService.create(barber_shop: barber_buffy, service: service_seven)
+
 Service.create(name: "dégradé haut", gender: "homme")
 Service.create(name: "brushing", gender: "femme")
 puts 'Ok services ! ✂️'
@@ -140,6 +153,7 @@ booking_pierre = Booking.create(user: pierre, start_datetime: DateTime.new(2021,
 puts 'Ok bookings! 📅'
 
 puts 'Create Shop Services...'
+degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
 degrade = ShopService.create(price: 10, duration: 60, description: "Super degrade", service_id: degrade_bas.id, barber_shop_id: barber2.id)
 
 puts 'Create Booking Services...'

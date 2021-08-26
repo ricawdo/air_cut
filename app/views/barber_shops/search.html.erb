@@ -1,0 +1,45 @@
+   <%= form_tag search_path, method: :get, class: "form-inline md-form mr-auto mb-4" do %>
+   <div class="category-wrapper" data-controller="steps">
+      <div data-steps-target="gender">
+        <h2>Vous êtes ?</h2>
+        <div class="gender_tag">
+          <div class="category-item-homme">
+              <%= radio_button("service", "gender", "homme", class: "category-selector")%>
+              <label data-action="click->steps#showServicehomme" for="gender" id="homme"><%= image_tag 'https://image.flaticon.com/icons/png/512/641/641695.png' %></label>
+          </div>
+          <div class="category-item-femme">
+              <%= radio_button("service", "gender", "femme", class: "category-selector") %>
+              <label data-action="click->steps#showServicefemme" for="gender" id="femme"><%= image_tag 'https://image.flaticon.com/icons/png/512/2922/2922579.png' %></label>
+          </div>
+          <%= hidden_field_tag("gender", "homme", options = {})%>
+        </div>
+      </div>
+          <div class="services inactive" id="services_femme" data-steps-target="servicefemme">
+            <h3>Prestation ?</h3>
+            <br>
+            <% @services.where(gender: "femme").each do |service|%>
+              <div class="category-item-service">
+                  <%= radio_button("service", "name", "#{service.name}", class: "category-selector") %>
+                  <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
+              </div>
+            <% end %>
+          </div>
+          <div class="services inactive" id="services_homme" data-steps-target="servicehomme">
+          <h3>Prestation ?</h3>
+            <br>
+            <% @services.where(gender: "homme").each do |service|%>
+              <div class="category-item-service">
+                  <%= radio_button("service", "name", "#{service.name}", class: "category-selector") %>
+                  <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
+              </div>
+            <% end %>          
+          </div>
+        <%= hidden_field_tag("service", "service", options = {}) %>
+        <%= hidden_field_tag("destination", @destination, options = {}) %>
+      <div data-steps-target="search" class='inactive'>
+        <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0", id: "submit_search"%>  
+      </div>
+   </div >
+   
+    <% end %>
+      
