@@ -2,6 +2,7 @@
 <%= render 'shared/carousel' %>
 <div class="card-info-barber">
   <div class="info-barber">
+    <i class="fas fa-chevron-circle-left" href="#"></i>
     <h2><%= @barber_shop.name %></h2>
     <p><i class="fas fa-home"></i> <%= @barber_shop.address %></p>
   </div>
@@ -92,7 +93,11 @@
 
   <div class="tab-pane fade" id="pills-details" role="tabpanel" aria-labelledby="pills-details-tab">
     <div class="card-map">
-      <p><%= @barber_shop.address %></p>
+      <div class="map-details-barber" id="map"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+          data-markers="<%= @markers.to_json %>">
+        <p><%= @barber_shop.address %></p>
+      </div>
     </div>
     <p class="underline"></p>
     <div class="btn-service d-flex">

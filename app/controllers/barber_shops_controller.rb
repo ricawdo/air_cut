@@ -15,5 +15,6 @@ class BarberShopsController < ApplicationController
   def show
     @barber_shop = BarberShop.find(params[:id])
     authorize @barber_shop
+    @markers = [{ lat: @barber_shop.latitude, lng: @barber_shop.longitude, info_window: render_to_string(partial: "info_window", locals: { barber_shop: @barber_shop }) }]
   end
 end
