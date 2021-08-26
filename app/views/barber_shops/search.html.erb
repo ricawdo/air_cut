@@ -23,6 +23,8 @@
                   <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
               </div>
             <% end %>
+            <%= link_to "Retour", search_path(address: params[:address], commit: params[:commit]), class: "btn-brown btn-search" %>
+
           </div>
           <div class="services inactive" id="services_homme" data-steps-target="servicehomme">
           <h3>Prestation ?</h3>
@@ -33,6 +35,7 @@
                   <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
               </div>
             <% end %>          
+            <%= link_to "Retour", search_path(address: params[:address], commit: params[:commit]), class: "btn-brown btn-search" %>
           </div>
         <%= hidden_field_tag("service", "service", options = {}) %>
         <%= hidden_field_tag("destination", @destination, options = {}) %>
@@ -40,6 +43,5 @@
         <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0", id: "submit_search"%>  
       </div>
    </div >
-   
-    <% end %>
+   <% end %>
       
