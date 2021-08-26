@@ -6,10 +6,14 @@ class BarberShopsController < ApplicationController
   end
   
   def search
-    if params[:query].present?
-      @barber_shops = BarberShop.where(address: params[:query])
+    if params[:address].present?
+      @barber_shops = BarberShop.all.near(params[:address], 20)
+      @services = Service.all
+      @destination = params[:address]
     else
+      @services = Service.where(gender: params[:gender], name: params[:service])
       @barber_shops = BarberShop.all
+      render :index
     end
     authorize @barber_shops
   end

@@ -1,0 +1,84 @@
+.category-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: bold;
+}
+
+.category-item-service label {
+  width: 205%;
+}
+
+.services h2 {
+  color: white;
+  position: absolute;
+  top: 4%;
+  left: 30%;
+}
+
+label img {
+  width: 80px;
+  height: 80px;
+}
+
+.category-wrapper h2 {
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.category-wrapper h3 {
+  color: white;
+  position: absolute;
+  top: 4%;
+  left: 30%;
+}
+
+.category-item-homme {
+  position: absolute;
+  top: 30%;
+  left: 14%;
+}
+
+.category-item-femme {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+}
+
+.inactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  margin-top: 90px;
+  padding: 13px;
+}
