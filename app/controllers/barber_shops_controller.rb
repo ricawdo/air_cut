@@ -1,12 +1,22 @@
 class BarberShopsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show, :map]
+  skip_before_action :authenticate_user!, only: [:index, :show, :search, :map]
   def index
     @barber_shops = policy_scope(BarberShop)
-    if params[:query].present?
-      @barber_shops = BarberShop.where(address: params[:query])
+  end
+  
+  def search
+    if params[:address].present?
+      @barber_shops = BarberShop.all.near(params[:address], 20)
+      @services = Service.all
+      @destination = params[:address]
     else
-      @barber_shops = BarberShop.all
+      @services = Service.select {|service| service.gender == params[:gender] && service.name == params[:service] }
+      @shop_services = @services.map { |service| ShopService.select { |shop_service| shop_service.service == service } }.flatten
+      @barber_shops = @shop_services.map { |shop_service| BarberShop.find(shop_service.barber_shop_id) }.uniq
+      # raise
+      render :index
     end
+    authorize @barber_shops.first
     @markers = @barber_shops.geocoded.map do |barber_shop|
       { lat: barber_shop.latitude, lng: barber_shop.longitude, info_window: render_to_string(partial: "info_window", locals: { barber_shop: barber_shop }) }
     end
