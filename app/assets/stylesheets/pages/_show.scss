@@ -57,6 +57,8 @@ font-weight: lighter;
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: black;
   background-color: $brown;
+  padding: 7px;
+  border-radius: 8px;
 }
 
 .carousel-item img {
@@ -66,11 +68,11 @@ font-weight: lighter;
 
 .underline {
   border: 0.5px solid $brown;
-  margin-top:10px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
   opacity: 0.3;
   width: 85%;
   margin-left: 25px;
+  margin-top: 15px;
 }
 
 .realisations {
@@ -126,7 +128,6 @@ font-weight: lighter;
 }
 
 .btn-service .btn {
-  margin-right: 12px;
   align-items: center;
   background-color: $brown;
   padding: 4px 12px;
@@ -135,6 +136,14 @@ font-weight: lighter;
 
 .btn-service {
   align-items: center;
+  justify-content: space-between;
+  margin-right: 25px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.btn-service p {
+  margin: auto;
 }
 
 .footer {
