@@ -1,6 +1,5 @@
 class BarberShopsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :search ]
-
+  skip_before_action :authenticate_user!, only: [:index, :show, :search, :map]
   def index
     @barber_shops = policy_scope(BarberShop)
   end
@@ -18,6 +17,9 @@ class BarberShopsController < ApplicationController
       render :index
     end
     authorize @barber_shops.first
+    @markers = @barber_shops.geocoded.map do |barber_shop|
+      { lat: barber_shop.latitude, lng: barber_shop.longitude, info_window: render_to_string(partial: "info_window", locals: { barber_shop: barber_shop }) }
+    end
   end
 
   def show

@@ -77,7 +77,7 @@ puts 'Ok Users! 💇🏽‍♂️'
 
 puts 'Create barber_shops...'
 puts 'Create Labo à barbe'
-labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: fabien)
+labo = BarberShop.create(name: "Le labo à barbe", address: "5 Rue Breguet Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '08:00 - 19:00', phone_number: "0143578420", user: fabien)
 file1 = URI.open('https://images.unsplash.com/photo-1516470930795-6ba2564824aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80')
 labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
@@ -92,7 +92,7 @@ file6 = URI.open('https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?i
 labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 labo.save!
 puts 'Create barber2'
-barber2 = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: cecile)
+barber2 = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", phone_number: "0141518420", user: cecile)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899115/nicolas-flor-RbyHJAjgGx8-unsplash_bmj2g7.jpg')
 barber2.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899215/valeriia-kogan-PD2RYMtsGhc-unsplash_swyk7x.jpg')
@@ -118,14 +118,14 @@ BarberShop.create(name: "Good style", address: "Allée des Quatre Carrefours Par
 BarberShop.create(name: "Les Gentils mens", address: "Allée des Vergers Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: clement)
 BarberShop.create(name: "Nouvelle coupe", address: "Allée Diane-de-Poitiers Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: leo)
 BarberShop.create(name: "Casse la demarche", address: "Allée du Bord-de-l'Eau Paris", remote: false, opening_days: %W[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: samuel)
-barber_diana = BarberShop.create(name: "Medley Rive Droite", address: "21 Rue Vieille du Temple", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: diana)
-barber_clodine = BarberShop.create(name: "Le Loft Barber shop - Châtelet", address: "3, Rue du Plat d'Étain", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: clodine)
-barber_oneal = BarberShop.create(name: "Prestige Barber Paris", address: "6, Rue des Prêcheurs", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: oneal)
-barber_michel = BarberShop.create(name: "Le club 33", address: "90, Rue du Temple", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: michel)
-barber_florian = BarberShop.create(name: "The barber studio", address: "1, Rue du Cygne", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: florian)
-barber_anna = BarberShop.create(name: "Le petit salon 38", address: "18, Rue Tiquetonne", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: anna)
-barber_buffy = BarberShop.create(name: "Buffy coiffure", address: "16 villa gaudelet", remote: true, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: buffy)
-barber_valentin = BarberShop.create(name: "Absolut", address: "3, boulevard de sébastopol", remote: true, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: valentin)
+barber_diana = BarberShop.create(name: "Medley Rive Droite", address: "21 Rue Vieille du Temple Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: diana)
+barber_clodine = BarberShop.create(name: "Le Loft Barber shop - Châtelet", address: "3, Rue du Plat d'Étain Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: clodine)
+barber_oneal = BarberShop.create(name: "Prestige Barber Paris", address: "6, Rue des Prêcheurs Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: "", user: oneal)
+barber_michel = BarberShop.create(name: "Le club 33", address: "90, Rue du Temple Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: michel)
+barber_florian = BarberShop.create(name: "The barber studio", address: "1, Rue du Cygne Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: florian)
+barber_anna = BarberShop.create(name: "Le petit salon 38", address: "18, Rue Tiquetonne Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: anna)
+barber_buffy = BarberShop.create(name: "Buffy coiffure", address: "16 villa gaudelet Paris", remote: true, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: "", opening_hours: "", user: buffy)
+barber_valentin = BarberShop.create(name: "Absolut", address: "3, boulevard de sébastopol Paris", remote: true, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: valentin)
 puts 'Ok Barbershops ! 💈'
 
 puts 'Create services...'

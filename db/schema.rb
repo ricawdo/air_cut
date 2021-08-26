@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_150522) do
+ActiveRecord::Schema.define(version: 2021_08_26_120726) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,12 +42,13 @@ ActiveRecord::Schema.define(version: 2021_08_24_150522) do
     t.boolean "remote", default: false
     t.text "opening_days", default: [], array: true
     t.date "closing_days", default: [], array: true
-    t.time "opening_hours"
+    t.string "opening_hours"
     t.float "latitude"
     t.float "longitude"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "phone_number"
     t.index ["user_id"], name: "index_barber_shops_on_user_id"
   end
 

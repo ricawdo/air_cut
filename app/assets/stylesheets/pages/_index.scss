@@ -118,3 +118,18 @@ img {
     display: block;
     }
 }
+
+#fixed-button:hover {
+  background: $brown;
+  color: white;
+  i {
+    color: white;
+  }
+}
+
+.modal-body {
+  height : 325px;
+  #map {
+    height: 100vh;
+  }
+}
