@@ -97,3 +97,22 @@ img {
   margin-left: -3px;
   position: relative;
 }
+
+#fixed-button {
+  color: grey;
+  font-weight: lighter;
+  background: white;
+  position: fixed;
+  bottom: 170px;
+  right: 12px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  z-index: 999;
+  border: none;
+    i {
+    width: 23;
+    color: $brown;
+    display: block;
+    }
+}
