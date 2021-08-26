@@ -129,8 +129,21 @@ barber_valentin = BarberShop.create(name: "Absolut", address: "3, boulevard de s
 puts 'Ok Barbershops ! 💈'
 
 puts 'Create services...'
-lissage = Service.create(name: "lissage brésilien", gender: "femme")
-degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
+service_one = Service.create(name: "Coupe Homme", gender: "homme")
+ShopService.create(barber_shop: barber_diana, service: service_one)
+service_second = Service.create(name: "Barbier", gender: "homme")
+ShopService.create(barber_shop: barber_clodine, service: service_second)
+service_three = Service.create(name: "Coiffure Afro", gender: "homme")
+ShopService.create(barber_shop: barber_oneal, service: service_three)
+service_four = Service.create(name: "Permanente", gender: "femme")
+ShopService.create(barber_shop: barber_michel, service: service_four)
+service_five = Service.create(name: "Coloration", gender: "femme")
+ShopService.create(barber_shop: barber_florian, service: service_five)
+service_six = Service.create(name: "lissage/Défrisage", gender: "femme")
+ShopService.create(barber_shop: barber_anna, service: service_six)
+service_seven = Service.create(name: "Coupe enfant", gender: "homme")
+ShopService.create(barber_shop: barber_buffy, service: service_seven)
+
 Service.create(name: "dégradé haut", gender: "homme")
 Service.create(name: "brushing", gender: "femme")
 puts 'Ok services ! ✂️'
@@ -140,6 +153,7 @@ booking_pierre = Booking.create(user: pierre, start_datetime: DateTime.new(2021,
 puts 'Ok bookings! 📅'
 
 puts 'Create Shop Services...'
+degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
 degrade = ShopService.create(price: 10, duration: 60, description: "Super degrade", service_id: degrade_bas.id, barber_shop_id: barber2.id)
 
 puts 'Create Booking Services...'
