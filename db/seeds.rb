@@ -92,7 +92,7 @@ file6 = URI.open('https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?i
 labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 labo.save!
 puts 'Create barber2'
-barber2 = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", phone_number: "0141518420", user: cecile)
+barber2 = BarberShop.create(name: "Capitaine barbier", address: "Allée Adrienne-Lecouvreur Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: '09:00 - 18:00', phone_number: "0143578490", user: cecile)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899115/nicolas-flor-RbyHJAjgGx8-unsplash_bmj2g7.jpg')
 barber2.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899215/valeriia-kogan-PD2RYMtsGhc-unsplash_swyk7x.jpg')
@@ -106,14 +106,57 @@ barber2.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/p
 file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1629899393/averie-woodard-4nulm-JUYFo-unsplash_cskaub.jpg')
 barber2.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 barber2.save!
-BarberShop.create(name: "Ciseaux d'Argile", address: "Allée Alexandre Vialatte Paris", remote: false, opening_days: %w[lundi mardi jeudi vendredi samedi], closing_days: "[mercredi dimanche]", opening_hours: "", user: thibault)
-BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: franck)
-BarberShop.create(name: "Barber Bros", address: "Allée de l'Espérance Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: "", user: claude)
+ciseaux = BarberShop.create(name: "Ciseaux d'Argile", address: "Allée Alexandre Vialatte Paris", remote: false, opening_days: %w[lundi mardi jeudi vendredi samedi], closing_days: "[mercredi dimanche]", opening_hours: '10:00 - 18:00', phone_number: "0141893784", user: thibault)
+file1 = URI.open('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80')
+labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://images.unsplash.com/photo-1591036690721-2d84db5d045b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://images.unsplash.com/photo-1606333259737-6da197890fa2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://images.unsplash.com/photo-1611433217094-65f4c56b2e09?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')
+labo.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+file5 = URI.open('https://images.unsplash.com/photo-1602641902219-622a1b9a257a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://images.unsplash.com/photo-1611433217216-592b86546e1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')
+labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+papa = BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: '10:00 - 19:00', phone_number: "0143503784", user: franck)
+file1 = URI.open('https://images.unsplash.com/photo-1462850932907-687c915e3d38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFpciUyMHNhbG9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')
+labo.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://images.unsplash.com/photo-1533052406605-9538b1b36aff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
+labo.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://images.unsplash.com/photo-1593580520258-cba26159511d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1537&q=80')
+labo.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+file5 = URI.open('https://images.unsplash.com/photo-1527082395-e939b847da0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80')
+labo.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://images.unsplash.com/photo-1614495038926-06305e479e9d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80')
+labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+bros = BarberShop.create(name: "Barber Bros", address: "Allée de l'Espérance Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: '09:00 - 18:00', phone_number: "0145563710", user: claude)
+file1 = URI.open('https://images.unsplash.com/photo-1576168056582-0a851a87ab8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=649&q=80')
+labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://www.pagesjaunes.fr/media/ugc/claude_coiffure_08300900_124551505')
+labo.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://images.unsplash.com/photo-1619233543640-af09c173763b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80')
+labo.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://images.unsplash.com/photo-1605980626247-eb3a2f10ec8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80')
 BarberShop.create(name: "La mode Galente", address: "Allée de la Reine-Marguerite Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: didier)
 BarberShop.create(name: "Top Barber", address: "Allée de la Garance Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: pascal)
 BarberShop.create(name: "Magique Barber", address: "Allée de Longchamp Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: morgan)
 BarberShop.create(name: "Classe Barber", address: "Allée des Lapins Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: "[lundi dimanche]", opening_hours: "", user: cedric)
-BarberShop.create(name: "Fresh Air", address: "Allée des Poteaux Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: pauletta)
+air = BarberShop.create(name: "Fresh Air", address: "Allée des Poteaux Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: '09:00 - 19:00', phone_number: "0143593710", user: pauletta)
+file1 = URI.open('https://images.unsplash.com/photo-1559599101-f09722fb4948?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://images.unsplash.com/photo-1626383137804-ff908d2753a2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://images.unsplash.com/photo-1549236177-f9b0031756eb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80')
+labo.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://images.unsplash.com/photo-1605980626247-eb3a2f10ec8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80')
+labo.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+file5 = URI.open('https://images.unsplash.com/photo-1562259920-47afc3030ba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
+labo.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://images.unsplash.com/photo-1574773004910-1eeaabb62b55?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80')
+labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 BarberShop.create(name: "Good style", address: "Allée des Quatre Carrefours Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: renald)
 BarberShop.create(name: "Les Gentils mens", address: "Allée des Vergers Paris", remote: false, opening_days: %w[lundi mercredi jeudi vendredi samedi], closing_days: "[mardi dimanche]", opening_hours: "", user: clement)
 BarberShop.create(name: "Nouvelle coupe", address: "Allée Diane-de-Poitiers Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi], closing_days: "[samedi dimanche]", opening_hours: "", user: leo)
@@ -150,6 +193,8 @@ puts 'Ok services ! ✂️'
 
 puts 'Create bookings...'
 booking_pierre = Booking.create(user: pierre, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
+booking_luc = Booking.create(user: pluc, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
+booking_damien = Booking.create(user: damien, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
 puts 'Ok bookings! 📅'
 
 puts 'Create Shop Services...'
@@ -161,6 +206,9 @@ BookingService.create(booking_id: booking_pierre.id, shop_service_id: degrade.id
 
 puts 'Create reviews...'
 Review.create(rating: rand(0..5), comment: "Excellente coiffure ! Au top !", user: pierre, booking: booking_pierre)
+Review.create(rating: 4, comment: "Pas d'attente, bien accueilli et très gentil", user: luc, booking: booking_luc)
+Review.create(rating: 3, comment: "Bien, un petit peu trop rapide mais satifait du resultat", user: damien, booking: booking_damien)
+
 puts 'Ok reviews! ⭐️ '
 
 puts "seed en cours gwen"
