@@ -1,18 +1,21 @@
 .card-info-barber {
-  border: 1px solid gray;
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   margin-top: -10px;
   background-color: white;
   position: relative;
-  padding: 10px 15px;
+  padding: 10px 15px 2px 15px;
   margin-bottom: 25px;
   box-shadow: 0 1px 3px rgba(255, 254, 254, 0.4);
 }
 
+.card-info-barber h2 {
+  text-align: center;
+}
+
 .show-services {
   display: flex;
-  margin-top: 30px;
+  margin-top: 20px;
   justify-content: space-between;
   align-items: center;
 
@@ -167,4 +170,12 @@ font-weight: lighter;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+}
+
+.map-details-barber {
+  height: 200px;
+}
+
+.fa-chevron-circle {
+  font-size: 20px;
 }
