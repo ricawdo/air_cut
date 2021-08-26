@@ -8,8 +8,9 @@ class BarberShopsController < ApplicationController
   end
 
   def search
+    skip_authorization
     if params[:address].present?
-      @barber_shops = BarberShop.all.near(params[:address], 20)
+      @barber_shops = policy_scope(BarberShop).all.near(params[:address], 20)
       @services = Service.all
       @destination = params[:address]
     else
@@ -21,7 +22,7 @@ class BarberShopsController < ApplicationController
         { lat: barber_shop.latitude, lng: barber_shop.longitude, info_window: render_to_string(partial: "info_window", locals: { barber_shop: barber_shop }) }
       end
       render :index
-    skip_authorization
+    
     end
   end
 
