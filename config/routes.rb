@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get "/search", to: 'barber_shops#search'
 
   resources :barber_shops, only: [:index, :show] do
-    resources :bookings, only: [:new, :create, :show]
+    resources :booking_services, only: [:new, :create, :show]
   end
 end
