@@ -71,12 +71,6 @@ label img {
   transform: translate(-50%, -50%);
 }
 
-.active {
-  opacity: 1;
-  pointer-events: all;
-  transform: translate(-50%, -50%);
-}
-
 .services {
   display: grid;
   grid-template-columns: 1fr;
@@ -86,4 +80,10 @@ label img {
   margin-right: -137px;
   position: absolute;
   width: 217px;
+}
+
+.btn-search {
+  width: 208%;
+  text-align: center;
+  font-size: 10px;
 }
