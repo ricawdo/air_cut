@@ -8,7 +8,7 @@
 </div>
 
 
-<ul class="nav nav-pills mb-1 d-flex justify-content-between" id="pills-tab" role="tablist">
+<ul class="nav nav-pills mb-1 d-flex justify-content-between rounded" id="pills-tab" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" id="pills-coiffures-tab" data-toggle="pill" href="#pills-coiffures" type="button" role="tab" aria-controls="pills-coiffures" aria-selected="true">Coiffures</a>
   </li>
@@ -38,10 +38,10 @@
           </div>
         </div>
         <div class="btn-service">
-          <a class="btn btn-flat" href="#">Book</a>
+          <a class="btn btn-flat" id="book-service" href="#">Book</a>
         </div>
-        <p class="underline"></p>
       </div>
+    <p class="underline"></p>
     <% end %>
   </div>
 
@@ -67,23 +67,23 @@
           <p>Note moyenne</p>
         </div>
         <div class="star-rating">
-          <p>5 <i class="far fa-star"></i></p>
-          <p>4 <i class="far fa-star"></i></p>
-          <p>3 <i class="far fa-star"></i></p>
-          <p>2 <i class="far fa-star"></i></p>
-          <p>1 <i class="far fa-star"></i></p>
-          <p>0 <i class="far fa-star"></i></p>
+          <p>5 <i class="fas fa-star"></i></p>
+          <p>4 <i class="fas fa-star"></i></p>
+          <p>3 <i class="fas fa-star"></i></p>
+          <p>2 <i class="fas fa-star"></i></p>
+          <p>1 <i class="fas fa-star"></i></p>
+          <p>0 <i class="fas fa-star"></i></p>
         </div>
       </div>
     </div>
     <div class="comment-rating">
       <% @barber_shop.reviews.each do |review| %>
         <div class="notification">
+          <img src='https://img1.freepng.fr/20180319/epw/kisspng-india-login-computer-icons-emoticon-medicine-user-login-icon-5ab05c8bc2f8d1.4479395815215074677986.jpg' class="avatar-rating" />
           <div class="notification-content">
-            <img src='https://img1.freepng.fr/20180319/epw/kisspng-india-login-computer-icons-emoticon-medicine-user-login-icon-5ab05c8bc2f8d1.4479395815215074677986.jpg' class="avatar" />
             <p><%= review.user.first_name %> <%= review.user.last_name %></p>
             <p><%= review.rating %></p>
-            <p id='comment-user'><%= review.comment %></p>
+          <p id='comment-user'><%= review.comment %></p>
           </div>
         </div>
       <% end %>
@@ -94,10 +94,27 @@
     <div class="card-map">
       <p><%= @barber_shop.address %></p>
     </div>
+    <p class="underline"></p>
+    <div class="btn-service d-flex justify-content-around">
+      <p>numero</p>
+      <a class="btn btn-flat" href="#"><i class="fas fa-phone-alt"> </i>Appeler</a>
+    </div>
+    <p class="underline"></p>
     <br>
-    <p>numero</p>
-    <br>
-    <div class="opening-hours">
+      <div class="opening">
+          <% @barber_shop.opening_days.each do |day| %>
+        <div class="opening-hours">
+            <p><%= day.capitalize %> : </p>  <p>   <%= @barber_shop.opening_hours %></p>
+
+        </div>
+          <% end %>
+      </div>
+    <div class="footer-details">
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
     </div>
   </div>
 </div>
