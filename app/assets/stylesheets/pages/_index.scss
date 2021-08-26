@@ -116,3 +116,11 @@ img {
     display: block;
     }
 }
+
+#fixed-button:hover {
+  background: $brown;
+  color: white;
+  i {
+    color: white;
+  }
+}
