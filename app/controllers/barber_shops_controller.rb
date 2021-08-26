@@ -17,4 +17,9 @@ class BarberShopsController < ApplicationController
     end
     authorize @barber_shops
   end
+
+  def show
+    @barber_shop = BarberShop.find(params[:id])
+    authorize @barber_shop
+  end
 end
