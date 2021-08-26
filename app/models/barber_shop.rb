@@ -8,4 +8,9 @@ class BarberShop < ApplicationRecord
   has_many :booking_services, through: :shop_services
   has_many :bookings, through: :booking_services
   has_many :reviews, through: :bookings
+
+  def average_rating
+    return 0 if reviews.empty?
+    reviews.pluck(:rating).sum / reviews.length.to_f
+  end
 end

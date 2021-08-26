@@ -7,6 +7,7 @@
   position: relative;
   padding: 15px;
   margin-bottom: 35px;
+  box-shadow: 0 1px 3px rgba(255, 254, 254, 0.4);
 }
 
 .show-services {
@@ -28,6 +29,7 @@
   color: white;
   justify-content: space-between;
   padding: 10px 15px;
+  align-items: center;
 }
 
 .service-details h3 {
@@ -70,22 +72,30 @@ font-weight: lighter;
 }
 
 .realisations {
-  border: 3px solid white;
-  width: 40%;
-  margin-left: 10px;
+  width: 42%;
+  margin-left: 20px;
   height: 150px;
   margin-top: 20px;
+}
+
+.realisations img {
+  width: 85%;
+  margin: 10px 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .text-photo-barber {
   color: $brown;
   display: flex;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  font-size: 18px;
 }
 
-.moyenne-rating {
-  border: 1px solid white;
-  height: 150px;
-  width: 80%;
-  margin: 20px 10px;
-  text-align: center;
+
+.portfolio_wrap {
+  display: flex;
+  flex-wrap: wrap;
 }

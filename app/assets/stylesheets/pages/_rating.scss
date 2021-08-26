@@ -1,0 +1,51 @@
+.star-rating {
+  font-size: 11px;
+  margin: 0px;
+  margin-left: 15px;
+}
+
+.star-rating .far  {
+  color: $brown;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+}
+
+.notification p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.notification small {
+  color: #999999;
+  font-weight: bold;
+}
+
+.moyenne {
+  border: 1px solid $brown;
+  border-radius: 8px;
+  width: 55%;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.moyenne-rating {
+  display: flex;
+  color: white;
+  height: 150px;
+  width: 80%;
+  margin: 20px 10px;
+  text-align: center;
+}
+
+#comment-user {
+  border: 1px solid $brown;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(255, 254, 254, 0.4);
+  width: 250px;
+}
