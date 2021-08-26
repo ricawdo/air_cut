@@ -40,6 +40,8 @@ gem 'devise'
 gem 'pundit'
 #gem for geocoder
 gem 'geocoder'
+# gem for calendar
+gem "simple_calendar", "~> 2.4"
 
 group :development, :test do
   gem 'pry-byebug'
