@@ -12,3 +12,10 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.main-wrapper {
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+}

@@ -1,0 +1,114 @@
+.container-profile {
+  margin-top: 237px;
+  padding: 0 20px 20px;
+  text-align: center;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  height: 500px;
+  background-color: $brown;
+}
+
+.avatar {
+  border-radius: 100px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  margin: auto;
+  top: -60px;
+}
+
+.avatar img {
+  border-radius: 100px;
+  height: 150px;
+  width: 150px;
+  border: 5px solid $gray;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-profile h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: -30px;
+  color: $gray;
+}
+.container-profile h4 {
+  font-size: 13px;
+  color: $brown;
+  letter-spacing: 1px;
+  margin-bottom: 25px
+}
+.container-profile p {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+  color: $gray;
+}
+
+.container-edit {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 50px;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border: 2px solid $gray;
+}
+
+.container-edit h2 {
+  font-family: "Montserrat";
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.btn-actions {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.edit_user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.required {
+  font-size: 15px;
+}
+
+.container-edit .form-control {
+  width: 70%;
+  height: 27px;
+  margin-left: 36px;
+}
+
+// .required label {
+//   display: none;
+// }
+
+label abbr {
+  display: none;
+}
+
+.required input {
+  // border: none;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.link-logo img {
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.border-profile {
+  border: 2px solid $brown !important;
+}
+
+.border-white {
+  border: 2px solid white;
+}

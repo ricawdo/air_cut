@@ -13,7 +13,10 @@ body {
   background: linear-gradient($gray, rgb(71, 71, 71));
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-control {
