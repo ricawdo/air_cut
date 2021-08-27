@@ -1,24 +1,31 @@
 .tabbar {
-  background-color: $gray;
-  border-top: 1px, solid, $brown;
+  background-color: #2c2a2a;
+  border-top: 3px solid #D0AB84;
   padding: 8px 19px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 10px 25px 0 rgba(#fff, 0.075);
-  width:100%;
-  position: fixed;
+  width: 100%;
   bottom: 0;
+  padding-top: 13px;
+  align-items: flex-end;
 }
 
 .link {
-  color: white;
+  i {
+    color: white;
+  }
 }
-.link:hover {
-  color: white;
+.link {
+  i:hover {
+    color: $brown;
+  }
 }
 
 .link p {
-  font-size: 12px;
+  font-size: 13px;
+  margin-bottom: 0px;
+  color: white;
+  font-weight: bold;
 }
 
 
@@ -27,4 +34,22 @@
 }
 .link-logo {
   text-align: center;
+}
+
+.link-logo:hover {
+  text-align: center;
+}
+
+.active-btn {
+  i {
+    color: $brown;
+  }
+  p {
+    color: $brown;
+  }
+}
+.active-profile {
+  p {
+    color: $brown;
+  }
 }

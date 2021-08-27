@@ -1,10 +1,10 @@
 <div class="tabbar">
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="fas fa-search"></i>
-      <p>Explorer</p>
-    </div>
-	</a>
+	<%= link_to root_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "home" }" do %>
+      <div class="link-logo">
+        <i class="fas fa-search"></i>
+        <p>Explorer</p>
+      </div>
+  <% end %>
 
 	<a href="#" class="link">
     <div class="link-logo">
@@ -26,11 +26,14 @@
       <p>Messages</p>
     </div>
 	</a>
-
-	<a href="#" class="link">
+  <%= link_to profile_path, class: "link #{"active-profile" if params[:controller] == "pages" && params[:action] == "profile" }" do %>
     <div class="link-logo">
-      <i class="fas fa-user-alt"></i>
-      <p>Profil</p>
+      <% if user_signed_in? %>
+        <%= image_tag ("photo-andrea.jpg"), class: "border-white #{"border-profile" if params[:controller] == "pages" && params[:action] == "profile" }"  %>
+      <% else %>
+        <i class="fas fa-user-alt"></i>
+      <% end %>
+        <p>Profil</p>
     </div>
-	</a>
+  <% end %>
 </div>
