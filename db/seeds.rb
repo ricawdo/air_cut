@@ -12,6 +12,16 @@ puts 'Create Users...'
 puts 'Create Pierre...'
 pierre = User.create(first_name: "Pierre", last_name: "Luce", email:"pierre.luce@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
 puts 'Create Luc...'
+conan = User.create(first_name: "Conan", last_name: "Lambada", email:"conan.lambada@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
+puts 'Create Conan...'
+teddy = User.create(first_name: "Teddy", last_name: "Riner", email:"teddy.riner@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
+puts 'Create Teddy...'
+nicolas = User.create(first_name: "Nicolas", last_name: "Launay", email:"nicolas.launay@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
+puts 'Create Nicolas...'
+lorenzo = User.create(first_name: "Lorenzo", last_name: "nuli", email:"lorenzo.nuli@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
+puts 'Create Lorenzo...'
+antoine = User.create(first_name: "Antoine", last_name: "Malin", email:"antoine.malin@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
+puts 'Create Antoine...'
 luc = User.create(first_name: "Luc", last_name: "Daniel", email:"luc.daniel@gmail.com", phone_number: "0648398674", password: "123456", gender: "homme", role: "client")
 puts 'Create Damien ...'
 damien = User.create(first_name: "Damien", last_name: "Rolland", email:"damien.rolland@gmail.com", phone_number: "0648593714", password: "123456", gender: "homme", role: "client")
@@ -119,6 +129,7 @@ file5 = URI.open('https://images.unsplash.com/photo-1602641902219-622a1b9a257a?i
 labo.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 file6 = URI.open('https://images.unsplash.com/photo-1611433217216-592b86546e1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')
 labo.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+ciseaux.save!
 papa = BarberShop.create(name: "Barbe a papa", address: "Allée de Bercy Paris", remote: false, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche], opening_hours: '10:00 - 19:00', phone_number: "0143503784", user: franck)
 file1 = URI.open('https://images.unsplash.com/photo-1462850932907-687c915e3d38?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80')
 labo.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
@@ -173,7 +184,7 @@ puts 'Ok Barbershops ! 💈'
 
 puts 'Create services...'
 service_one = Service.create(name: "Coupe Homme", gender: "homme")
-ShopService.create(barber_shop: barber_diana, service: service_one)
+ShopService.create(price: 20, duration: 30, description: "Coupe à la demande du client", barber_shop: barber_diana, service: service_one)
 service_second = Service.create(name: "Barbier", gender: "homme")
 ShopService.create(barber_shop: barber_clodine, service: service_second)
 service_three = Service.create(name: "Coiffure Afro", gender: "homme")
@@ -193,21 +204,47 @@ puts 'Ok services ! ✂️'
 
 puts 'Create bookings...'
 booking_pierre = Booking.create(user: pierre, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
-booking_luc = Booking.create(user: pluc, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
-booking_damien = Booking.create(user: damien, start_datetime: DateTime.new(2021,2,3,4,5,6), end_datetime: DateTime.new(2021,2,3,4,5,7), total_amount: 25)
+booking_luc = Booking.create(user: luc, start_datetime: DateTime.new(2021,7,1,4,5,6), end_datetime: DateTime.new(2021,7,1,4,5,7), total_amount: 25)
+booking_damien = Booking.create(user: damien, start_datetime: DateTime.new(2021,7,3,4,5,6), end_datetime: DateTime.new(2021,7,3,4,5,7), total_amount: 25)
+booking_camille = Booking.create(user: camille, start_datetime: DateTime.new(2021,8,5,4,5,6), end_datetime: DateTime.new(2021,8,5,4,5,7), total_amount: 25)
+booking_marie = Booking.create(user: marie, start_datetime: DateTime.new(2021,8,6,4,5,6), end_datetime: DateTime.new(2021,8,6,4,5,7), total_amount: 25)
+booking_daniel = Booking.create(user: daniel, start_datetime: DateTime.new(2021,8,8,4,5,6), end_datetime: DateTime.new(2021,8,8,4,5,7), total_amount: 25)
+booking_lorenzo = Booking.create(user: lorenzo, start_datetime: DateTime.new(2021,8,23,4,5,6), end_datetime: DateTime.new(2021,8,23,4,5,7), total_amount: 25)
+booking_antoine = Booking.create(user: antoine, start_datetime: DateTime.new(2021,8,15,4,5,6), end_datetime: DateTime.new(2021,8,15,4,5,7), total_amount: 25)
+booking_teddy = Booking.create(user: teddy, start_datetime: DateTime.new(2021,8,17,4,5,6), end_datetime: DateTime.new(2021,8,17,4,5,7), total_amount: 25)
+booking_conan = Booking.create(user: conan, start_datetime: DateTime.new(2021,8,19,4,5,6), end_datetime: DateTime.new(2021,8,19,4,5,7), total_amount: 25)
+booking_nicolas = Booking.create(user: nicolas, start_datetime: DateTime.new(2021,7,14,4,5,6), end_datetime: DateTime.new(2021,7,14,4,5,7), total_amount: 25)
 puts 'Ok bookings! 📅'
 
 puts 'Create Shop Services...'
 degrade_bas = Service.create(name: "Dégradé bas", gender: "homme")
 degrade = ShopService.create(price: 10, duration: 60, description: "Super degrade", service_id: degrade_bas.id, barber_shop_id: barber2.id)
+barbe_travaille = Service.create(name: "Barbe travaillé", gender: "homme")
+barbe = ShopService.create(price: 10, duration: 30, description: "", service_id: barbe_travaille.id, barber_shop_id: ciseaux.id)
+barbe_degrade = Service.create(name: "Barbe dégradé + huile", gender: "homme")
+barbe2 = ShopService.create(price: 15, duration: 30, description: "", service_id: barbe_degrade.id, barber_shop_id: ciseaux.id)
+service_dix = Service.create(name: "Shampoing", gender: "homme")
+shampoing= ShopService.create(price: 5, duration: 30, description: "", service_id: service_dix.id, barber_shop_id: ciseaux.id)
+design = Service.create(name: "Desgin coiffure", gender: "homme")
+design_coiffure = ShopService.create(price: 5, duration: 15, description: "", service_id: design.id, barber_shop_id: ciseaux.id)
+
 
 puts 'Create Booking Services...'
 BookingService.create(booking_id: booking_pierre.id, shop_service_id: degrade.id)
+BookingService.create(booking_id: booking_luc.id, shop_service_id: barbe.id)
+BookingService.create(booking_id: booking_damien.id, shop_service_id: shampoing.id)
 
 puts 'Create reviews...'
 Review.create(rating: rand(0..5), comment: "Excellente coiffure ! Au top !", user: pierre, booking: booking_pierre)
+Review.create(rating: rand(0..5), comment: "Je recommande !", user: pierre, booking: booking_pierre)
+Review.create(rating: rand(0..5), comment: "Très propre, personnel très gentil", user: pierre, booking: booking_pierre)
+Review.create(rating: rand(0..5), comment: "Personnel amical, contente de ma nouvelle coiffure", user: camille, booking: booking_camille)
+Review.create(rating: rand(0..5), comment: "Bon accueil, le massage de la tete avec le shampoing était parfait !", user: marie, booking: booking_marie)
+Review.create(rating: 2, comment: "Le coupe n'a pas était à la hauteur de mes esperance et du prix...", user: conan, booking: booking_conan)
+Review.create(rating: 5, comment: "Coupe exactement réalisée comme je l'avais demandé", user: luc, booking: booking_luc)
 Review.create(rating: 4, comment: "Pas d'attente, bien accueilli et très gentil", user: luc, booking: booking_luc)
 Review.create(rating: 3, comment: "Bien, un petit peu trop rapide mais satifait du resultat", user: damien, booking: booking_damien)
+Review.create(rating: 4, comment: "Charmant salon et très bon coiffeur", user: teddy, booking: booking_teddy)
 
 puts 'Ok reviews! ⭐️ '
 
