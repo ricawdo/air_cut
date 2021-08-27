@@ -10,7 +10,9 @@
         class: "form-control mr-sm-2",
         placeholder: "Adresse"
       %>
-      <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0" %>
+      <%= button_tag(type: "submit", class: "btn-brown btn-brown:hover border-0") do %>
+         <i class="fas fa-search"></i>
+      <% end %>
     <% end %>
   </div>
 </div>
