@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get "/users/:id/edit", to: 'pages#edit', as: 'user_edit'
   patch "/users/:id", to: 'pages#update'
 
-  resources :barber_shops, only: [:index, :show] do
-    resources :booking_services, only: [:new, :create, :show]
-  end
+  resources :barber_shops, only: [:index, :show]
+  resources :bookings, only: [:new, :create, :show]
 end
