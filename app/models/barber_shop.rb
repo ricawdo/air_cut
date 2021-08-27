@@ -14,4 +14,12 @@ class BarberShop < ApplicationRecord
     return 0 if reviews.empty?
     reviews.pluck(:rating).sum / reviews.length.to_f
   end
+
+  def rating_count(integer)
+    reviews.where(rating: integer).count
+  end
+
+  def rating_count_percent(integer)
+    rating_count(integer).fdiv(reviews.count) * 100
+  end
 end

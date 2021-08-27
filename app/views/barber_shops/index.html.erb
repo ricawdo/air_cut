@@ -37,7 +37,7 @@
         <% end %>
           <div id="reviews-bs">
             <div id="rating-bs">
-               <%= barber_shop.reviews.pluck(:rating).reduce%>⭐️
+               <%= (barber_shop.reviews.pluck(:rating).sum / barber_shop.reviews.pluck(:rating).count.to_f).round(1)%>⭐️
             </div>
             <div id="number-reviews-bs">
               <%= barber_shop.reviews.pluck(:rating).count%> reviews
