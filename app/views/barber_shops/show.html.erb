@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="btn-service">
-          <a class="btn btn-flat" id="book-service" href="#">Book</a>
+          <%= link_to "Book", new_booking_path(shop_service_id: shop_service.id), id: "book-service", class: "btn btn-flat" %>
         </div>
       </div>
     <p class="underline"></p>
