@@ -1,0 +1,22 @@
+<div class="container"id="title-book" >
+
+  <h3 >Votre rendez-vous est confirmé pour le <%= @booking.start_datetime.strftime("%d/%m/%Y") %> à  <%=  @booking.start_datetime.strftime("%H:%M")  %></h3>
+  <div class="show-services" id="book-services">
+    <div class="service-details" id="validate-details">
+      <div id="book-description">
+        <p>Prestation(s) :<% @booking.services.each do |service| %> <%= service.name %> </p>
+
+        <% end %>
+      </div>
+      <div class="text-right">
+        <% @booking.shop_services.each do |shop_service| %>
+        <p><%= shop_service.price %>€</p>
+        <p><%= shop_service.duration %>   <%= %>mn  <i class="far fa-clock"></i></p>
+        <% end %>
+        <p></p>
+      </div>
+    </div>
+  </div>
+        <p>TOTAL:<strong><%=@booking.total_amount%> €</strong></p>
+</div>
+<% console %>

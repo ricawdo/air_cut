@@ -11,7 +11,9 @@ class BookingsController < ApplicationController
     @shop_service = ShopService.find(params[:booking][:shop_service_id])
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_path
+      @booking_service = BookingService.create(booking: @booking, shop_service: @shop_service)
+      @booking.update(total_amount: @booking.shop_services.sum(:price))
+      redirect_to booking_path(@booking)
     else
       render :new
     end
