@@ -2,7 +2,9 @@
 <%= render 'shared/carousel' %>
 <div class="card-info-barber">
   <div class="info-barber">
-    <i class="fas fa-chevron-circle-left" href="#"></i>
+    <%= link_to url_for(:back) do %>
+      <i class="fas fa-arrow-circle-left"></i>
+    <% end %>
     <h2><%= @barber_shop.name %></h2>
     <p><i class="fas fa-home"></i> <%= @barber_shop.address %></p>
   </div>
@@ -66,14 +68,20 @@
       <div class="moyenne-rating">
         <div class="moyenne">
           <p>Note moyenne</p>
+          <p> <%= (@barber_shop.reviews.pluck(:rating).sum / @barber_shop.reviews.pluck(:rating).count.to_f).round(1)%>/5</p>
+          <p> <%= @barber_shop.reviews.pluck(:rating).count %> <i class="far fa-comment-dots"></i></p>
+
         </div>
-        <div class="star-rating">
-          <p>5 <i class="fas fa-star"></i></p>
-          <p>4 <i class="fas fa-star"></i></p>
-          <p>3 <i class="fas fa-star"></i></p>
-          <p>2 <i class="fas fa-star"></i></p>
-          <p>1 <i class="fas fa-star"></i></p>
-          <p>0 <i class="fas fa-star"></i></p>
+        <div class="star-ratings">
+          <% [5, 4, 3, 2, 1, 0].each do |i| %>
+          <div class="star-rating">
+              <p><%= i %>  <i class="fas fa-star"></i></p>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: <%= @barber_shop.rating_count_percent(i)  %>%" aria-valuenow="<%= @barber_shop.rating_count_percent(4)  %>" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          <%= @barber_shop.rating_count(i) %>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>
