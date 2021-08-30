@@ -6,19 +6,19 @@
       </div>
   <% end %>
 
-  <%= link_to favorie_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "home" }" do %>
+  <%= link_to favorie_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "favorie" }" do %>
       <div class="link-logo">
         <i class="far fa-heart"></i>
         <p>Favoris</p>
       </div>
   <% end %>
 
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="fas fa-cut"></i>
+  <%= link_to reservation_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "reservation" }" do %>
+      <div class="link-logo">
+        <i class="fas fa-cut"></i>
       <p>Réservations</p>
-    </div>
-	</a>
+      </div>
+  <% end %>
 
 	<a href="#" class="link">
     <div class="link-logo">

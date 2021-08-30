@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/search", to: 'barber_shops#search'
   get "/profile", to: 'pages#profile'
   get "/favorie", to: 'pages#favorie'
+  get "/reservation", to: 'pages#reservation'
   get "/users/:id/edit", to: 'pages#edit', as: 'user_edit'
   patch "/users/:id", to: 'pages#update'
 
