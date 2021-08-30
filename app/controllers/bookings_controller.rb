@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
   def new
     @user = current_user
-    @barber_shop = BarberShop
-    @booking = Booking.new
     @shop_service = ShopService.find(params[:shop_service_id])
+    @barber_shop = @shop_service.barber_shop
+    @booking = Booking.new
     authorize @booking
   end
 

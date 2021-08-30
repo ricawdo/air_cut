@@ -1,5 +1,5 @@
 <div class ="container book">
-  <h1> <%= BarberShop.find_by(params[:barber_shop_id]).name %></h1>
+  <h1><%= @barber_shop.name %></h1>
   <div class="show-services" id="book-services">
     <div class="service-details">
       <div id="book-description">
@@ -13,25 +13,39 @@
     </div>
   </div>
 
-  <div>
+  <div id="available-days" type="button" data-controller="available-hours" data-action="">
     <ul>
-      <li>
-        <%=  %>
-      </li>
+        <% @barber_shop.available_days.each do |available_day| %>
+          <li><%= available_day %></li>
+        <% end %>
     </ul>
   </div>
+
+    <div id="available-hours" type="button" data-controller="available-hours" data-action="click->available-hours#disable">
+    <ul>
+        <%= @barber_shop.opening_hours %>
+    </ul>
+  </div>
+
+
+
 
   <div class="container">
     <div class="form-wrapper" id ="calendar" style="width: 400px; margin: 0 auto; inline: true;">
       <h1>Sélectionnez une date et une heure</h1>
 
       <%= simple_form_for @booking do |f| %>
-        <%= f.input :start_datetime, as: :string, required: false, input_html: {class: "datepicker", id:"valeur"} %>
+        <%= f.input :start_datetime, as: :string, required: false, input_html: {class: "datepicker", data: { closing_days: @barber_shop.closing_days }}  %>
         <%= f.submit class: "button-book"%>
         <%= f.hidden_field :shop_service_id, value: params[:shop_service_id] %>
       <% end %>
+
+      <ul class="available-schedules">
+        <% @barber_shop.open_schedules(Date.new(2021, 8, 31)).each do |schedule| %>
+          <li><%= schedule.hour %> : <%= schedule.minute %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 
 </div>
-<% console %>
