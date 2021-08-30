@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
   def new
+    @user = current_user
+    @barber_shop = BarberShop
     @booking = Booking.new
-    @shop_service = ShopService.find( params[:shop_service_id])
+    @shop_service = ShopService.find(params[:shop_service_id])
     authorize @booking
   end
 
@@ -20,6 +22,7 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @booking = Booking.find(params[:id])
     authorize @booking
   end

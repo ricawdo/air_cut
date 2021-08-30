@@ -23,4 +23,20 @@ class BarberShop < ApplicationRecord
   def rating_count_percent(integer)
     rating_count(integer).fdiv(reviews.count) * 100
   end
+
+  def available_days#_for(seconds)
+    week_days = ((x = Time.now.to_date.next)..(x + 14)).to_a
+    days = {
+      "Sunday" => 'dimanche',
+      "Monday" => 'lundi',
+      "Tuesday" => 'mardi',
+      "Wednesday" => 'mercredi',
+      "Thursday" => 'jeudi',
+      "Friday" => 'vendredi',
+      "Saturday" => 'samedi',
+    }
+    week_days.select do |day|
+      opening_days.include?(days[day.strftime('%A')])
+    end
+  end
 end
