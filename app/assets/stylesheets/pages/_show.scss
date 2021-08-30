@@ -9,40 +9,44 @@
   box-shadow: 0 1px 3px rgba(255, 254, 254, 0.4);
 }
 
-.card-info-barber h2 {
-  text-align: center;
-}
-
 .show-services {
   display: flex;
-  margin-top: 20px;
+  margin-top: 0;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .service-details {
-  display: flex;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.4);
-  width: 80%;
   border-radius: 8px;
   margin: 20px 15px;
-  height: 90px;
   color: white;
   justify-content: space-between;
-  padding: 10px 15px;
   align-items: center;
+  padding: 13px;
+  background-color: #413e39;
 }
 
 .service-details h3 {
-font-size: 20px;
-font-weight: bold;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #d0ab84;
 }
 
 .service-details p {
-margin-bottom: 0px;
-font-size: 15px;
-font-weight: lighter;
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+#text-right-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top: 16px;
+  align-items: baseline;
+  font-size: 30px;
+  color: #d0ab84;
 }
 
 #book-service {
@@ -53,14 +57,14 @@ font-weight: lighter;
 }
 
 .nav-link {
-  color: $brown;
+  color: #f0dbc5;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: black;
-  background-color: $brown;
+  color: #D0AB84;
   padding: 7px;
-  border-radius: 8px;
+  border-bottom: 1px solid #c8a767;
+  background-color: transparent;
 }
 
 .carousel-item img {
@@ -77,31 +81,13 @@ font-weight: lighter;
   margin-top: 15px;
 }
 
-.realisations {
-  width: 42%;
-  margin-left: 20px;
-  height: 150px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-}
-
 .realisations img {
-  width: 85%;
+  width: 160px;
   margin: 6px 10px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  height: 160px;
   object-fit: cover;
   border-radius: 6px;
 }
-
-.text-photo-barber {
-  color: $brown;
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 10px;
-  font-size: 18px;
-}
-
 
 .portfolio_wrap {
   display: flex;
@@ -162,6 +148,7 @@ font-weight: lighter;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .footer-links a {
   color: $brown;
@@ -185,6 +172,22 @@ font-weight: lighter;
 }
 
 .checkbox-service:checked + label .service-details {
-background-color: $brown;
-color: black;
+  border: 1px solid;
+}
+
+.btn-brown {
+  position: fixed;
+  bottom: 90px;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: #c8a767;
+  background: #c8a767;
+  border-radius: 30px;
+  color: white;
+}
+
+.fa-phone-alt {
+  margin-right: 5px;
 }
