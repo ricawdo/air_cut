@@ -27,6 +27,7 @@ import "controllers"
 import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initAutocomplete } from "../plugins/init_autocomplete";
 
 
 // Internal imports, e.g:
@@ -39,5 +40,11 @@ document.addEventListener('turbolinks:load', () => {
   if (mapElement) {
     initMapbox();
   }
+
   initFlatpickr();
+
+  const addressInput = document.getElementById('address');
+  if (addressInput) {
+    initAutocomplete();
+  }
 });

@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
   def home
+    @user = current_user
   end
 
   def profile
@@ -10,7 +11,7 @@ class PagesController < ApplicationController
   def edit
     @user = current_user
   end
-  
+
   def update
     @user = current_user
     @user.update(user_params)

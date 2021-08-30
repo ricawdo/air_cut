@@ -29,7 +29,7 @@
   <%= link_to profile_path, class: "link #{"active-profile" if params[:controller] == "pages" && params[:action] == "profile" }" do %>
     <div class="link-logo">
       <% if user_signed_in? %>
-        <%= image_tag ("photo-andrea.jpg"), class: "border-white #{"border-profile" if params[:controller] == "pages" && params[:action] == "profile" }"  %>
+        <%= cl_image_tag @user.photo.key, class: "border-white #{"border-profile" if params[:controller] == "pages" && params[:action] == "profile" }"  %>
       <% else %>
         <i class="fas fa-user-alt"></i>
       <% end %>
@@ -37,3 +37,4 @@
     </div>
   <% end %>
 </div>
+<%= console %>

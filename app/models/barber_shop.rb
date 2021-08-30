@@ -8,6 +8,7 @@ class BarberShop < ApplicationRecord
   has_many :services, through: :shop_services
   has_many :bookings, through: :booking_services
   has_many :booking_services, through: :shop_services
+  has_many :bookings, through: :booking_services
   has_many :reviews, through: :bookings
 
   def average_rating

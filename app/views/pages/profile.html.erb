@@ -1,7 +1,7 @@
 <div class="container-p">
   <div class="container-profile">
     <div class="avatar">
-      <%= image_tag ("photo-andrea.jpg") %>
+      <%= cl_image_tag @user.photo.key %>
     </div>
       <h2>Mes coordonnées</h2>
       <div class="container-edit">
@@ -9,9 +9,9 @@
         <p>Nom de famille :  <strong><%= @user.last_name%></strong></p>
         <p>Email :  <strong><%= @user.email%></strong></p>
         <p>Numéro :  <strong><%= @user.phone_number%></strong></p>
-        <%= link_to "Modifier",  edit_user_registration_path, class: "btn-brown" %> 
+        <%= link_to "Modifier",  edit_user_registration_path, class: "btn-brown" %>
         <%= link_to "Déconnection", destroy_user_session_path, method: :delete, class: "btn-brown" %>
-        
+
       </div>
     </div>
   </div>
