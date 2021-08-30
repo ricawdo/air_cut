@@ -457,7 +457,7 @@ ShopService.create(price: 30, duration: 45, description: "Forfait décoloration 
 ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: muses_paris.id, service_id: deco_teinture.id )
 
 puts 'Create Départ de locks..'
-depart_locks = Service.create(name: "Massage cranien", gender: "homme")
+depart_locks = Service.create(name: "Départ de locks", gender: "homme")
 ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: le_loft.id, service_id: depart_locks.id )
 ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barbes_barber.id, service_id: depart_locks.id )
 ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barber_street.id, service_id: depart_locks.id )
@@ -474,12 +474,12 @@ ShopService.create(price: 20, duration: 30, description: "Shampoing (cheveux lon
 puts '>> Create Bookings, BookingServices and link to Services and Reviews...' # ***************************************
 puts 'Create booking of Dustin...'
 b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 7, 3, 7, 30), end_datetime: DateTime.new(2021, 7, 3, 8, 30), total_amount: 15)
-BookingService.create(booking_id: b_dustin.id, shop_service_id: shop_shampoing_court.id)
+BookingService.create(booking_id: b_dustin.id, shop_service_id: shop_degrade_shampoing.id)
 Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user: dustin, booking: b_dustin)
 
 puts 'Create booking of Danieal...'
 b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 4, 7, 30), end_datetime: DateTime.new(2021, 7, 4, 8, 30), total_amount: 15)
-BookingService.create(booking_id: b_daniela.id, shop_service_id: shop_shampoing_court.id)
+BookingService.create(booking_id: b_daniela.id, shop_service_id: shop_rasage_crane.id)
 Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user: daniela, booking: b_daniela)
 
 puts 'Ok bookings and reviews!' # **************************************************************************************
