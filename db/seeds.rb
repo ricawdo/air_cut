@@ -474,12 +474,12 @@ ShopService.create(price: 20, duration: 30, description: "Shampoing (cheveux lon
 puts '>> Create Bookings, BookingServices and link to Services and Reviews...' # ***************************************
 puts 'Create booking of Dustin...'
 b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 7, 3, 7, 30), end_datetime: DateTime.new(2021, 7, 3, 8, 30), total_amount: 15)
-BookingService.create(booking_id: b_dustin.id, shop_service_id: shop_shampoing_court.id)
+BookingService.create(booking_id: b_dustin.id, shop_service_id: shop_degrade_shampoing.id)
 Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user: dustin, booking: b_dustin)
 
 puts 'Create booking of Danieal...'
 b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 4, 7, 30), end_datetime: DateTime.new(2021, 7, 4, 8, 30), total_amount: 15)
-BookingService.create(booking_id: b_daniela.id, shop_service_id: shop_shampoing_court.id)
+BookingService.create(booking_id: b_daniela.id, shop_service_id: shop_rasage_crane.id)
 Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user: daniela, booking: b_daniela)
 
 puts 'Ok bookings and reviews!' # **************************************************************************************
