@@ -6,12 +6,12 @@
       </div>
   <% end %>
 
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="far fa-heart"></i>
-      <p>Favoris</p>
-    </div>
-	</a>
+  <%= link_to favorie_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "home" }" do %>
+      <div class="link-logo">
+        <i class="far fa-heart"></i>
+        <p>Favoris</p>
+      </div>
+  <% end %>
 
 	<a href="#" class="link">
     <div class="link-logo">
