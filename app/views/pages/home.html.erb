@@ -8,6 +8,7 @@
       <%= text_field_tag :address,
         params[:address],
         class: "form-control mr-sm-2",
+        input_html: {id: "address"},
         placeholder: "Adresse"
       %>
       <%= button_tag(type: "submit", class: "btn-brown btn-brown:hover border-0") do %>

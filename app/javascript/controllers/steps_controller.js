@@ -3,10 +3,10 @@ import { Controller } from "stimulus"
 export default class extends Controller {
   static targets = [ "gender", "search", "servicefemme", "servicehomme" ]
 
-  connect() {
-    console.log(this.genderTarget)
-    console.log(this.searchTarget)
-  }
+  // connect() {
+  //   console.log(this.genderTarget)
+  //   console.log(this.searchTarget)
+  // }
 
   showServicefemme(e) {
     this.servicefemmeTarget.classList.remove("inactive")
@@ -19,7 +19,7 @@ export default class extends Controller {
     this.genderTarget.classList.add("inactive")
     document.getElementById('gender').value = e.currentTarget.getAttribute('id');
   }
-  
+
   showSearch(e) {
     // this.searchTarget.classList.remove("inactive")
     // this.serviceTarget.classList.add("inactive")
