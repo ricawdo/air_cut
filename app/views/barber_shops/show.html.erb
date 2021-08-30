@@ -38,7 +38,7 @@
               <h3><%= shop_service.service.name %></h3>
               <p><%= shop_service.description %></p>
             </div>
-            <div class="text-right">
+            <div class="text-right" id="text-right-card">
               <p><strong><%= shop_service.price %> €</strong></p>
               <p><i class="far fa-clock"></i>  <%= shop_service.duration %>mn</p>
             </div>
@@ -58,11 +58,6 @@
       <% @barber_shop.portfolios.each do |photo| %>
         <div class="realisations">
           <%= cl_image_tag photo.key, height:100, crop: :fill %>
-            <div class="text-photo-barber">
-              <p><i class="far fa-heart"></i></p>
-              <p><i class="far fa-comment"></i></p>
-              <p><i class="fas fa-share"></i></p>
-            </div>
         </div>
       <% end %>
     </div>
@@ -93,11 +88,10 @@
     <div class="comment-rating">
       <% @barber_shop.reviews.each do |review| %>
         <div class="notification">
-          <img src='https://img1.freepng.fr/20180319/epw/kisspng-india-login-computer-icons-emoticon-medicine-user-login-icon-5ab05c8bc2f8d1.4479395815215074677986.jpg' class="avatar-rating" />
           <div class="notification-content">
             <p><%= review.user.first_name %> <%= review.user.last_name %></p>
-            <p><%= review.rating %></p>
-          <p id='comment-user'><%= review.comment %></p>
+            <p><i class="fas fa-star"> </i> <%= review.rating %></p>
+          <p id='comment-user'><i>"<%= review.comment %>"</i></p>
           </div>
         </div>
       <% end %>
