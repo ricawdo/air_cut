@@ -30,16 +30,9 @@
   <div class="tab-pane fade show active" id="pills-coiffures" role="tabpanel" aria-labelledby="pills-coiffures-tab">
 
     <%= form_tag new_booking_path, method: :get do %>
-      <%# <label for="booking_services_#{id}">Homme</label>
-      <input type="checkbox" name=" booking_services[]" id="booking_services_#{id}" value="booking_services[]"> %>
-
-
-
-
       <% @barber_shop.shop_services.each do |shop_service| %>
-
-        <input type="checkbox" class="checkbox-service" name=" booking_services[]" style="display: none;" id="booking_services_#{<%= shop_service.id %>}" value="<%= shop_service.id %>">
-        <label for="booking_services_#{<%= shop_service.id %>}" class="show-services">
+        <input type="checkbox" class="checkbox-service" name="booking_services[]" style="display: none;" id="booking_services_<%= shop_service.id %>" value="<%= shop_service.id %>">
+        <label for="booking_services_<%= shop_service.id %>" class="show-services">
           <div class="service-details">
             <div>
               <h3><%= shop_service.service.name %></h3>
@@ -51,20 +44,9 @@
             </div>
           </div>
         </label>
-
-
         <p class="underline"></p>
-
       <% end %>
-
-
-
-
-
-      <%#= label_tag do %>
-        <%#= check_box_tag 'gender', 'male'%>
-      <%# end %>
-      <%= button_tag(type: "submit", class: "btn-brown btn-brown:hover border-0") link to_ new_booking_path do %>
+      <%= button_tag(type: "submit", class: "btn-brown btn-brown:hover border-0") do %>
          Book
       <% end %>
     <% end %>
