@@ -12,6 +12,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @shop_service = ShopService.find(params[:booking][:shop_service_id])
     @booking.user = current_user
+    @booking.end_datetime = @booking.start_datetime + @shop_service.duration.minutes
     if @booking.save
       @booking_service = BookingService.create(booking: @booking, shop_service: @shop_service)
       @booking.update(total_amount: @booking.shop_services.sum(:price))
