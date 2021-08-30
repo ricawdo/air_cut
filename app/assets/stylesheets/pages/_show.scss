@@ -183,3 +183,8 @@ font-weight: lighter;
 .info-barber p {
   color: black;
 }
+
+.checkbox-service:checked + label .service-details {
+background-color: $brown;
+color: black;
+}
