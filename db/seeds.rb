@@ -457,7 +457,7 @@ ShopService.create(price: 30, duration: 45, description: "Forfait décoloration 
 ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: muses_paris.id, service_id: deco_teinture.id )
 
 puts 'Create Départ de locks..'
-depart_locks = Service.create(name: "Massage cranien", gender: "homme")
+depart_locks = Service.create(name: "Départ de locks", gender: "homme")
 ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: le_loft.id, service_id: depart_locks.id )
 ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barbes_barber.id, service_id: depart_locks.id )
 ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barber_street.id, service_id: depart_locks.id )
