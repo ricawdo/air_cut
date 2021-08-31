@@ -24,6 +24,7 @@
   align-items: center;
   padding: 13px;
   background-color: #413e39;
+  width: 100%;
 }
 
 .service-details h3 {
@@ -107,7 +108,6 @@
 .opening {
   color: $brown;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
   margin-left: 15px;
   margin-right: 15px;
   margin-top: -20px;
@@ -128,6 +128,7 @@
   margin-right: 25px;
   color: white;
   margin-bottom: 10px;
+  display: flex;
 }
 
 .btn-service p {
@@ -182,7 +183,7 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 30px;
-  color: #c8a767;
+  color: $brown;
   background: #c8a767;
   border-radius: 30px;
   color: white;
