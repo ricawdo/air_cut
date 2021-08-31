@@ -8,6 +8,14 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def favorie
+    @user = current_user
+  end
+
+  def reservation
+    @user = current_user
+  end
+
   def edit
     @user = current_user
   end

@@ -25,7 +25,10 @@
       <%= simple_form_for @booking do |f| %>
         <%= f.input :start_datetime, as: :string, required: false, input_html: {class: "datepicker", id:"valeur"} %>
         <%= f.submit class: "button-book"%>
-        <%= f.hidden_field :shop_service_id, value: params[:shop_service_id] %>
+
+        <% @shop_services.each do |shop_service| %>
+          <%= hidden_field_tag 'booking_services[]', shop_service.id %>          
+        <% end %>
       <% end %>
     </div>
   </div>
