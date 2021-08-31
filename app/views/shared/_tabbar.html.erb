@@ -20,12 +20,6 @@
       </div>
   <% end %>
 
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="far fa-comment-dots"></i>
-      <p>Messages</p>
-    </div>
-	</a>
   <%= link_to profile_path, class: "link #{"active-profile" if params[:controller] == "pages" && params[:action] == "profile" }" do %>
     <div class="link-logo">
       <% if user_signed_in? %>

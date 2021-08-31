@@ -8,6 +8,6 @@ class Booking < ApplicationRecord
   validates :start_datetime, presence: true
   validates :end_datetime, presence: true 
 
-  scope :past, -> { where('end_datetime > ?', DateTime.now) }
-  scope :upcoming, -> { where('end_datetime < ?', DateTime.now) }
+  scope :past, -> { where('end_datetime < ?', DateTime.now) }
+  scope :upcoming, -> { where('end_datetime > ?', DateTime.now) }
 end
