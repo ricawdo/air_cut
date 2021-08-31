@@ -10,4 +10,12 @@ class Booking < ApplicationRecord
 
   scope :past, -> { where('end_datetime < ?', DateTime.now) }
   scope :upcoming, -> { where('end_datetime > ?', DateTime.now) }
+
+  def barber_shop
+    shop_services.first.barber_shop
+  end
+
+  def duration_in_minutes
+    ((end_datetime - start_datetime) / 60).round
+  end
 end
