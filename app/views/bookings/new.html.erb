@@ -17,7 +17,7 @@
 
   </div>
 
-  <div id="available-days" type="button" data-controller="available-hours" data-action="">
+  <div id="available-days" type="button">
     <ul>
         <% @barber_shop.available_days.each do |available_day| %>
           <li><%= available_day %></li>
@@ -28,20 +28,26 @@
 
 
   <div class="container">
-    <div class="form-wrapper" id ="calendar" style="width: 400px; margin: 0 auto; inline: true;">
+    <div class="form-wrapper" id ="calendar" style="width: 400px; margin: 0 auto; inline: true;" data-controller="available-hours">
       <h1>Sélectionnez une date</h1>
 
       <%= simple_form_for @booking do |f| %>
-        <%= f.input :start_schedule_time, as: :string, required: false, label: false, input_html: {class: "datepicker", data: { closing_days: @barber_shop.closing_days }}  %>
+        <%= f.input :start_schedule_time, as: :string, required: false, label: false,
+        input_html: {class: "datepicker", data: { closing_days: @barber_shop.closing_days, action: "change->available-hours#showHours", available_hours_target: "dateUser"}}%>
         <%= f.submit class: "button-book"%>
         <%= f.hidden_field :shop_service_id, value: params[:shop_service_id] %>
-        <%= f.input :start_datetime, as: :radio_buttons,
-          collection_wrapper_tag: 'div',
-          collection_wrapper_class: 'category-wrapper',
-          item_wrapper_class: 'category-item',
-          input_html: {class: 'category-selector'},
-          collection: @barber_shop.open_schedules(Date.new(2021, 8, 31)),
-          label_method: ->(schedule) { "#{schedule.hour}:#{schedule.minute}"}%>
+        <div data-available-hours-target="scheduleHours">
+          <% if params[:date_validate]  %>
+            <%= f.input :start_datetime, as: :radio_buttons,
+              collection_wrapper_tag: 'div',
+              collection_wrapper_class: 'category-wrapper-book',
+              item_wrapper_class: 'category-item-book',
+              input_html: {class: 'category-selector'},
+              collection: @barber_shop.open_schedules(Date.parse(params[:date_validate])),
+              label_method: ->(schedule) { "#{schedule.hour}:#{schedule.minute}"}%>
+          <% end %>
+        </div>
+
         <% @shop_services.each do |shop_service| %>
           <%= hidden_field_tag 'booking_services[]', shop_service.id %>
         <% end %>

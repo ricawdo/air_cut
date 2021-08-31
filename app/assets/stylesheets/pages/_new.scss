@@ -45,31 +45,25 @@ p {
   color: white;
 }
 
-.category-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  margin-right: 77px;
+.category-wrapper-book {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
 }
-.category-item {
-  flex: 0 0 30%;
-}
+
 .category-selector {
   position: absolute;
   transform: scale(0);
 }
 .category-selector + label {
-  display: block;
   cursor: pointer;
   box-sizing: border-box;
-  width: 80%;
   font-size: 16 px;
   text-align: center;
-  border: 1px solid $brown;
+  border: 1px solid #D0AB84;
   border-radius: 4px;
   background-color: #444040;
-  margin: 10px;
+  padding: 10px 0;
   color: white;
 }
 .category-selector:checked + label {
@@ -77,5 +71,5 @@ p {
   background-color: $brown !important;
 }
 .form-group label {
-  padding-left: 10px;
+  padding-left: 10px !important;
 }
