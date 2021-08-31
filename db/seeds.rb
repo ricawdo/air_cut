@@ -478,6 +478,16 @@ Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘"
 puts 'Create booking of Danieal...'
 b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 4, 7, 30), end_datetime: DateTime.new(2021, 7, 4, 8, 30), total_amount: 40)
 BookingService.create(booking_id: b_daniela.id, shop_service_id: shop_rasage_crane.id)
-Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user: daniela, booking: b_daniela)
+Review.create(rating: 5, comment: "Très pro, je recommande 🧘", user: benoit, booking: b_daniela)
+Review.create(rating: 4, comment: "Je recommande vivement 🧘", user: daniela, booking: b_daniela)
+Review.create(rating: 4, comment: "Je vais souvent revenir 🧘", user: axel, booking: b_daniela)
+Review.create(rating: 5, comment: "J'aime trop 🧘", user: gwen, booking: b_daniela)
+Review.create(rating: 5, comment: "Allez-y les yeux fermés 🧘", user: rahim, booking: b_daniela)
+Review.create(rating: 5, comment: "J'adore le style 🧘", user: diane, booking: b_daniela)
+Review.create(rating: 5, comment: "La classe 🧘", user: daniela, booking: b_daniela)
+Review.create(rating: 5, comment: "J'aime beaucoup 🧘", user: daniela, booking: b_daniela)
+Review.create(rating: 5, comment: "Je vais revenir c'est certain ! 🧘", user: bruno, booking: b_daniela)
+Review.create(rating: 5, comment: "Toujours aussi bien 🧘", user: ricardo, booking: b_daniela)
+Review.create(rating: 5, comment: "Super ! 🧘", user: dorien, booking: b_daniela)
 
 puts 'Ok bookings and reviews!' # **************************************************************************************

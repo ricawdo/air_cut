@@ -23,7 +23,7 @@
 
 #big-picture-landscape {
   img {
-  width: 350px;
+  width: 326px;
   height: 150px;
   object-fit: cover;
   object-position: center;
@@ -32,20 +32,21 @@
   display: flex;
   border-top-left-radius: 8px 8px;
   border-top-right-radius: 8px 8px;
-  margin-top: 20px;
+  margin-top: 25px;
   }
   #reviews-bs{
     position: absolute;
     right: -2px;
     top: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top-right-radius: 8px 8px;
-    border-bottom-left-radius: 8px 8px;
-    opacity: 0.65;
+    background-color: $brown;
+    border-radius: 15px;
     color: white;
+    padding: 1px 7px;
+    margin: 10px;
   }
       #rating-bs {
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: bold;
         text-align: center;
       }
       #number-reviews-bs{
@@ -72,7 +73,6 @@
 
 #third-img {
   border-top: 2px solid white;
-  border-right: 2px solid white;
 }
 
 #last-img {
@@ -82,9 +82,9 @@
     }
 }
 
-img {
-  width: 86px;
-  height: 86px;
+a img {
+  width: 107px;
+  height: 85px;
   object-fit: cover;
   object-position: center;
 }
@@ -93,18 +93,24 @@ img {
 }
 
 #address-barbershop {
-  border-bottom: 1px solid rgba(172, 172, 172, 0.564);
   padding-bottom: 10px;
   padding-top: 5px;
+  font-size: 16px;
+  margin-left: 12px;
 }
 
 #name-barbershop {
   margin-top: 15px;
   font-weight: bolder;
+  font-size: 22px;
+  margin-left: 12px;
 }
 .one-barbershop {
-  margin-left: -3px;
   position: relative;
+  background-color: #444040;
+  border-radius: 8px;
+  width: 325px;
+  margin-left: 10px;
 }
 
 #fixed-button {
@@ -165,4 +171,33 @@ img {
 
 .close {
   font-size: 40px;
+}
+
+.btn-search-index {
+  background-color: white;
+  margin: 0px 10px;
+  margin-top: 8px;
+  border-radius: 50px;
+  width: 333px;
+}
+
+.algolia-places {
+  width: 70%;
+}
+
+.btn-search-index button {
+  margin-left: 44px;
+}
+
+.ap-input-icon svg {
+  display: none;
+}
+
+.btn-brown1 {
+  color: $brown;
+  margin: 10px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 21px;
+  background-color: white;
 }

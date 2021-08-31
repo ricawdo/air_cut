@@ -1,19 +1,23 @@
-<div class="navbar">
-  <h1>AirCut</h1>
-</div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1611313151697-d626e818dddf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);">
-  <div class="container">
-    <h3>Prenez rendez-vous</h3>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.9)), url(https://www.dealhair.ch/wp-content/uploads/2018/05/pointbarber-dealhair_02.jpg);">
+  <div class="container-home">
+    <div class="navbar">
+      <%= image_tag ("logoAircut.png") %>
+    </div>
+    <h3 class="h3-first">Trouver un </h3>
+    <h3 class="h3-second" style="color: #d0ab84">salon de coiffure ou barbier aux</h3>
+    <h3>alentours</h3>
     <%= form_tag search_path, method: :get, class: "form-inline md-form mr-auto mb-4 form-home" do %>
-      <%= text_field_tag :address,
-        params[:address],
-        class: "form-control mr-sm-2",
-        input_html: {id: "address"},
-        placeholder: "Adresse"
-      %>
-      <%= button_tag(type: "submit", class: "btn-brown btn-brown:hover border-0") do %>
-         <i class="fas fa-search"></i>
-      <% end %>
+      <div class="btn-search-home">
+        <%= text_field_tag :address,
+          params[:address],
+          class: "form-control mr-sm-2",
+          input_html: {id: "address"},
+          placeholder: "Adresse"
+        %>
+        <%= button_tag(type: "submit", class: "btn-brown1 btn-brown:hover border-0") do %>
+          <i class="fas fa-search"></i>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
