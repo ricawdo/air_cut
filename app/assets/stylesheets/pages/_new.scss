@@ -40,3 +40,36 @@ p {
 #title-book {
     margin-top: 130px;
 }
+
+#available-days {
+  color: white;
+}
+
+.category-wrapper-book {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+.category-selector-book + label {
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 16 px;
+  text-align: center;
+  border: 1px solid #D0AB84;
+  border-radius: 4px;
+  background-color: #444040;
+  padding: 10px 0;
+  color: white;
+}
+.category-selector-book:checked + label {
+  color: white !important;
+  background-color: $brown !important;
+}
+.form-group label {
+  padding-left: 10px !important;
+}

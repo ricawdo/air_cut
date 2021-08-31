@@ -1,9 +1,18 @@
 class BookingsController < ApplicationController
   def new
     @user = current_user
-    @booking = Booking.new
     @shop_services = ShopService.where(id: params[:booking_services])
+    @barber_shop = @shop_services.first.barber_shop
+    @booking = Booking.new
     authorize @booking
+    if params[:date_validate]
+      @chosen_date = Date.parse(params[:date_validate])
+      @open_schedules = @barber_shop.open_schedules(@chosen_date)
+    end
+    respond_to do |format|
+      format.html
+      format.text { render partial: 'bookings/form.html', locals: { booking: @booking, shop_services: @shop_services, barber_shop: @barber_shop, open_schedules: @open_schedules, chosen_date: @chosen_date } }
+    end
   end
 
   def create

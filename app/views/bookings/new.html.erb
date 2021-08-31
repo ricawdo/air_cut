@@ -1,5 +1,5 @@
 <div class ="container book">
-  <h1> <%= BarberShop.find_by(params[:barber_shop_id]).name %></h1>
+  <h1><%= @barber_shop.name %></h1>
   <div class="show-services" id="book-services">
 
     <% @shop_services.each do |shop_service| %>
@@ -17,20 +17,19 @@
 
   </div>
 
-
-  <div class="container">
-    <div class="form-wrapper" id ="calendar" style="width: 400px; margin: 0 auto; inline: true;">
-      <h1>Sélectionnez une date et une heure</h1>
-
-      <%= simple_form_for @booking do |f| %>
-        <%= f.input :start_datetime, as: :string, required: false, input_html: {class: "datepicker", id:"valeur"} %>
-        <%= f.submit class: "button-book"%>
-
-        <% @shop_services.each do |shop_service| %>
-          <%= hidden_field_tag 'booking_services[]', shop_service.id %>          
+  <div id="available-days" type="button">
+    <ul>
+        <% @barber_shop.available_days.each do |available_day| %>
+          <li><%= available_day %></li>
         <% end %>
-      <% end %>
-    </div>
+    </ul>
   </div>
 
+
+
+  <div class="container">
+    <div class="form-wrapper" id="calendar" style="width: 400px; margin: 0 auto; inline: true;" data-controller="available-hours">
+      <%= render 'bookings/form', booking: @booking, barber_shop: @barber_shop, shop_services: @shop_services, chosen_date: nil, open_schedules: nil %>
+    </div>
+  </div>
 </div>

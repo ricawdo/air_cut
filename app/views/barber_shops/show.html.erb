@@ -116,7 +116,7 @@
       <div class="opening">
           <% @barber_shop.opening_days.each do |day| %>
         <div class="opening-hours">
-            <p><%= day.capitalize %> : </p>  <p>   <%= @barber_shop.opening_hours %></p>
+            <p><%= Date::DAYNAMES[day].capitalize %> : </p>  <p>   <%= @barber_shop.opening_hours[0] %> - <%=  @barber_shop.opening_hours[-1] %></p>
 
         </div>
           <% end %>
