@@ -10,7 +10,7 @@ class Booking < ApplicationRecord
   def closed_datetimes
     closed_times = [start_datetime]
     date = start_datetime
-    until date == end_datetime do
+    until date >= end_datetime do
       closed_times << date += 30.minute
     end
     closed_times = closed_times.map{|cl| cl.to_datetime}
