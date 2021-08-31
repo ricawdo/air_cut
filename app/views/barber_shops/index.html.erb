@@ -13,7 +13,8 @@
         </button>
         <div class="map" id="map" style="height: 98vh; width: 94vw;"
           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-          data-markers="<%= @markers.to_json %>">
+          data-markers="<%= @markers.to_json %>"
+          data-destination="<%= params[:destination] %>">
       </div>
       </div>
     </div>
