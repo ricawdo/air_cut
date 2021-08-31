@@ -1,10 +1,10 @@
 
 <%= render 'shared/carousel' %>
 <div class="card-info-barber">
-  <div class="info-barber">
     <%= link_to url_for(:back) do %>
-      <i class="fas fa-arrow-circle-left"></i>
+      <i class="fas fa-arrow-left" id="arrow-back"></i>
     <% end %>
+  <div class="info-barber">
     <h2><%= @barber_shop.name %></h2>
     <p><i class="fas fa-home"></i> <%= @barber_shop.address %></p>
   </div>

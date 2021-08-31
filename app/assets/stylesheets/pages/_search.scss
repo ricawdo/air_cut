@@ -17,8 +17,8 @@
   text-align: center;
   padding: 10px 4px;
   border-radius: 8px;
-  background-color: white;
-  font-weight: bold;
+  background-color:#444040;
+  color: white;
 }
 
 .category-item-service label {
@@ -41,16 +41,16 @@ label img {
   color: white;
   position: absolute;
   top: 20%;
-  left: 30%;
+  left: 15%;
 }
 
 .category-wrapper h3 {
   color: white;
   position: absolute;
+  font-size: 35px;
   top: 4%;
-  left: 30%;
-  padding-left: 50px;
-  width: -webkit-fill-available;
+  left: 35%;
+  width: 115%;
 }
 
 .category-item-homme {
@@ -86,4 +86,18 @@ label img {
   width: 208%;
   text-align: center;
   font-size: 13px;
+  margin-top: 30px;
+}
+
+.prestation-homme-femme {
+  margin-bottom: 120px;
+  width: 150%;
+  font-size: 35px;
+}
+
+.fa-arrow-left {
+  color: $brown;
+  font-size: 18px;
+  position: absolute;
+  top: 0px;
 }
