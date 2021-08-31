@@ -4,8 +4,7 @@
       <%= image_tag ("logoAircut.png") %>
     </div>
     <h3 class="h3-first">Trouver un </h3>
-    <h3 class="h3-second" style="color: #d0ab84">salon de coiffure ou barbier aux</h3>
-    <h3>alentours</h3>
+    <h3 id="banner-typed-text" class="h3-second" style="color: #d0ab84"></h3>
     <%= form_tag search_path, method: :get, class: "form-inline md-form mr-auto mb-4 form-home" do %>
       <div class="btn-search-home">
         <%= text_field_tag :address,

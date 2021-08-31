@@ -4,20 +4,18 @@
       <h2>Une coupe pour ?</h2>
       <div class="gender_tag">
         <div class="category-item-homme">
-            <%= radio_button("service", "gender", "homme", class: "category-selector")%>
-            <label data-action="click->steps#showServicehomme" for="gender" id="homme"><%= image_tag 'icons/male.png' %></label>
-            <p>Un homme</p>
+            <%= radio_button("service", "gender", "homme", class: "category-selector-gender")%>
+            <label data-action="click->steps#showServicehomme" for="gender" id="homme"><%= image_tag 'icons/male.svg' %><p>Un homme</p></label>
         </div>
         <div class="category-item-femme">
-            <%= radio_button("service", "gender", "femme", class: "category-selector") %>
-            <label data-action="click->steps#showServicefemme" for="gender" id="femme"><%= image_tag 'icons/woman-2.png' %></label>
-            <p>Une femme</p>
+            <%= radio_button("service", "gender", "femme", class: "category-selector-gender") %>
+            <label data-action="click->steps#showServicefemme" for="gender" id="femme"><%= image_tag 'icons/woman-2.png' %><p>Une femme</p></label>
         </div>
         <%= hidden_field_tag("gender", "homme", options = {})%>
       </div>
     </div>
     <div class="services inactive" id="services_femme" data-steps-target="servicefemme">
-      <%= link_to url_for(:back) do %>
+      <%= link_to search_path(address: params[:address], commit: params[:commit]) do %>
         <i class="fas fa-arrow-left"></i>
     <% end %>
       <div class="prestation-homme-femme">
@@ -30,10 +28,9 @@
             <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
         </div>
       <% end %>
-      <%= link_to "Retour", search_path(address: params[:address], commit: params[:commit]), class: "btn-brown btn-search" %>
     </div>
     <div class="services inactive" id="services_homme" data-steps-target="servicehomme">
-      <%= link_to url_for(:back) do %>
+      <%= link_to search_path(address: params[:address], commit: params[:commit]) do %>
         <i class="fas fa-arrow-left"></i>
       <% end %>
       <div class="prestation-homme-femme">
@@ -45,7 +42,6 @@
             <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
         </div>
       <% end %>
-      <%= link_to "Retour", search_path(address: params[:address], commit: params[:commit]), class: "btn-brown btn-search" %>
     </div>
     <%= hidden_field_tag("service", "service", options = {}) %>
     <%= hidden_field_tag("destination", @destination, options = {}) %>
