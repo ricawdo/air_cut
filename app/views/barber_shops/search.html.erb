@@ -5,11 +5,13 @@
         <div class="gender_tag">
           <div class="category-item-homme">
               <%= radio_button("service", "gender", "homme", class: "category-selector")%>
-              <label data-action="click->steps#showServicehomme" for="gender" id="homme"><%= image_tag 'https://image.flaticon.com/icons/png/512/641/641695.png' %></label>
+              <label data-action="click->steps#showServicehomme" for="gender" id="homme"><%= image_tag 'icons/male.png' %></label>
+              <p>Un homme</p>
           </div>
           <div class="category-item-femme">
               <%= radio_button("service", "gender", "femme", class: "category-selector") %>
-              <label data-action="click->steps#showServicefemme" for="gender" id="femme"><%= image_tag 'https://image.flaticon.com/icons/png/512/2922/2922579.png' %></label>
+              <label data-action="click->steps#showServicefemme" for="gender" id="femme"><%= image_tag 'icons/woman-2.png' %></label>
+              <p>Une femme</p>
           </div>
           <%= hidden_field_tag("gender", "homme", options = {})%>
         </div>
@@ -34,14 +36,13 @@
                   <%= radio_button("service", "name", "#{service.name}", class: "category-selector") %>
                   <label data-action="click->steps#showSearch" for="name" id="<%= service.name %>"><%= service.name %></label>
               </div>
-            <% end %>          
+            <% end %>
             <%= link_to "Retour", search_path(address: params[:address], commit: params[:commit]), class: "btn-brown btn-search" %>
           </div>
         <%= hidden_field_tag("service", "service", options = {}) %>
         <%= hidden_field_tag("destination", @destination, options = {}) %>
       <div data-steps-target="search" class='inactive'>
-        <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0", id: "submit_search"%>  
+        <%= submit_tag "Rechercher", class: "btn-brown btn-brown:hover border-0", id: "submit_search"%>
       </div>
    </div >
    <% end %>
-      
