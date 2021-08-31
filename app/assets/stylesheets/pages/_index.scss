@@ -6,6 +6,7 @@
 @import "new";
 @import "profile";
 @import "edit";
+@import "reservation";
 
 
 .container {
@@ -134,8 +135,34 @@ img {
 }
 
 .modal-body {
-  height : 325px;
+  // height : 325px;
+  padding: 2px;
   #map {
-    height: 100vh;
+    height: 98vh;
   }
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: rgb(0, 0, 0);
+  background-clip: padding-box;
+  border: 0px solid rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  outline: 0;
+}
+
+.modal-body button {
+  color: white;
+  position: absolute;
+  top: 1%;
+  z-index: 1;
+  right: 5%;
+}
+
+.close {
+  font-size: 40px;
 }

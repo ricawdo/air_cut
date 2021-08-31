@@ -1,0 +1,30 @@
+.container-booking {
+  background-color: #444040;
+    border: 2px solid #D0AB84;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin: 42px;
+}
+
+.booking-prestation {
+  border-bottom: 1px solid $brown;
+}
+
+.booking-prestation h3, .booking-shop h3 {
+  margin-top: 5px;
+  font-size: 20px;
+  color: #d0ab84;
+  text-transform: uppercase;
+}
+
+.title-reservation {
+  text-align: center;
+  color: $brown;
+}
+
+.prestation-reservation {
+  border-bottom: 1px solid $brown;
+  padding: 2px 10px;
+  margin: 10px 0px;
+}
+

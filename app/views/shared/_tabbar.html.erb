@@ -6,26 +6,20 @@
       </div>
   <% end %>
 
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="far fa-heart"></i>
-      <p>Favoris</p>
-    </div>
-	</a>
+  <%= link_to favorie_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "favorie" }" do %>
+      <div class="link-logo">
+        <i class="far fa-heart"></i>
+        <p>Favoris</p>
+      </div>
+  <% end %>
 
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="fas fa-cut"></i>
+  <%= link_to reservation_path, class: "link #{"active-btn" if params[:controller] == "pages" && params[:action] == "reservation" }" do %>
+      <div class="link-logo">
+        <i class="fas fa-cut"></i>
       <p>Réservations</p>
-    </div>
-	</a>
+      </div>
+  <% end %>
 
-	<a href="#" class="link">
-    <div class="link-logo">
-      <i class="far fa-comment-dots"></i>
-      <p>Messages</p>
-    </div>
-	</a>
   <%= link_to profile_path, class: "link #{"active-profile" if params[:controller] == "pages" && params[:action] == "profile" }" do %>
     <div class="link-logo">
       <% if user_signed_in? %>
