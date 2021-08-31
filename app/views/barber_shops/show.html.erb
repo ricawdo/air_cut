@@ -90,7 +90,7 @@
         <div class="notification">
           <div class="notification-content">
             <p><%= review.user.first_name %> <%= review.user.last_name %></p>
-            <p><i class="fas fa-star"> </i> <%= review.rating %></p>
+            <p><i class="fas fa-star"> </i> <%= review.rating %> | <%= l(review.booking.end_datetime, format: "%d %B %Y") %></p>
           <p id='comment-user'><i>"<%= review.comment %>"</i></p>
           </div>
         </div>
@@ -108,8 +108,8 @@
     </div>
     <p class="underline"></p>
     <div class="btn-service d-flex">
-      <p><%= @barber_shop.phone_number %> - </p>
-      <a class="btn btn-flat" href="#"><i class="fas fa-phone-alt"> </i>Appeler</a>
+      <p><i class="fas fa-phone-alt"> </i> - <%= @barber_shop.phone_number %> </p>
+      <a class="btn btn-flat" href="#"> Appeler</a>
     </div>
     <p class="underline"></p>
     <br>
