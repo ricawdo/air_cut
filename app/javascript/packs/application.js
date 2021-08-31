@@ -27,6 +27,7 @@ import "controllers"
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from "../plugins/init_autocomplete";
+import { loadDynamicBannerText } from '../plugins/home';
 
 
 // Internal imports, e.g:
@@ -44,4 +45,6 @@ document.addEventListener('turbolinks:load', () => {
   if (addressInput) {
     initAutocomplete();
   }
+
+  loadDynamicBannerText();
 });

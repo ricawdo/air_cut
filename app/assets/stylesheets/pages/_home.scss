@@ -1,12 +1,7 @@
-.navbar {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .navbar h1 {
   font-size: 30px;
   color: $brown;
+  padding: 10px;
 }
 
 body {
@@ -19,17 +14,23 @@ body {
   flex-direction: column;
 }
 
-.form-control {
-  width: 70%;
-  height: 27px;
-  margin-left: 39px;
-}
-
-.container h3 {
-  font-size: 25px;
+.container-home h3 {
+  font-size: 48px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  margin-left: 61px;
+  margin-left: 49px;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+.h3-first {
+  font-size: 48px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-left: 49px;
+  margin-top: 40px;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
 
 .algolia-places {
@@ -37,5 +38,36 @@ body {
 }
 
 #address {
-  width: 84%;
+  position: relative;
+  vertical-align: top;
+  margin-left: 21px;
+  border: none;
+}
+
+.btn-search-home {
+  background-color: white;
+  margin: 20px 21px;
+  border-radius: 50px;
+  width: 333px;
+}
+
+.btn-search-home button {
+  margin-left: 44px;
+}
+
+.ap-input-icon svg {
+  display: none;
+}
+
+.navbar img {
+  width: 32%;
+}
+
+.btn-brown1 {
+  color: $brown;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 21px;
+  background-color: white;
 }
