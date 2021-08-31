@@ -14,41 +14,45 @@
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-coiffures" role="tabpanel" aria-labelledby="pills-coiffures-tab">
     <% @user.bookings.past.each do |booking| %>
-      <% booking.booking_services.each do |booking_service| %>
         <div class="container-booking">
           <div class="booking-prestation">
-            <h3><%= booking_service.shop_service.service.name %></h3>
-            <p><%= booking_service.booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking_service.booking.end_datetime.strftime("%d/%m/%y") %></p>
-            <p><i class="far fa-clock"></i>  <%= booking_service.shop_service.duration %>mn</p>
-            <p>prix:  <%= booking_service.booking.total_amount %> €</p>
+            <% booking.booking_services.each do |booking_service| %>
+              <div class="prestation-reservation">
+                <h3><%= booking_service.shop_service.service.name %></h3>
+                <p><i class="far fa-clock"></i>  <%= booking_service.shop_service.duration %>mn</p>
+              </div>
+            <% end %>
+            <p><%= booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking.start_datetime.strftime("%R") %></p>
+            <p>Total:  <%= booking.total_amount %> €</p>
           </div>
           <div class="booking-shop">
-              <h3><%= booking_service.shop_service.barber_shop.name %></h3>
-              <p><%= booking_service.shop_service.barber_shop.address %></p>
-              <p> <i class="fas fa-phone-alt"> </i> <%= booking_service.shop_service.barber_shop.phone_number %></p>
+              <h3><%= booking.barber_shop.name %></h3>
+              <p><%= booking.barber_shop.address %></p>
+              <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %></p>
           </div>
         </div>
-      <% end %>
     <% end %>
   </div>
   <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
     <div class="portfolio_wrap">
     <% @user.bookings.upcoming.each do |booking| %>
-      <% booking.booking_services.each do |booking_service| %>
         <div class="container-booking">
           <div class="booking-prestation">
-            <h3><%= booking_service.shop_service.service.name %></h3>
-            <p><%= booking_service.booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking_service.booking.end_datetime.strftime("%d/%m/%y") %></p>
-            <p><i class="far fa-clock"></i>  <%= booking_service.shop_service.duration %>mn</p>
-            <p>prix:  <%= booking_service.booking.total_amount %> €</p>
+            <% booking.booking_services.each do |booking_service| %>
+              <div class="prestation-reservation">
+                <h3><%= booking_service.shop_service.service.name %></h3>
+                <p><i class="far fa-clock"></i>  <%= booking_service.shop_service.duration %>mn</p>
+              </div>
+            <% end %>
+            <p><%= booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking.start_datetime.strftime("%R") %></p>
+            <p>Total:  <%= booking.total_amount %> €</p>
           </div>
           <div class="booking-shop">
-              <h3><%= booking_service.shop_service.barber_shop.name %></h3>
-              <p><%= booking_service.shop_service.barber_shop.address %></p>
-              <p> <i class="fas fa-phone-alt"> </i> <%= booking_service.shop_service.barber_shop.phone_number %></p>
+              <h3><%= booking.barber_shop.name %></h3>
+              <p><%= booking.barber_shop.address %></p>
+              <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %></p>
           </div>
         </div>
-      <% end %>
     <% end %>
     </div>
   </div>
