@@ -164,9 +164,10 @@
   height: 200px;
 }
 
-.fa-arrow-circle-left {
+#arrow-back {
   font-size: 20px;
   color: black;
+  margin-top: 10px;
 }
 
 .info-barber p {
@@ -192,4 +193,8 @@
 
 .fa-phone-alt {
   margin-right: 5px;
+}
+
+.info-barber {
+  text-align: center;
 }
