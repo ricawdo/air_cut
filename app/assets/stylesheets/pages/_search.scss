@@ -15,7 +15,7 @@
   box-sizing: border-box;
   width: 100%;
   text-align: center;
-  padding: 10px 4px;
+  padding: 13px 22px;
   border-radius: 8px;
   background-color:#444040;
   color: white;
@@ -56,13 +56,13 @@ label img {
 .category-item-homme {
   position: absolute;
   top: 30%;
-  left: 14%;
+  left: 5%;
 }
 
 .category-item-femme {
   position: absolute;
   top: 30%;
-  left: 60%;
+  left: 53%;
 }
 
 .inactive {
@@ -100,4 +100,30 @@ label img {
   font-size: 18px;
   position: absolute;
   top: 0px;
+}
+
+#femme p, #homme p {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+#homme {
+  color: white;
+}
+
+.category-selector-gender {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector-gender + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: 26px 33px;
+  border-radius: 8px;
+  background-color:#444040;
+  color: white;
 }

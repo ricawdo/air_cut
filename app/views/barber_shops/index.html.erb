@@ -20,6 +20,22 @@
     </div>
   </div>
 </div>
+    <%= form_tag barber_shops_path, method: :get, class: "form-inline md-form mr-auto mb-4" do %>
+      <div class="btn-search-index">
+        <%= text_field_tag :address,
+          params[:address],
+          class: "form-control mr-sm-2",
+          input_html: {id: "address"},
+          placeholder: "Adresse",
+          value: @address_geocoded
+          %>
+          <%= hidden_field_tag "latitude" %>
+          <%= hidden_field_tag "longitude" %>
+          <%= button_tag(type: "submit", class: "btn-brown1 btn-brown:hover border-0") do %>
+            <i class="fas fa-search"></i>
+        <% end %>
+      </div>
+    <% end %>
     <h1>
       <%= @barber_shops.size %> Résultats:
     </h1>
@@ -35,11 +51,9 @@
         <% end %>
           <div id="reviews-bs">
             <div id="rating-bs">
-               <%= (barber_shop.reviews.pluck(:rating).sum / barber_shop.reviews.pluck(:rating).count.to_f).round(1)%>⭐️
+               <%= (barber_shop.reviews.pluck(:rating).sum / barber_shop.reviews.pluck(:rating).count.to_f).round(1)%> ⭐️
             </div>
-            <div id="number-reviews-bs">
-              <%= barber_shop.reviews.pluck(:rating).count%> reviews
-            </div>
+
           </div>
         </div>
         <div id="small-picture-square">
@@ -61,13 +75,6 @@
           <% if barber_shop.photos.attached?%>
             <%= link_to barber_shop_path(barber_shop) do %>
               <%= cl_image_tag barber_shop.portfolios.third.key %>
-            <% end %>
-          <% end %>
-          </div>
-          <div id="last-img">
-          <% if barber_shop.photos.attached?%>
-            <%= link_to barber_shop_path(barber_shop) do %>
-              <%= cl_image_tag barber_shop.portfolios.fourth.key %>
             <% end %>
           <% end %>
           </div>

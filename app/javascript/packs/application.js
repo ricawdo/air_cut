@@ -28,6 +28,7 @@ import "bootstrap";
 import { initFlatpickr } from "../plugins/flatpickr";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from "../plugins/init_autocomplete";
+import { loadDynamicBannerText } from '../plugins/home';
 
 
 // Internal imports, e.g:
@@ -47,4 +48,6 @@ document.addEventListener('turbolinks:load', () => {
   if (addressInput) {
     initAutocomplete();
   }
+
+  loadDynamicBannerText();
 });
