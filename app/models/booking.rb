@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
   has_many :services, through: :shop_services
   has_many :reviews, dependent: :destroy
 
+  attr_accessor :start_schedule_time
 
   def closed_datetimes
     closed_times = [start_datetime]

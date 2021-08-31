@@ -4,24 +4,25 @@ import flatpickr from "flatpickr";
 
 const initFlatpickr = () => {
 
-  const dataDay = document.getElementById("booking_start_datetime");
-  const closingDays = JSON.parse(dataDay.dataset.closingDays);
+  const dataDay = document.querySelector(".datepicker");
+  if (dataDay) {
 
-  flatpickr(".datepicker", {
-    enableTime: false,
-    allowInput: true,
-    altInput: true,
-    disable: [
-      function (date) {
-        return closingDays.includes(date.getDay());
+    const closingDays = JSON.parse(dataDay.dataset.closingDays);
+
+    flatpickr(".datepicker", {
+      enableTime: false,
+      allowInput: true,
+      altInput: true,
+      disable: [
+        function (date) {
+          return closingDays.includes(date.getDay());
+        }
+      ],
+      locale: {
+        firstDayOfWeek: 1
       }
-    ],
-    locale: {
-      firstDayOfWeek: 1
-    }
-  });
-
-
+    });
+  }
 }
 
 
