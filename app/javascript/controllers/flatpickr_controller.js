@@ -1,13 +1,11 @@
+import { Controller } from "stimulus";
 import flatpickr from "flatpickr";
 
+export default class extends Controller {
+  static targets = ["datepickr"]
 
-
-const initFlatpickr = () => {
-
-  const dataDay = document.querySelector(".datepicker");
-  if (dataDay) {
-
-    const closingDays = JSON.parse(dataDay.dataset.closingDays);
+  connect() {
+    const closingDays = JSON.parse(this.datepickrTarget.dataset.closingDays);
 
     flatpickr(".datepicker", {
       enableTime: false,
@@ -22,9 +20,6 @@ const initFlatpickr = () => {
         firstDayOfWeek: 1
       }
     });
+
   }
 }
-
-
-
-export { initFlatpickr };
