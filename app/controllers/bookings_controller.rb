@@ -10,11 +10,13 @@ class BookingsController < ApplicationController
     @user = current_user
     @booking = Booking.new(booking_params)
     authorize @booking
-    @shop_service = ShopService.find(params[:booking][:shop_service_id])
+    @shop_services = ShopService.where(id: params[:booking_services])
     @booking.user = current_user
-    @booking.end_datetime = @booking.start_datetime + @shop_service.duration.minutes
+    @booking.end_datetime = @booking.start_datetime + @shop_services.sum(:duration).minutes
     if @booking.save
-      @booking_service = BookingService.create(booking: @booking, shop_service: @shop_service)
+      @shop_services.each do |shop_service|
+        @booking_service = BookingService.create(booking: @booking, shop_service: shop_service)
+      end
       @booking.update(total_amount: @booking.shop_services.sum(:price))
       redirect_to booking_path(@booking)
     else

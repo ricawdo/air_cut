@@ -4,17 +4,17 @@
 
 <ul class="nav nav-pills mb-1 d-flex justify-content-around" id="pills-tab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="pills-coiffures-tab" data-toggle="pill" href="#pills-coiffures" type="button" role="tab" aria-controls="pills-coiffures" aria-selected="true">Passé</a>
+    <a class="nav-link" id="pills-portfolio-tab" data-toggle="pill" href="#pills-portfolio" type="button" role="tab" aria-controls="pills-portfolio" aria-selected="false">À venir</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" id="pills-portfolio-tab" data-toggle="pill" href="#pills-portfolio" type="button" role="tab" aria-controls="pills-portfolio" aria-selected="false">À venir</a>
+    <a class="nav-link active" id="pills-coiffures-tab" data-toggle="pill" href="#pills-coiffures" type="button" role="tab" aria-controls="pills-coiffures" aria-selected="true">Passé</a>
   </li>
 </ul>
 
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-coiffures" role="tabpanel" aria-labelledby="pills-coiffures-tab">
     <% @user.bookings.past.each do |booking| %>
-      <% booking.bookings_services.each do |booking_service| %>
+      <% booking.booking_services.each do |booking_service| %>
         <div class="container-booking">
           <div class="booking-prestation">
             <h3><%= booking_service.shop_service.service.name %></h3>
@@ -34,7 +34,7 @@
   <div class="tab-pane fade" id="pills-portfolio" role="tabpanel" aria-labelledby="pills-portfolio-tab">
     <div class="portfolio_wrap">
     <% @user.bookings.upcoming.each do |booking| %>
-      <% booking.bookings_services.each do |booking_service| %>
+      <% booking.booking_services.each do |booking_service| %>
         <div class="container-booking">
           <div class="booking-prestation">
             <h3><%= booking_service.shop_service.service.name %></h3>
