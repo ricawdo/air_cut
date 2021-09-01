@@ -17,7 +17,7 @@
 
 .service-details {
   border-radius: 8px;
-  margin: 20px 15px;
+  margin: 10px 15px;
   color: white;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +63,7 @@
   color: #D0AB84;
   padding: 7px;
   border-bottom: 1px solid #c8a767;
-  background-color: transparent;
+  background-color: $gray;
 }
 
 .carousel-item img {
@@ -76,9 +76,9 @@
   border: 0.5px solid $brown;
   box-shadow: 0 1px 3px rgba(0,0,0,0.4);
   opacity: 0.3;
-  width: 85%;
+  width: 85% !important;
   margin-left: 25px;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .realisations img {
@@ -195,4 +195,14 @@
 
 .info-barber {
   text-align: center;
+}
+
+#price-show {
+  font-weight: bold;
+  color: #d0ab84;
+  font-size: 25px;
+}
+
+#note-moyenne-gras {
+  font-size: 30px;
 }

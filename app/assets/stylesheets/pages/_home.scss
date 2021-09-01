@@ -42,6 +42,15 @@ body {
   vertical-align: top;
   margin-left: 21px;
   border: none;
+  &:focus {
+      outline: none;
+  }
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .btn-search-home {
@@ -49,6 +58,8 @@ body {
   margin: 20px 21px;
   border-radius: 50px;
   width: 333px;
+  position: absolute;
+  top: 41%;
 }
 
 .btn-search-home button {
