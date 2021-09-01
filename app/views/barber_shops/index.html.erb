@@ -53,7 +53,6 @@
             <div id="rating-bs">
                <%= (barber_shop.reviews.pluck(:rating).sum / barber_shop.reviews.pluck(:rating).count.to_f).round(1).to_s.gsub(/\.0+/, '')%> <i class="fas fa-star"></i>
             </div>
-
           </div>
         </div>
         <div id="small-picture-square">
