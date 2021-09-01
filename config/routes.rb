@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   patch "/users/:id", to: 'pages#update'
 
   resources :barber_shops, only: [:index, :show]
-  resources :bookings, only: [:new, :create, :show]
+  resources :bookings, only: [:new, :create, :show] do 
+    resources :reviews, only: [ :new, :create ]
+  end
 end

@@ -28,7 +28,7 @@
           <div class="booking-shop">
               <h3><%= booking.barber_shop.name %></h3>
               <p><%= booking.barber_shop.address %></p>
-              <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %></p>
+              <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %>  <%= link_to 'Ajouter un avis', new_booking_review_path(booking), class: "btn-brown"%></p>
           </div>
         </div>
     <% end %>
@@ -50,7 +50,7 @@
           <div class="booking-shop">
               <h3><%= booking.barber_shop.name %></h3>
               <p><%= booking.barber_shop.address %></p>
-              <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %></p>
+              <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %></p> 
           </div>
         </div>
     <% end %>
