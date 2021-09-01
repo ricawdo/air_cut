@@ -1,5 +1,7 @@
-<%= simple_form_for [ @booking, @review ] do |f| %>
-  <%= f.input :rating %>
-  <%= f.input :comment %>
-  <%= f.submit "Ajouter l'avis", class: "btn-brown" %>
-<% end %>
+<div class="container-edit-page">
+  <%= simple_form_for [ @booking, @review ] do |f| %>
+    <%= f.input :rating %>
+    <%= f.input :comment %>
+    <%= f.submit "Ajouter l'avis", class: "btn-brown" %>
+  <% end %>
+</div>
