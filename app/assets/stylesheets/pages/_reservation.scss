@@ -1,9 +1,10 @@
 .container-booking {
   background-color: #4242429e;
-    border: 2px solid #D0AB84;
-    border-radius: 10px;
-    padding: 0px 10px;
-    margin: 42px;
+  border: 2px solid #D0AB84;
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin: 25px 23px;
+  height: 60vh;
 }
 
 .booking-prestation {
@@ -28,3 +29,40 @@
   margin: 10px 0px;
 }
 
+.btn-reservation .btn-brown {
+  color: white;
+  padding: 9px 30px;
+  border-radius: 22px;
+  font-weight: bold;
+  background-color: $brown;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.title-reservation h1 {
+  margin: 27px 0px;
+}
+
+.booking-prestation h3, .booking-shop h3 {
+  margin-top: 5px;
+  font-size: 30px;
+  color: #d0ab84;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.booking-prestation p, .booking-shop p {
+  margin-top: 5px;
+  font-size: 21px;
+}
+
+.nav-item-reservation  a {
+  font-size: 23px;
+  color: white;
+}
+.nav-link-reservation.active {
+  border-bottom: 1px solid $brown;
+  text-decoration: none;
+}
+  
