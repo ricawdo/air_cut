@@ -157,6 +157,16 @@ p {
   margin: 39px 70px;
 }
 
+.total-new {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.total-price-duration {
+  font-size: 20px;
+  font-weight: bold;
+}
 .container-booking-final {
   background-color: #4242429e;
   border: 2px solid #D0AB84;

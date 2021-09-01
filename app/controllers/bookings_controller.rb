@@ -2,6 +2,8 @@ class BookingsController < ApplicationController
   def new
     @user = current_user
     @shop_services = ShopService.where(id: params[:booking_services])
+    @total_duration = @shop_services.map{|shop_service| shop_service.duration}.sum
+    @total_price = @shop_services.map{|shop_service| shop_service.price}.sum
     @barber_shop = @shop_services.first.barber_shop
     @booking = Booking.new
     authorize @booking
