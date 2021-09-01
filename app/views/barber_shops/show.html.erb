@@ -39,15 +39,15 @@
               <p><%= shop_service.description %></p>
             </div>
             <div class="text-right" id="text-right-card">
-              <p><strong><%= shop_service.price %> €</strong></p>
+              <p id="price-show"><strong><%= shop_service.price %> €</strong></p>
               <p><i class="far fa-clock"></i>  <%= shop_service.duration %>mn</p>
             </div>
           </div>
         </label>
-        <p class="underline"></p>
+        <div class="underline"></div>
       <% end %>
       <%= button_tag(type: "submit", class: "btn-brown2 btn-brown:hover border-0") do %>
-         Réserver
+         Reserver
       <% end %>
     <% end %>
 
@@ -68,7 +68,7 @@
       <div class="moyenne-rating">
         <div class="moyenne">
           <p>Note moyenne</p>
-          <p> <%= (@barber_shop.reviews.pluck(:rating).sum / @barber_shop.reviews.pluck(:rating).count.to_f).round(1)%>/5</p>
+          <p id="note-moyenne-gras"> <%= (@barber_shop.reviews.pluck(:rating).sum / @barber_shop.reviews.pluck(:rating).count.to_f).round(1)%>/5</p>
           <p> <%= @barber_shop.reviews.pluck(:rating).count %> <i class="far fa-comment-dots"></i></p>
 
         </div>

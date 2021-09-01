@@ -142,3 +142,14 @@ p {
 #new_review input {
   margin-left: 114px;
 }
+
+.total-new {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.total-price-duration {
+  font-size: 20px;
+  font-weight: bold;
+}
