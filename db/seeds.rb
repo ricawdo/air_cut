@@ -13,106 +13,106 @@ puts '>> Clients...' # *********************************************************
 
 puts 'Create Wadi...'
 wadi = User.create(first_name: "Wadi", last_name: "Boom", email: "wadi@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
-wadi_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630263386/22159093_353860515062143_2483913212299313152_n_hgnpmm.png')
-wadi.photo.attach(io: wadi_photo, filename: 'wadi.png', content_type: 'image/png')
+# wadi_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630263386/22159093_353860515062143_2483913212299313152_n_hgnpmm.png')
+# wadi.photo.attach(io: wadi_photo, filename: 'wadi.png', content_type: 'image/png')
 
 puts 'Create Dustin...'
 dustin = User.create(first_name: "Dustin", last_name: "Stender", email: "dustin@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
-dustin_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189270/PortraitsLeWagon_0721_By_BenoitBillard-285_plwizk.jpg')
-dustin.photo.attach(io: dustin_photo, filename: 'dustin.png', content_type: 'image/png')
+# dustin_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189270/PortraitsLeWagon_0721_By_BenoitBillard-285_plwizk.jpg')
+# dustin.photo.attach(io: dustin_photo, filename: 'dustin.png', content_type: 'image/png')
 
-# puts 'Create Amandine...'
-# amandine = User.create(first_name: "Amandine", last_name: "Arnould", email: "amandine@gmail.com", phone_number: "0673869727", password: "123456", gender: "femme", role: "client")
+puts 'Create Amandine...'
+amandine = User.create(first_name: "Amandine", last_name: "Arnould", email: "amandine@gmail.com", phone_number: "0673869727", password: "123456", gender: "femme", role: "client")
 # amandine_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189712/PortraitsLeWagon_0721_By_BenoitBillard-308_v4wmcm.jpg')
 # amandine.photo.attach(io: amandine_photo, filename: 'amandine.png', content_type: 'image/png')
 
-# puts 'Create Lydia...'
-# lydia = User.create(first_name: "Lydia", last_name: "Seyler", email: "lydia@gmail.com", phone_number: "0673869727", password: "123456", gender: "femme", role: "client")
+puts 'Create Lydia...'
+lydia = User.create(first_name: "Lydia", last_name: "Seyler", email: "lydia@gmail.com", phone_number: "0673869727", password: "123456", gender: "femme", role: "client")
 # lydia_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189877/PortraitsLeWagon_0721_By_BenoitBillard-314_idekzc.jpg')
 # lydia.photo.attach(io: lydia_photo, filename: 'lydia.png', content_type: 'image/png')
 
-# puts 'Create Bene...'
-# bene = User.create(first_name: "Bene", last_name: "Nolte", email: "bene@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
+puts 'Create Bene...'
+bene = User.create(first_name: "Bene", last_name: "Nolte", email: "bene@gmail.com", phone_number: "0673869727", password: "123456", gender: "homme", role: "client")
 # bene_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189973/PortraitsLeWagon_0721_By_BenoitBillard-326_nnqods.jpg')
 # bene.photo.attach(io: bene_photo, filename: 'bene.png', content_type: 'image/png')
 
-# puts 'Create Andréa...'
-# pandrea = User.create(first_name: "Andréa", last_name: "Prouvost", email: "pandrea@gmail.com", phone_number: "0673869727", password: "123456", gender: "femme", role: "client")
+puts 'Create Andréa...'
+pandrea = User.create(first_name: "Andréa", last_name: "Prouvost", email: "pandrea@gmail.com", phone_number: "0673869727", password: "123456", gender: "femme", role: "client")
 # pandrea_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189973/PortraitsLeWagon_0721_By_BenoitBillard-326_nnqods.jpg')
 # pandrea.photo.attach(io: pandrea_photo, filename: 'pandrea.png', content_type: 'image/png')
 
-# puts 'Create Pierre...'
-# bpierre = User.create(first_name: "Pierre", last_name: "Bride", email: "bpierre@gmail.com", phone_number: "0648398674", password: "123456", gender: "homme", role: "client")
+puts 'Create Pierre...'
+bpierre = User.create(first_name: "Pierre", last_name: "Bride", email: "bpierre@gmail.com", phone_number: "0648398674", password: "123456", gender: "homme", role: "client")
 # bpierre_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630190169/PortraitsLeWagon_0721_By_BenoitBillard-357_trjmcv.jpg')
 # bpierre.photo.attach(io: bpierre_photo, filename: 'bpierre.png', content_type: 'image/png')
 
-# puts 'Create Fati ...'
-# fati = User.create(first_name: "Fati", last_name: "Aamrane", email: "fati@gmail.com", phone_number: "0648593714", password: "123456", gender: "femme", role: "client")
+puts 'Create Fati ...'
+fati = User.create(first_name: "Fati", last_name: "Aamrane", email: "fati@gmail.com", phone_number: "0648593714", password: "123456", gender: "femme", role: "client")
 # fati_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630190369/PortraitsLeWagon_0721_By_BenoitBillard-379_p8oswo.jpg')
 # fati.photo.attach(io: fati_photo, filename: 'fati.png', content_type: 'image/png')
 
-# puts 'Create Paul ...'
-# paul = User.create(first_name: "Paul", last_name: "Loncke", email: "paul@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Paul ...'
+paul = User.create(first_name: "Paul", last_name: "Loncke", email: "paul@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # paul_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630190531/PortraitsLeWagon_0721_By_BenoitBillard-406_zf8w5m.jpg')
 # paul.photo.attach(io: paul_photo, filename: 'paul.png', content_type: 'image/png')
 
-# puts 'Create Anne Bonfante ...'
-# boanne = User.create(first_name: "Anne", last_name: "Bonfante", email: "boanne@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Anne Bonfante ...'
+boanne = User.create(first_name: "Anne", last_name: "Bonfante", email: "boanne@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # boanne_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191343/PortraitsLeWagon_0721_By_BenoitBillard-451_pso1oo.jpg')
 # boanne.photo.attach(io: boanne_photo, filename: 'boanne.png', content_type: 'image/png')
 
-# puts 'Create Mathias ...'
-# mathias = User.create(first_name: "Mathias", last_name: "Salanon", email: "mathias@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Mathias ...'
+mathias = User.create(first_name: "Mathias", last_name: "Salanon", email: "mathias@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # mathias_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191594/PortraitsLeWagon_0721_By_BenoitBillard-481_gvbbg3.jpg')
 # mathias.photo.attach(io: mathias_photo, filename: 'mathias.png', content_type: 'image/png')
 
-# puts 'Create Nas ...'
-# nas = User.create(first_name: "Nasreddine", last_name: "Ghribi", email: "nas@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Nas ...'
+nas = User.create(first_name: "Nasreddine", last_name: "Ghribi", email: "nas@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # nas_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191701/PortraitsLeWagon_0721_By_BenoitBillard-484_zns72h.jpg')
 # nas.photo.attach(io: nas_photo, filename: 'nas.png', content_type: 'image/png')
 
-# puts 'Create Pierre Grandjean ...'
-# gpierre = User.create(first_name: "Pierre", last_name: "Grandjean", email: "gpierre@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Pierre Grandjean ...'
+gpierre = User.create(first_name: "Pierre", last_name: "Grandjean", email: "gpierre@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # gpierre_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191743/PortraitsLeWagon_0721_By_BenoitBillard-500_cwemsr.jpg')
 # gpierre.photo.attach(io: gpierre_photo, filename: 'gpierre.png', content_type: 'image/png')
 
-# puts 'Create Julien ...'
-# julien = User.create(first_name: "Julien", last_name: "Guichard", email: "julien@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Julien ...'
+julien = User.create(first_name: "Julien", last_name: "Guichard", email: "julien@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # julien_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630192163/PortraitsLeWagon_0721_By_BenoitBillard-517_dhaafn.jpg')
 # julien.photo.attach(io: julien_photo, filename: 'julien.png', content_type: 'image/png')
 
-# puts 'Create Arthur ...'
-# arthur = User.create(first_name: "Arthur", last_name: "Herminie", email: "arthur@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Arthur ...'
+arthur = User.create(first_name: "Arthur", last_name: "Herminie", email: "arthur@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # arthur_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630192753/PortraitsLeWagon_0721_By_BenoitBillard-540_syikbb.jpg')
 # arthur.photo.attach(io: arthur_photo, filename: 'arthur.png', content_type: 'image/png')
 
-# puts 'Create Martial ...'
-# martial = User.create(first_name: "Martial", last_name: "Herminie", email: "martial@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Martial ...'
+martial = User.create(first_name: "Martial", last_name: "Herminie", email: "martial@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # martial_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630192807/PortraitsLeWagon_0721_By_BenoitBillard-550_juhqtl.jpg')
 # martial.photo.attach(io: martial_photo, filename: 'martial.png', content_type: 'image/png')
 
-# puts 'Create Tamara ...'
-# tamara = User.create(first_name: "Tamara", last_name: "De Gaetano", email: "tamara@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Tamara ...'
+tamara = User.create(first_name: "Tamara", last_name: "De Gaetano", email: "tamara@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # tamara_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630192998/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_01.23.12_l7nbxj.png')
 # tamara.photo.attach(io: tamara_photo, filename: 'tamara.png', content_type: 'image/png')
 
-# puts 'Create Anna ...'
-# anna = User.create(first_name: "Anna", last_name: "Bozio", email: "anna@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Anna ...'
+anna = User.create(first_name: "Anna", last_name: "Bozio", email: "anna@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # anna_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193066/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_01.24.20_fsic0j.png')
 # anna.photo.attach(io: anna_photo, filename: 'anna.png', content_type: 'image/png')
 
-# puts 'Create Thibault ...'
-# thibault = User.create(first_name: "Thibault", last_name: "Lenclos", email: "thibault@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Thibault ...'
+thibault = User.create(first_name: "Thibault", last_name: "Lenclos", email: "thibault@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # thibault_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193143/PortraitsLeWagon_0721_By_BenoitBillard-588_bfobfa.jpg')
 # thibault.photo.attach(io: thibault_photo, filename: 'thibault.png', content_type: 'image/png')
 
-# puts 'Create Carole ...'
-# carole = User.create(first_name: "Carole", last_name: "Valentin", email: "carole@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Carole ...'
+carole = User.create(first_name: "Carole", last_name: "Valentin", email: "carole@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # carole_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193311/PortraitsLeWagon_0721_By_BenoitBillard-601_aibljc.jpg')
 # carole.photo.attach(io: carole_photo, filename: 'carole.png', content_type: 'image/png')
 
-# puts 'Create Estelle ...'
-# estelle = User.create(first_name: "estelle", last_name: "Cirilo", email: "estelle@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Estelle ...'
+estelle = User.create(first_name: "estelle", last_name: "Cirilo", email: "estelle@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # estelle_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193472/PortraitsLeWagon_0721_By_BenoitBillard-630_jx1exh.jpg')
 # estelle.photo.attach(io: estelle_photo, filename: 'estelle.png', content_type: 'image/png')
 
@@ -121,53 +121,53 @@ daniela = User.create(first_name: "Daniela", last_name: "Mock-Zubia", email: "da
 daniela_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193955/PortraitsLeWagon_0721_By_BenoitBillard-734_drvdkw.jpg')
 daniela.photo.attach(io: daniela_photo, filename: 'daniela.png', content_type: 'image/png')
 
-# puts 'Create Jean ...'
-# jean = User.create(first_name: "Jean", last_name: "Thomassin", email: "jean@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Jean ...'
+jean = User.create(first_name: "Jean", last_name: "Thomassin", email: "jean@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # jean_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194110/PortraitsLeWagon_0721_By_BenoitBillard-718_ocfmzd.jpg')
 # jean.photo.attach(io: jean_photo, filename: 'jean.png', content_type: 'image/png')
 
-# puts 'Create Ornella ...'
-# ornella = User.create(first_name: "Ornella", last_name: "Bissessur", email: "ornella@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Ornella ...'
+ornella = User.create(first_name: "Ornella", last_name: "Bissessur", email: "ornella@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # ornella_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194170/PortraitsLeWagon_0721_By_BenoitBillard-699_q9ya6e.jpg')
 # ornella.photo.attach(io: ornella_photo, filename: 'ornella.png', content_type: 'image/png')
 
-# puts 'Create Tristan ...'
-# tristan = User.create(first_name: "Tristan", last_name: "Monteiro", email: "tristan@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Tristan ...'
+tristan = User.create(first_name: "Tristan", last_name: "Monteiro", email: "tristan@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # tristan_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194326/PortraitsLeWagon_0721_By_BenoitBillard-688_jpch6m.jpg')
 # tristan.photo.attach(io: tristan_photo, filename: 'tristan.png', content_type: 'image/png')
 
-# puts 'Create Walid ...'
-# walid = User.create(first_name: "Walid", last_name: "Monteiro", email: "walid@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Walid ...'
+walid = User.create(first_name: "Walid", last_name: "Monteiro", email: "walid@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # walid_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194562/PortraitsLeWagon_0721_By_BenoitBillard-656_ykooru.jpg')
 # walid.photo.attach(io: walid_photo, filename: 'walid.png', content_type: 'image/png')
 
-# puts 'Create Clémence ...'
-# clemence = User.create(first_name: "Clémence", last_name: "Chalot", email: "clemence@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Clémence ...'
+clemence = User.create(first_name: "Clémence", last_name: "Chalot", email: "clemence@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # clemence_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194776/PortraitsLeWagon_0721_By_BenoitBillard-637_qttvog.jpg')
 # clemence.photo.attach(io: clemence_photo, filename: 'clemence.png', content_type: 'image/png')
 
-# puts 'Create Thibault Baissac...'
-# bthibault = User.create(first_name: "Thibault", last_name: "Baissac", email: "bthibault@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Thibault Baissac...'
+bthibault = User.create(first_name: "Thibault", last_name: "Baissac", email: "bthibault@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # bthibault_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194832/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_01.53.45_e1k8kc.png')
 # bthibault.photo.attach(io: bthibault_photo, filename: 'bthibault.png', content_type: 'image/png')
 
-# puts 'Create Quentin'
-# quentin = User.create(first_name: "Quentin", last_name: "Peschard", email: "quentin@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Quentin'
+quentin = User.create(first_name: "Quentin", last_name: "Peschard", email: "quentin@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # quentin_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630195070/PortraitsLeWagon_0721_By_BenoitBillard-390_izkn7r.jpg')
 # quentin.photo.attach(io: quentin_photo, filename: 'quentin.png', content_type: 'image/png')
 
-# puts 'Create Adrien'
-# adrien = User.create(first_name: "Adrien", last_name: "Bartolini", email: "adrien@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Adrien'
+adrien = User.create(first_name: "Adrien", last_name: "Bartolini", email: "adrien@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # adrien_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630195115/PortraitsLeWagon_0721_By_BenoitBillard-368_uphlhr.jpg')
 # adrien.photo.attach(io: adrien_photo, filename: 'adrien.png', content_type: 'image/png')
 
-# puts 'Create Stephane'
-# stephane = User.create(first_name: "Stephane", last_name: "Mouillat", email: "stephane@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
+puts 'Create Stephane'
+stephane = User.create(first_name: "Stephane", last_name: "Mouillat", email: "stephane@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
 # stephane_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630195180/PortraitsLeWagon_0721_By_BenoitBillard-355_mmcq5f.jpg')
 # stephane.photo.attach(io: stephane_photo, filename: 'stephane.png', content_type: 'image/png')
 
-# puts 'Create Marly ...'
-# marly = User.create(first_name: "Clémence", last_name: "Chalot", email: "marly@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
+puts 'Create Marly ...'
+marly = User.create(first_name: "Clémence", last_name: "Chalot", email: "marly@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
 # marly_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630195255/60466088_p9szlg.png')
 # marly.photo.attach(io: marly_photo, filename: 'marly.png', content_type: 'image/png')
 
@@ -191,53 +191,53 @@ gwen.photo.attach(io: gwen_photo, filename: 'gwen.png', content_type: 'image/png
 
 puts "Create O'neal..."
 oneal = User.create(first_name: "O'neal", last_name: "Maoukola", email: "oneal@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-oneal_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189536/PortraitsLeWagon_0721_By_BenoitBillard-298_r7jtn6.jpg')
-oneal.photo.attach(io: oneal_photo, filename: 'oneal.png', content_type: 'image/png')
+# oneal_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630189536/PortraitsLeWagon_0721_By_BenoitBillard-298_r7jtn6.jpg')
+# oneal.photo.attach(io: oneal_photo, filename: 'oneal.png', content_type: 'image/png')
 
 puts "Create Rahim..."
 rahim = User.create(first_name: "Rahim", last_name: "Pauillac", email: "rahim@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-rahim_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191048/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_00.50.28_se5dft.png')
-rahim.photo.attach(io: rahim_photo, filename: 'rahim.png', content_type: 'image/png')
+# rahim_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191048/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_00.50.28_se5dft.png')
+# rahim.photo.attach(io: rahim_photo, filename: 'rahim.png', content_type: 'image/png')
 
 puts "Create Anne..."
 anne = User.create(first_name: "Anne", last_name: "Barois", email: "anne@aircut.fr", phone_number: "0673869727", password: "123456", gender: "femme", role: "barber")
-anne_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191189/PortraitsLeWagon_0721_By_BenoitBillard-435_bnapcu.jpg')
-anne.photo.attach(io: anne_photo, filename: 'anne.png', content_type: 'image/png')
+# anne_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191189/PortraitsLeWagon_0721_By_BenoitBillard-435_bnapcu.jpg')
+# anne.photo.attach(io: anne_photo, filename: 'anne.png', content_type: 'image/png')
 
 puts "Create Mica..."
 micka = User.create(first_name: "Mickael", last_name: "Gaspard", email: "mica@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-micka_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191473/PortraitsLeWagon_0721_By_BenoitBillard-459_ssxe6p.jpg')
-micka.photo.attach(io: micka_photo, filename: 'micka.png', content_type: 'image/png')
+# micka_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191473/PortraitsLeWagon_0721_By_BenoitBillard-459_ssxe6p.jpg')
+# micka.photo.attach(io: micka_photo, filename: 'micka.png', content_type: 'image/png')
 
 puts "Create Dorien..."
 dorien = User.create(first_name: "Dorien", last_name: "Reynders", email: "dorien@aircut.fr", phone_number: "0673869727", password: "123456", gender: "femme", role: "barber")
-dorien_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191882/PortraitsLeWagon_0721_By_BenoitBillard-508_zsvoan.jpg')
-dorien.photo.attach(io: dorien_photo, filename: 'dorien.png', content_type: 'image/png')
+# dorien_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630191882/PortraitsLeWagon_0721_By_BenoitBillard-508_zsvoan.jpg')
+# dorien.photo.attach(io: dorien_photo, filename: 'dorien.png', content_type: 'image/png')
 
 puts "Create Axel..."
 axel = User.create(first_name: "Axel", last_name: "Burtz", email: "axel@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-axel_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630192402/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_01.13.11_bdx3l7.png')
-axel.photo.attach(io: axel_photo, filename: 'axel.png', content_type: 'image/png')
+# axel_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630192402/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_01.13.11_bdx3l7.png')
+# axel.photo.attach(io: axel_photo, filename: 'axel.png', content_type: 'image/png')
 
 puts "Create Diane..."
 diane = User.create(first_name: "Diane", last_name: "Orlac'h", email: "diane@aircut.fr", phone_number: "0673869727", password: "123456", gender: "femme", role: "barber")
-diane_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193437/PortraitsLeWagon_0721_By_BenoitBillard-618_jyb5m8.jpg')
-diane.photo.attach(io: diane_photo, filename: 'diane.png', content_type: 'image/png')
+# diane_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193437/PortraitsLeWagon_0721_By_BenoitBillard-618_jyb5m8.jpg')
+# diane.photo.attach(io: diane_photo, filename: 'diane.png', content_type: 'image/png')
 
 puts "Create Benoit..."
 benoit = User.create(first_name: "Benoit", last_name: "Jeanjoseph", email: "benoit@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-benoit_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193871/PortraitsLeWagon_0721_By_BenoitBillard-713_bewmmb.jpg')
-benoit.photo.attach(io: benoit_photo, filename: 'benoit.png', content_type: 'image/png')
+# benoit_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193871/PortraitsLeWagon_0721_By_BenoitBillard-713_bewmmb.jpg')
+# benoit.photo.attach(io: benoit_photo, filename: 'benoit.png', content_type: 'image/png')
 
 puts "Create Raphaël..."
 raphael = User.create(first_name: "Raphaël", last_name: "Kalinowski", email: "raphael@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-raphael_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194443/PortraitsLeWagon_0721_By_BenoitBillard-681_cndvph.jpg')
-raphael.photo.attach(io: raphael_photo, filename: 'raphael.png', content_type: 'image/png')
+# raphael_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194443/PortraitsLeWagon_0721_By_BenoitBillard-681_cndvph.jpg')
+# raphael.photo.attach(io: raphael_photo, filename: 'raphael.png', content_type: 'image/png')
 
 puts "Create Andréa Abbou..."
 aandrea = User.create(first_name: "Andréa", last_name: "Abbou", email: "aandrea@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
-aandrea_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194693/PortraitsLeWagon_0721_By_BenoitBillard-646_io5cxp.jpg')
-aandrea.photo.attach(io: aandrea_photo, filename: 'aandrea.png', content_type: 'image/png')
+# aandrea_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630194693/PortraitsLeWagon_0721_By_BenoitBillard-646_io5cxp.jpg')
+# aandrea.photo.attach(io: aandrea_photo, filename: 'aandrea.png', content_type: 'image/png')
 
 puts 'Ok Owners!'
 puts '>> Ok Users!' # **************************************************************************************************
@@ -263,7 +263,7 @@ le_loft.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/p
 le_loft.save!
 
 puts 'Create Barbes BarberShop...'
-barbes_barber = BarberShop.create(name: "Barbes Barber Shop", address: "36 rue de la Charbonnière 75018 Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '08:00 - 19:00', phone_number: "0143578420", user: oneal)
+barbes_barber = BarberShop.create(name: "Barbes Barber Shop", address: "36 rue de la Charbonnière 75018 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: oneal)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/85043998_630044161131752_6086941935936272674_n_mngbcr.jpg')
 barbes_barber.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/159461383_467113237872322_4740289791941848095_n_gamlvv.jpg')
@@ -281,7 +281,7 @@ barbes_barber.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'i
 barbes_barber.save!
 
 puts 'Create 235th Barberstreet...'
-barber_street = BarberShop.create(name: "235th Barber Street", address: "25 boulevard du temple, Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '08:00 - 19:00', phone_number: "0143578420", user: gwen)
+barber_street = BarberShop.create(name: "235th Barber Street", address: "25 boulevard du temple, Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: gwen)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/e000e950f397110d534cdc0375418ff7_kfkxos.png')
 barber_street.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/123850089_120299963020303_2174107557210075674_n_s4ciux.jpg')
@@ -298,26 +298,26 @@ file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/13
 barber_street.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 barber_street.save!
 
-puts 'Create Chez Ginette...'
-chez_ginette = BarberShop.create(name: "Chez Ginette", address: "92 rue Saint-Maur 75011 Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '08:00 - 19:00', phone_number: "0143578420", user: aandrea)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/19425055_1823915407926116_549866314806591488_n_kct6mh.jpg')
-chez_ginette.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/147285712_779266606015604_8278282685700591519_n_gm5b0o.jpg')
-chez_ginette.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/163324310_2561674560806405_3576701263983415628_n_vkxlze.jpg')
-chez_ginette.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/141119815_1139154913191018_1225381972405680285_n_wkmslw.jpg')
-chez_ginette.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/199246745_192614856072404_1313079733274839405_n_jmmvde.jpg')
-chez_ginette.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/148867217_428586141791251_2044507491608283699_n_how35n.jpg')
-chez_ginette.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/21372419_1863524447298629_3725630653195091968_n_wovrvq.jpg')
-chez_ginette.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
-chez_ginette.save!
+# puts 'Create Chez Ginette...'
+# chez_ginette = BarberShop.create(name: "Chez Ginette", address: "92 rue Saint-Maur 75011 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: aandrea)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/19425055_1823915407926116_549866314806591488_n_kct6mh.jpg')
+# chez_ginette.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/147285712_779266606015604_8278282685700591519_n_gm5b0o.jpg')
+# chez_ginette.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/163324310_2561674560806405_3576701263983415628_n_vkxlze.jpg')
+# chez_ginette.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/141119815_1139154913191018_1225381972405680285_n_wkmslw.jpg')
+# chez_ginette.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/199246745_192614856072404_1313079733274839405_n_jmmvde.jpg')
+# chez_ginette.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/148867217_428586141791251_2044507491608283699_n_how35n.jpg')
+# chez_ginette.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235848/21372419_1863524447298629_3725630653195091968_n_wovrvq.jpg')
+# chez_ginette.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+# chez_ginette.save!
 
 puts 'Create La Fabrique du Barbier...'
-fabrique_barbier = BarberShop.create(name: "la fabrique du barbier", address: "48 avenue Parmentier 75011 Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '10:00 - 20:00', phone_number: "0143578420", user: raphael)
+fabrique_barbier = BarberShop.create(name: "la fabrique du barbier", address: "48 avenue Parmentier 75011 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: raphael)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54513472_434714960615600_4566258248230641053_n_eiqdi0.jpg')
 fabrique_barbier.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/161183945_5657882437557014_3118596535305460499_n_tizuu4.jpg')
@@ -335,7 +335,7 @@ fabrique_barbier.portfolios.attach(io: file7, filename: 'nes.png', content_type:
 fabrique_barbier.save!
 
 puts 'Create Groomers Lab...'
-groomers_lab = BarberShop.create(name: "Groomers Lab", address: "22 rue Saint-Sauveur, 75002 Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '08:00 - 19:00', phone_number: "0143578420", user: ricardo)
+groomers_lab = BarberShop.create(name: "Groomers Lab", address: "22 rue Saint-Sauveur, 75002 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: ricardo)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/160665572_960878401322082_7387677801624201175_n_shzf9p.jpg')
 groomers_lab.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235198/179079625_211068043834476_7442340714166392203_n_aoayv3.jpg')
@@ -352,32 +352,32 @@ file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/17
 groomers_lab.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 groomers_lab.save!
 
-puts 'Create Les Muses de Paris...'
-muses_paris = BarberShop.create(name: "Les Muses de Paris", address: "7 rue de la Folie Méricourt 75011 Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '10:00 - 19:00', phone_number: "0143578420", user: anne)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/128611333_1017417372096059_5427433182090816740_n_d9zwvy.jpg')
-muses_paris.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/117686790_310429653529174_5994249439903792464_n_xrhavo.jpg')
-muses_paris.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/120923128_1509732492557270_2082077265362896323_n_zym1ft.jpg')
-muses_paris.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/120369319_120339702956350_8000463976015980935_n_nucckp.jpg')
-muses_paris.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/56811556_146481546401392_7289317986160084036_n_msmgcz.jpg')
-muses_paris.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/127625245_693831827933868_7502587138975867052_n_yxqobd.jpg')
-muses_paris.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/202195222_268218095061918_1586111710750182932_n_mtbdnj.jpg')
-muses_paris.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
-file8 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/163497078_442419720176127_6630973805201591507_n_mqqoi6.jpg')
-muses_paris.portfolios.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
-file9 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/210892860_182422460509026_6825919216547742359_n_eg6zhp.jpg')
-muses_paris.portfolios.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
-file10 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/170074414_757825294883796_8934725685543473917_n_tioijn.jpg')
-muses_paris.portfolios.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
-muses_paris.save!
+# puts 'Create Les Muses de Paris...'
+# muses_paris = BarberShop.create(name: "Les Muses de Paris", address: "7 rue de la Folie Méricourt 75011 Paris", remote: false, opening_days: %w[mardi mercredi jeudi vendredi samedi], closing_days: %w[dimanche lundi], opening_hours: '10:00 - 19:00', phone_number: "0143578420", user: anne)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/128611333_1017417372096059_5427433182090816740_n_d9zwvy.jpg')
+# muses_paris.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/117686790_310429653529174_5994249439903792464_n_xrhavo.jpg')
+# muses_paris.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/120923128_1509732492557270_2082077265362896323_n_zym1ft.jpg')
+# muses_paris.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/120369319_120339702956350_8000463976015980935_n_nucckp.jpg')
+# muses_paris.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/56811556_146481546401392_7289317986160084036_n_msmgcz.jpg')
+# muses_paris.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255504/127625245_693831827933868_7502587138975867052_n_yxqobd.jpg')
+# muses_paris.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/202195222_268218095061918_1586111710750182932_n_mtbdnj.jpg')
+# muses_paris.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+# file8 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/163497078_442419720176127_6630973805201591507_n_mqqoi6.jpg')
+# muses_paris.portfolios.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
+# file9 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/210892860_182422460509026_6825919216547742359_n_eg6zhp.jpg')
+# muses_paris.portfolios.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
+# file10 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630255505/170074414_757825294883796_8934725685543473917_n_tioijn.jpg')
+# muses_paris.portfolios.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
+# muses_paris.save!
 
 puts 'Lazerus...'
-lazerus = BarberShop.create(name: "Le Lazerus", address: "23 rue meslay 75003 Paris", remote: true, opening_days: %w[lundi mardi mercredi jeudi vendredi samedi dimanche], closing_days: %w[], opening_hours: ["08:00", "19:00"], phone_number: "0643578420", user: rahim)
+lazerus = BarberShop.create(name: "Le Lazerus", address: "23 rue meslay 75003 Paris", remote: true, opening_days: [5, 6, 0], closing_days: [1, 2, 3, 4], opening_hours: ["08:00", "19:00"], phone_number: "0643578420", user: rahim)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/22159093_353860515062143_2483913212299313152_n_x083ge.jpg')
 lazerus.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/31104024_852019971668068_424075862397157376_n_tovwk8.jpg')
@@ -400,94 +400,109 @@ puts 'Create Services for gender:homme' # **************************************
 
 puts 'Coupe dégradé'
 degrade = Service.create(name: "Dégradé", gender: "homme")
-shop_degrade = ShopService.create(price: 15, duration: 35, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: le_loft.id, service_id: degrade.id )
-shop_degrade = ShopService.create(price: 15, duration: 35, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barbes_barber.id, service_id: degrade.id )
-shop_degrade = ShopService.create(price: 115, duration: 35, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barber_street.id, service_id: degrade.id )
-shop_degrade = ShopService.create(price: 115, duration: 35, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: groomers_lab.id, service_id: degrade.id )
-shop_degrade = ShopService.create(price: 115, duration: 35, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: fabrique_barbier.id, service_id: degrade.id )
-shop_degrade = ShopService.create(price: 115, duration: 35, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: lazerus.id, service_id: degrade.id )
+shop_degrade_loft = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: le_loft.id, service_id: degrade.id )
+shop_degrade_barbes = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barbes_barber.id, service_id: degrade.id )
+shop_degrade_street = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barber_street.id, service_id: degrade.id )
+shop_degrade_groomers = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: groomers_lab.id, service_id: degrade.id )
+shop_degrade_fabrique = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: fabrique_barbier.id, service_id: degrade.id )
+shop_degrade_lazerus = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: lazerus.id, service_id: degrade.id )
 
 puts 'Create Formule Coupe Dégradé + Shampoing...'
 degrade_shampoing = Service.create(name: "Formule Coupe Dégradé + Shampoing", gender: "homme")
-shop_degrade_shampoing = ShopService.create(price: 40, duration: 35, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: le_loft.id, service_id: degrade_shampoing.id )
-shop_degrade_shampoing = ShopService.create(price: 40, duration: 35, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: barbes_barber.id, service_id: degrade_shampoing.id )
-shop_degrade_shampoing = ShopService.create(price: 40, duration: 35, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: barber_street.id, service_id: degrade_shampoing.id )
-shop_degrade_shampoing = ShopService.create(price: 40, duration: 35, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: groomers_lab.id, service_id: degrade_shampoing.id )
-shop_degrade_shampoing = ShopService.create(price: 40, duration: 35, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: fabrique_barbier.id, service_id: degrade_shampoing.id )
-shop_degrade_shampoing = ShopService.create(price: 40, duration: 35, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: lazerus.id, service_id: degrade_shampoing.id )
+shop_degrade_shampoing_loft = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: le_loft.id, service_id: degrade_shampoing.id )
+shop_degrade_shampoing_barbes = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: barbes_barber.id, service_id: degrade_shampoing.id )
+shop_degrade_shampoing_street = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: barber_street.id, service_id: degrade_shampoing.id )
+shop_degrade_shampoing_groomers = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: groomers_lab.id, service_id: degrade_shampoing.id )
+shop_degrade_shampoing_fabrique = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: fabrique_barbier.id, service_id: degrade_shampoing.id )
+shop_degrade_shampoing_lazerus = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: lazerus.id, service_id: degrade_shampoing.id )
 
 puts 'Create Rasage de crâne lame...'
 rasage_crane = Service.create(name: "Boule à Zéro à l'ancienne", gender: "homme")
-shop_rasage_crane = ShopService.create(price: 15, duration: 25, description: "Rasage de crâne à la lame", barber_shop_id: le_loft.id, service_id: rasage_crane.id )
-shop_rasage_crane = ShopService.create(price: 10, duration: 25, description: "Rasage de crâne à la lame", barber_shop_id: barbes_barber.id, service_id: rasage_crane.id )
-shop_rasage_crane = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: barber_street.id, service_id: rasage_crane.id )
-shop_rasage_crane = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: groomers_lab.id, service_id: rasage_crane.id )
-shop_rasage_crane = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane.id )
-shop_rasage_crane = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: lazerus.id, service_id: rasage_crane.id )
+shop_rasage_crane_loft = ShopService.create(price: 15, duration: 25, description: "Rasage de crâne à la lame", barber_shop_id: le_loft.id, service_id: rasage_crane.id )
+shop_rasage_crane_barbes = ShopService.create(price: 10, duration: 25, description: "Rasage de crâne à la lame", barber_shop_id: barbes_barber.id, service_id: rasage_crane.id )
+shop_rasage_crane_barber = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: barber_street.id, service_id: rasage_crane.id )
+shop_rasage_crane_groomers = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: groomers_lab.id, service_id: rasage_crane.id )
+shop_rasage_crane_fabrique = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane.id )
+shop_rasage_crane_lazerus = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: lazerus.id, service_id: rasage_crane.id )
 
 puts 'Create Rasage à la tondeuse...'
 rasage_crane_tondeuse = Service.create(name: "Boule à Zéro à la tondeuse", gender: "homme")
-ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: le_loft.id, service_id: rasage_crane_tondeuse.id )
-ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: barbes_barber.id, service_id: rasage_crane_tondeuse.id )
-ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: barber_street.id, service_id: rasage_crane_tondeuse.id )
-ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: groomers_lab.id, service_id: rasage_crane_tondeuse.id )
-ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane_tondeuse.id )
-ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: lazerus.id, service_id: rasage_crane_tondeuse.id )
+rasage_crane_tondeuse_loft = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: le_loft.id, service_id: rasage_crane_tondeuse.id )
+rasage_crane_tondeuse_barbes = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: barbes_barber.id, service_id: rasage_crane_tondeuse.id )
+rasage_crane_tondeuse_street = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: barber_street.id, service_id: rasage_crane_tondeuse.id )
+rasage_crane_tondeuse_groomers = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: groomers_lab.id, service_id: rasage_crane_tondeuse.id )
+rasage_crane_tondeuse_fabrique = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane_tondeuse.id )
+rasage_crane_tondeuse_lazerus = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: lazerus.id, service_id: rasage_crane_tondeuse.id )
 
 puts 'Create Massage cranien...'
 massage_cranien = Service.create(name: "Massage cranien", gender: "homme")
-ShopService.create(price: 30, duration: 45, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: le_loft.id, service_id: massage_cranien.id )
-ShopService.create(price: 30, duration: 45, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barbes_barber.id, service_id: massage_cranien.id )
-ShopService.create(price: 30, duration: 45, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barber_street.id, service_id: massage_cranien.id )
-ShopService.create(price: 30, duration: 45, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: groomers_lab.id, service_id: massage_cranien.id )
-ShopService.create(price: 30, duration: 45, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: fabrique_barbier.id, service_id: massage_cranien.id )
-ShopService.create(price: 30, duration: 45, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: lazerus.id, service_id: massage_cranien.id )
+massage_cranien_loft = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: le_loft.id, service_id: massage_cranien.id )
+massage_cranien_barbes = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barbes_barber.id, service_id: massage_cranien.id )
+massage_cranien_street = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barber_street.id, service_id: massage_cranien.id )
+massage_cranien_groomers = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: groomers_lab.id, service_id: massage_cranien.id )
+massage_cranien_fabrique = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: fabrique_barbier.id, service_id: massage_cranien.id )
+massage_cranien_lazerus = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: lazerus.id, service_id: massage_cranien.id )
 
 puts 'Create Décoloration et teinture...'
 deco_teinture = Service.create(name: "Forfait décoloration et teinture", gender: "homme")
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: le_loft.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: barbes_barber.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: barber_street.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: groomers_lab.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: fabrique_barbier.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: lazerus.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: muses_paris.id, service_id: deco_teinture.id )
-ShopService.create(price: 30, duration: 45, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: chez_ginette.id, service_id: deco_teinture.id )
+deco_teinture_loft = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: le_loft.id, service_id: deco_teinture.id )
+deco_teinture_barbes = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: barbes_barber.id, service_id: deco_teinture.id )
+deco_teinture_street = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: barber_street.id, service_id: deco_teinture.id )
+deco_teinture_groomers = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: groomers_lab.id, service_id: deco_teinture.id )
+deco_teinture_fabrique = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: fabrique_barbier.id, service_id: deco_teinture.id )
+deco_teinture_lazerus = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: lazerus.id, service_id: deco_teinture.id )
 
 puts 'Create Départ de locks..'
 depart_locks = Service.create(name: "Départ de locks", gender: "homme")
-ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: le_loft.id, service_id: depart_locks.id )
-ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barbes_barber.id, service_id: depart_locks.id )
-ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barber_street.id, service_id: depart_locks.id )
-ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: groomers_lab.id, service_id: depart_locks.id )
-ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: fabrique_barbier.id, service_id: depart_locks.id )
-ShopService.create(price: 120, duration: 55, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: lazerus.id, service_id: depart_locks.id )
+depart_locks_loft = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: le_loft.id, service_id: depart_locks.id )
+depart_locks_barbes = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barbes_barber.id, service_id: depart_locks.id )
+depart_locks_street = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barber_street.id, service_id: depart_locks.id )
+depart_locks_groomers = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: groomers_lab.id, service_id: depart_locks.id )
+depart_locks_fabrique = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: fabrique_barbier.id, service_id: depart_locks.id )
+depart_locks_lazerus = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: lazerus.id, service_id: depart_locks.id )
 
-puts 'Create Services for gender:femme' # ******************************************************************************
-shampoing_long = Service.create(name: "Shampoing (cheveux longs)", gender: "femme")
-ShopService.create(price: 10, duration: 30, description: "Shampoing (cheveux longs) + Massage", barber_shop_id: chez_ginette.id, service_id: shampoing_long.id )
-ShopService.create(price: 20, duration: 30, description: "Shampoing (cheveux longs) + Massage", barber_shop_id: barber_street.id, service_id: shampoing_long.id )
-ShopService.create(price: 20, duration: 30, description: "Shampoing (cheveux longs) + Massage", barber_shop_id: groomers_lab.id, service_id: shampoing_long.id )
+# puts 'Create Services for gender:femme' # ******************************************************************************
+# shampoing_long = Service.create(name: "Shampoing (cheveux longs)", gender: "femme")
+# ShopService.create(price: 10, duration: 30, description: "Shampoing (cheveux longs) + Massage", barber_shop_id: chez_ginette.id, service_id: shampoing_long.id )
+# ShopService.create(price: 20, duration: 30, description: "Shampoing (cheveux longs) + Massage", barber_shop_id: barber_street.id, service_id: shampoing_long.id )
+# ShopService.create(price: 20, duration: 30, description: "Shampoing (cheveux longs) + Massage", barber_shop_id: groomers_lab.id, service_id: shampoing_long.id )
 
 puts '>> Create Bookings, BookingServices and link to Services and Reviews...' # ***************************************
-puts 'Create booking of Dustin...'
-b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 7, 3, 7, 30), end_datetime: DateTime.new(2021, 7, 3, 8, 30), total_amount: 40)
-BookingService.create(booking_id: b_dustin.id, shop_service_id: shop_degrade_shampoing.id)
-Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user: dustin, booking: b_dustin)
+puts 'Create booking and review of Dustin...'
+b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 7, 3, 9, 30), end_datetime: DateTime.new(2021, 7, 3, 10, 30), total_amount: 40)
+BookingService.create(booking_id: b_dustin.id, shop_service_id: massage_cranien_lazerus.id)
+Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user_id: dustin.id, booking_id: b_dustin.id)
 
-puts 'Create booking of Danieal...'
-b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 4, 7, 30), end_datetime: DateTime.new(2021, 7, 4, 8, 30), total_amount: 40)
-BookingService.create(booking_id: b_daniela.id, shop_service_id: shop_rasage_crane.id)
-Review.create(rating: 5, comment: "Très pro, je recommande 🧘", user: benoit, booking: b_daniela)
-Review.create(rating: 4, comment: "Je recommande vivement 🧘", user: daniela, booking: b_daniela)
-Review.create(rating: 4, comment: "Je vais souvent revenir 🧘", user: axel, booking: b_daniela)
-Review.create(rating: 5, comment: "J'aime trop 🧘", user: gwen, booking: b_daniela)
-Review.create(rating: 5, comment: "Allez-y les yeux fermés 🧘", user: rahim, booking: b_daniela)
-Review.create(rating: 5, comment: "J'adore le style 🧘", user: diane, booking: b_daniela)
-Review.create(rating: 5, comment: "La classe 🧘", user: daniela, booking: b_daniela)
-Review.create(rating: 5, comment: "J'aime beaucoup 🧘", user: daniela, booking: b_daniela)
-Review.create(rating: 5, comment: "Je vais revenir c'est certain ! 🧘", user: bruno, booking: b_daniela)
-Review.create(rating: 5, comment: "Toujours aussi bien 🧘", user: ricardo, booking: b_daniela)
-Review.create(rating: 5, comment: "Super ! 🧘", user: dorien, booking: b_daniela)
+puts 'Create booking of Daniela...'
+b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 7, 11, 30), end_datetime: DateTime.new(2021, 7, 7, 12, 30), total_amount: 40)
+BookingService.create(booking_id: b_daniela.id, shop_service_id: massage_cranien_lazerus.id)
+Review.create(rating: 3, comment: "Bonne coupe. La prestation a durée un peu plus lontemps que prévue.", user_id: daniela.id, booking_id: b_daniela.id)
+
+puts 'Create booking of Wadi...'
+b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 7, 4, 14, 30), end_datetime: DateTime.new(2021, 7, 3, 15, 30), total_amount: 40)
+BookingService.create(booking_id: b_wadi.id, shop_service_id: shop_rasage_crane_lazerus.id)
+Review.create(rating: 5, comment: "Mon crâne n'a jamais été aussi bien traité, il est maintenant très doux 🍑 ", user_id: wadi.id, booking_id: b_wadi.id)
+
+puts 'Create booking of Amandine...'
+b_amandine = Booking.create(user_id: amandine.id, start_datetime: DateTime.new(2021, 7, 4, 15, 30), end_datetime: DateTime.new(2021, 7, 3, 16, 30), total_amount: 40)
+BookingService.create(booking_id: b_amandine.id, shop_service_id: shop_rasage_crane_lazerus.id)
+Review.create(rating: 4, comment: "Super ! Hate d'y retourner 😁 ", user_id: amandine.id, booking_id: b_amandine.id)
+
+puts 'Create booking of Lydia...'
+b_lydia = Booking.create(user_id: lydia.id, start_datetime: DateTime.new(2021, 8, 4, 14, 30), end_datetime: DateTime.new(2021, 8, 3, 15, 30), total_amount: 40)
+BookingService.create(booking_id: b_lydia.id, shop_service_id: shop_rasage_crane_loft.id)
+Review.create(rating: 5, comment: "Très bon salon, je recommande ! 👌", user_id: lydia.id, booking_id: b_lydia.id)
+
+Review.create(rating: 5, comment: "Très pro, je recommande 🧘", user_id: benoit.id, booking_id: b_daniela.id)
+Review.create(rating: 4, comment: "Je recommande vivement 🧘", user_id: daniela.id, booking_id: b_daniela)
+Review.create(rating: 4, comment: "Je vais souvent revenir 🧘", user_id: axel.id, booking_id: b_daniela)
+Review.create(rating: 5, comment: "J'aime trop 🧘", user_id: gwen.id, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "Allez-y les yeux fermés 🧘", user_id: rahim.id, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "J'adore le style 🧘", user_id: diane.id, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "La classe 🧘", user_id: daniela.id, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "J'aime beaucoup 🧘", user_id: daniela.id, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "Je vais revenir c'est certain ! 🧘", user_id: bruno, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "Toujours aussi bien 🧘", user_id: ricardo.id, booking_id: b_daniela.id)
+Review.create(rating: 5, comment: "Super ! 🧘", user_id: dorien.id, booking_id: b_daniela.id)
 
 puts 'Ok bookings and reviews!' # **************************************************************************************
