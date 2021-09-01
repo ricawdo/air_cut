@@ -1,10 +1,11 @@
-<div class="container-edit-page" style="margin: 70px 30px">
+<div class="container-rating-page" style="margin: 70px 30px">
   <%= simple_form_for [ @booking, @review ], html: { class: "form-review"} do |f| %>
     <%= f.input :rating,
                   collection: Review::NUMERO,
+                  :label => "Note",
                   input_html: { class: "tag-selector-review" },
                   item_wrapper_class: 'item-review' %>
-    <%= f.input :comment %>
+    <%= f.input :comment, :label => "Commentaire" %>
     <%= f.submit "Ajouter l'avis", class: "btn btn-brown" %>
   <% end %>
 </div>
