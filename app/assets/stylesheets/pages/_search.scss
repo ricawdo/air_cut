@@ -59,10 +59,22 @@ label img {
   left: 5%;
 }
 
+.category-item-homme:active {
+  label {
+    background-color: $brown !important;
+  }
+}
+
 .category-item-femme {
   position: absolute;
   top: 30%;
   left: 53%;
+}
+
+.category-item-femme:active {
+  label {
+    background-color: $brown !important;
+  }
 }
 
 .inactive {
@@ -126,4 +138,10 @@ label img {
   border-radius: 8px;
   background-color:#444040;
   color: white;
+}
+
+.category-item-service:active {
+  label {
+    background-color: $brown !important;
+  }
 }
