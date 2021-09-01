@@ -111,6 +111,7 @@ p {
   padding-left: 10px !important;
 }
 
+
 #calendar {
   width: 325px !important;
 }
@@ -121,4 +122,23 @@ p {
 
 .form-check-label {
   width: 80%;
+}
+
+.container-rating-page {
+  background-color: rgb(63, 62, 62);
+  border-radius: 10px;
+  margin-top: 50px;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border: 2px solid $brown;
+}
+
+.review_rating label, .review_comment label {
+  color: white;
+  font-size: 25px;
+}
+
+#new_review input {
+  margin-left: 114px;
 }
