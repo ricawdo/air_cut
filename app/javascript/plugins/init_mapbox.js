@@ -45,7 +45,7 @@ const initMapbox = () => {
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${mapElement.dataset.destination}.json?access_token=${mapElement.dataset.mapboxApiKey}`)
       .then(response => response.json())
       .then((data) => {
-        new mapboxgl.Marker({ color: 'black' })
+        new mapboxgl.Marker({ color: 'red' })
           .setLngLat(data.features[0].geometry.coordinates)
           .addTo(map);
       })
