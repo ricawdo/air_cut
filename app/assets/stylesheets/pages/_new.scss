@@ -28,17 +28,18 @@ p {
 #book-description h3 {
   margin-left: 0px;
 }
-#title-book h3{
+#title-book h5{
   text-align: center;
   margin-left: 0px;
-  font-size: 21px;
+  font-size: 30px;
+  color: $brown;
 }
 #book-services {
   margin-top: 0px;
 }
 
 #title-book {
-    margin-top: 130px;
+    margin-top: 90px;
 }
 
 #available-days {
