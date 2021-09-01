@@ -316,23 +316,23 @@ barber_street.save!
 # chez_ginette.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 # chez_ginette.save!
 
-puts 'Create La Fabrique du Barbier...'
-fabrique_barbier = BarberShop.create(name: "la fabrique du barbier", address: "48 avenue Parmentier 75011 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: raphael)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54513472_434714960615600_4566258248230641053_n_eiqdi0.jpg')
-fabrique_barbier.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/161183945_5657882437557014_3118596535305460499_n_tizuu4.jpg')
-fabrique_barbier.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/56600014_179129213086938_8603465694517778467_n_kclvhr.jpg')
-fabrique_barbier.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54513777_449695419170017_6604703189482963927_n_c5wgnx.jpg')
-fabrique_barbier.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/225193784_2888630458132931_3474282452227338118_n_drlrby.jpg')
-fabrique_barbier.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54446798_2305854626323372_3290491206406902808_n_grxycp.jpg')
-fabrique_barbier.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/70506190_2507360009500926_7422880321855644188_n_f9wnoh.jpg')
-fabrique_barbier.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
-fabrique_barbier.save!
+# puts 'Create La Fabrique du Barbier...'
+# fabrique_barbier = BarberShop.create(name: "la fabrique du barbier", address: "48 avenue Parmentier 75011 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: raphael)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54513472_434714960615600_4566258248230641053_n_eiqdi0.jpg')
+# fabrique_barbier.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/161183945_5657882437557014_3118596535305460499_n_tizuu4.jpg')
+# fabrique_barbier.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/56600014_179129213086938_8603465694517778467_n_kclvhr.jpg')
+# fabrique_barbier.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54513777_449695419170017_6604703189482963927_n_c5wgnx.jpg')
+# fabrique_barbier.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/225193784_2888630458132931_3474282452227338118_n_drlrby.jpg')
+# fabrique_barbier.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/54446798_2305854626323372_3290491206406902808_n_grxycp.jpg')
+# fabrique_barbier.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630236378/70506190_2507360009500926_7422880321855644188_n_f9wnoh.jpg')
+# fabrique_barbier.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+# fabrique_barbier.save!
 
 puts 'Create Groomers Lab...'
 groomers_lab = BarberShop.create(name: "Groomers Lab", address: "22 rue Saint-Sauveur, 75002 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: ricardo)
@@ -377,7 +377,7 @@ groomers_lab.save!
 # muses_paris.save!
 
 puts 'Lazerus...'
-lazerus = BarberShop.create(name: "Le Lazerus", address: "23 rue meslay 75003 Paris", remote: true, opening_days: [5, 6, 0], closing_days: [1, 2, 3, 4], opening_hours: ["08:00", "19:00"], phone_number: "0643578420", user: rahim)
+lazerus = BarberShop.create(name: "Le Lazerus", address: "75 Rue Oberkampf, 75011 Paris", remote: true, opening_days: [5, 6, 0], closing_days: [1, 2, 3, 4], opening_hours: ["08:00", "19:00"], phone_number: "0643578420", user: rahim)
 file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/22159093_353860515062143_2483913212299313152_n_x083ge.jpg')
 lazerus.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/31104024_852019971668068_424075862397157376_n_tovwk8.jpg')
@@ -398,14 +398,14 @@ puts 'Ok Barbershops ! 💈' # *************************************************
 puts 'Create Services, ShopServices and link to BarberShops...' # ******************************************************
 puts 'Create Services for gender:homme' # ******************************************************************************
 
-puts 'Coupe dégradé'
+puts 'Coupe Dégradé'
 degrade = Service.create(name: "Dégradé", gender: "homme")
-shop_degrade_loft = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: le_loft.id, service_id: degrade.id )
+shop_degrade_street = ShopService.create(price: 25, duration: 40, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barber_street.id, service_id: degrade.id )
 shop_degrade_barbes = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barbes_barber.id, service_id: degrade.id )
-shop_degrade_street = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barber_street.id, service_id: degrade.id )
+shop_degrade_loft = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: le_loft.id, service_id: degrade.id )
 shop_degrade_groomers = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: groomers_lab.id, service_id: degrade.id )
-shop_degrade_fabrique = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: fabrique_barbier.id, service_id: degrade.id )
-shop_degrade_lazerus = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: lazerus.id, service_id: degrade.id )
+# shop_degrade_fabrique = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: fabrique_barbier.id, service_id: degrade.id )
+shop_degrade_lazerus = ShopService.create(price: 10, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: lazerus.id, service_id: degrade.id )
 
 puts 'Create Formule Coupe Dégradé + Shampoing...'
 degrade_shampoing = Service.create(name: "Formule Coupe Dégradé + Shampoing", gender: "homme")
@@ -413,16 +413,16 @@ shop_degrade_shampoing_loft = ShopService.create(price: 40, duration: 60, descri
 shop_degrade_shampoing_barbes = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: barbes_barber.id, service_id: degrade_shampoing.id )
 shop_degrade_shampoing_street = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: barber_street.id, service_id: degrade_shampoing.id )
 shop_degrade_shampoing_groomers = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: groomers_lab.id, service_id: degrade_shampoing.id )
-shop_degrade_shampoing_fabrique = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: fabrique_barbier.id, service_id: degrade_shampoing.id )
+# shop_degrade_shampoing_fabrique = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: fabrique_barbier.id, service_id: degrade_shampoing.id )
 shop_degrade_shampoing_lazerus = ShopService.create(price: 40, duration: 60, description: "Forfait dégradé (bas ou haut) + shampoing + coiffage", barber_shop_id: lazerus.id, service_id: degrade_shampoing.id )
 
 puts 'Create Rasage de crâne lame...'
 rasage_crane = Service.create(name: "Boule à Zéro à l'ancienne", gender: "homme")
-shop_rasage_crane_loft = ShopService.create(price: 15, duration: 25, description: "Rasage de crâne à la lame", barber_shop_id: le_loft.id, service_id: rasage_crane.id )
-shop_rasage_crane_barbes = ShopService.create(price: 10, duration: 25, description: "Rasage de crâne à la lame", barber_shop_id: barbes_barber.id, service_id: rasage_crane.id )
-shop_rasage_crane_barber = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: barber_street.id, service_id: rasage_crane.id )
+shop_rasage_crane_loft = ShopService.create(price: 15, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: le_loft.id, service_id: rasage_crane.id )
+shop_rasage_crane_barbes = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la lame", barber_shop_id: barbes_barber.id, service_id: rasage_crane.id )
+shop_rasage_crane_street = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: barber_street.id, service_id: rasage_crane.id )
 shop_rasage_crane_groomers = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: groomers_lab.id, service_id: rasage_crane.id )
-shop_rasage_crane_fabrique = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane.id )
+# shop_rasage_crane_fabrique = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane.id )
 shop_rasage_crane_lazerus = ShopService.create(price: 17, duration: 30, description: "Rasage de crâne à la lame", barber_shop_id: lazerus.id, service_id: rasage_crane.id )
 
 puts 'Create Rasage à la tondeuse...'
@@ -431,7 +431,7 @@ rasage_crane_tondeuse_loft = ShopService.create(price: 10, duration: 15, descrip
 rasage_crane_tondeuse_barbes = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: barbes_barber.id, service_id: rasage_crane_tondeuse.id )
 rasage_crane_tondeuse_street = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: barber_street.id, service_id: rasage_crane_tondeuse.id )
 rasage_crane_tondeuse_groomers = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: groomers_lab.id, service_id: rasage_crane_tondeuse.id )
-rasage_crane_tondeuse_fabrique = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane_tondeuse.id )
+# rasage_crane_tondeuse_fabrique = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: fabrique_barbier.id, service_id: rasage_crane_tondeuse.id )
 rasage_crane_tondeuse_lazerus = ShopService.create(price: 10, duration: 15, description: "Rasage de crâne à la tondeuse", barber_shop_id: lazerus.id, service_id: rasage_crane_tondeuse.id )
 
 puts 'Create Massage cranien...'
@@ -440,7 +440,7 @@ massage_cranien_loft = ShopService.create(price: 30, duration: 60, description: 
 massage_cranien_barbes = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barbes_barber.id, service_id: massage_cranien.id )
 massage_cranien_street = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barber_street.id, service_id: massage_cranien.id )
 massage_cranien_groomers = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: groomers_lab.id, service_id: massage_cranien.id )
-massage_cranien_fabrique = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: fabrique_barbier.id, service_id: massage_cranien.id )
+# massage_cranien_fabrique = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: fabrique_barbier.id, service_id: massage_cranien.id )
 massage_cranien_lazerus = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: lazerus.id, service_id: massage_cranien.id )
 
 puts 'Create Décoloration et teinture...'
@@ -449,7 +449,7 @@ deco_teinture_loft = ShopService.create(price: 15, duration: 30, description: "F
 deco_teinture_barbes = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: barbes_barber.id, service_id: deco_teinture.id )
 deco_teinture_street = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: barber_street.id, service_id: deco_teinture.id )
 deco_teinture_groomers = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: groomers_lab.id, service_id: deco_teinture.id )
-deco_teinture_fabrique = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: fabrique_barbier.id, service_id: deco_teinture.id )
+# deco_teinture_fabrique = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: fabrique_barbier.id, service_id: deco_teinture.id )
 deco_teinture_lazerus = ShopService.create(price: 15, duration: 30, description: "Forfait décoloration + teinture. Merci de prendre contact au préalable pour s'assurer de la disponibilité de la couleur désirée", barber_shop_id: lazerus.id, service_id: deco_teinture.id )
 
 puts 'Create Départ de locks..'
@@ -458,7 +458,7 @@ depart_locks_loft = ShopService.create(price: 120, duration: 90, description: "D
 depart_locks_barbes = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barbes_barber.id, service_id: depart_locks.id )
 depart_locks_street = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: barber_street.id, service_id: depart_locks.id )
 depart_locks_groomers = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: groomers_lab.id, service_id: depart_locks.id )
-depart_locks_fabrique = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: fabrique_barbier.id, service_id: depart_locks.id )
+# depart_locks_fabrique = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: fabrique_barbier.id, service_id: depart_locks.id )
 depart_locks_lazerus = ShopService.create(price: 120, duration: 90, description: "Départ de locks sur cheveux court (10cm minimum) ", barber_shop_id: lazerus.id, service_id: depart_locks.id )
 
 # puts 'Create Services for gender:femme' # ******************************************************************************
@@ -469,29 +469,70 @@ depart_locks_lazerus = ShopService.create(price: 120, duration: 90, description:
 
 puts '>> Create Bookings, BookingServices and link to Services and Reviews...' # ***************************************
 puts 'Create booking and review of Dustin...'
-b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 7, 3, 9, 30), end_datetime: DateTime.new(2021, 7, 3, 10, 30), total_amount: 40)
+
+puts 'Create booking of Wadi...'
+b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 9, 2, 14, 30), end_datetime: DateTime.new(2021, 9, 3, 15, 30), total_amount: 40)
+BookingService.create(booking_id: b_wadi.id, shop_service_id: shop_rasage_crane_lazerus.id)
+Review.create(rating: 5, comment: "Ma barbe est douce, mon crane est doux 🍑 Merci pour les travaux 🚧", user_id: wadi.id, booking_id: b_wadi.id)
+
+puts 'Create booking of Gwen...'
+b_gwen = Booking.create(user_id: gwen.id, start_datetime: DateTime.new(2021, 9, 2, 14, 30), end_datetime: DateTime.new(2021, 9, 3, 14, 30), total_amount: 40)
+BookingService.create(booking_id: b_gwen.id, shop_service_id: shop_rasage_crane_lazerus.id)
+Review.create(rating: 5, comment: "Enfin un coiffeur efficace et qui n'abuse pas sur les prix ! Maintenant direction la Thaïlande 😎 ! ", user_id: gwen.id, booking_id: b_gwen.id)
+
+puts 'Create booking of Benoit...'
+b_benoit = Booking.create(user_id: benoit.id, start_datetime: DateTime.new(2021, 9, 1, 14, 30), end_datetime: DateTime.new(2021, 8, 25, 14, 30), total_amount: 40)
+BookingService.create(booking_id: b_benoit.id, shop_service_id: shop_rasage_crane_lazerus.id)
+Review.create(rating: 5, comment: "Ce magnifique dégradé va améliorer mon aérodynamisme 🏄🏾‍♂️ ", user_id: benoit.id, booking_id: b_benoit.id)
+
+puts 'Create booking of Bruno...'
+b_bruno = Booking.create(user_id: bruno.id, start_datetime: DateTime.new(2021, 9, 1, 14, 30), end_datetime: DateTime.new(2021, 8, 25, 14, 30), total_amount: 40)
+BookingService.create(booking_id: b_bruno.id, shop_service_id: shop_rasage_crane_lazerus.id)
+Review.create(rating: 5, comment: "Le roi des dégradés ! 👑 ", user_id: bruno.id, booking_id: b_bruno.id)
+
+puts 'Create booking of Andréa...'
+b_aandrea = Booking.create(user_id: aandrea.id, start_datetime: DateTime.new(2021, 8, 31, 9, 30), end_datetime: DateTime.new(2021, 7, 20, 10, 30), total_amount: 40)
+BookingService.create(booking_id: b_aandrea.id, shop_service_id: massage_cranien_lazerus.id)
+Review.create(rating: 5, comment: "Que dire de plus ... la perfection #Ellii ♥️ ! ", user_id: aandrea.id, booking_id: b_aandrea.id)
+
+puts 'Create booking of Rahim...'
+b_rahim = Booking.create(user_id: rahim.id, start_datetime: DateTime.new(2021, 8, 31, 9, 30), end_datetime: DateTime.new(2021, 7, 15, 10, 30), total_amount: 40)
+BookingService.create(booking_id: b_rahim.id, shop_service_id: massage_cranien_lazerus.id)
+Review.create(rating: 5, comment: "Le roi des Boule à Z 👻 ! ", user_id: rahim.id, booking_id: b_rahim.id)
+
+puts 'Create booking of Oneal...'
+b_oneal = Booking.create(user_id: oneal.id, start_datetime: DateTime.new(2021, 8, 31, 9, 30), end_datetime: DateTime.new(2021, 7, 10, 10, 30), total_amount: 40)
+BookingService.create(booking_id: b_oneal.id, shop_service_id: massage_cranien_lazerus.id)
+Review.create(rating: 5, comment: "High Top au max ! 2.6.ZERO 🚃 ", user_id: oneal.id, booking_id: b_oneal.id)
+
+puts 'Create booking of Dustin...'
+b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 8, 30, 9, 30), end_datetime: DateTime.new(2021, 7, 7, 10, 30), total_amount: 40)
 BookingService.create(booking_id: b_dustin.id, shop_service_id: massage_cranien_lazerus.id)
-Review.create(rating: 5, comment: "Le massage était super, très relaxant 🧘", user_id: dustin.id, booking_id: b_dustin.id)
+Review.create(rating: 4, comment: "I love this fade ! 💈", user_id: dustin.id, booking_id: b_dustin.id)
+
 
 puts 'Create booking of Daniela...'
 b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 7, 11, 30), end_datetime: DateTime.new(2021, 7, 7, 12, 30), total_amount: 40)
-BookingService.create(booking_id: b_daniela.id, shop_service_id: massage_cranien_lazerus.id)
+BookingService.create(booking_id: b_daniela.id, shop_service_id: massage_cranien_groomers.id)
 Review.create(rating: 3, comment: "Bonne coupe. La prestation a durée un peu plus lontemps que prévue.", user_id: daniela.id, booking_id: b_daniela.id)
-
-puts 'Create booking of Wadi...'
-b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 7, 4, 14, 30), end_datetime: DateTime.new(2021, 7, 3, 15, 30), total_amount: 40)
-BookingService.create(booking_id: b_wadi.id, shop_service_id: shop_rasage_crane_lazerus.id)
-Review.create(rating: 5, comment: "Mon crâne n'a jamais été aussi bien traité, il est maintenant très doux 🍑 ", user_id: wadi.id, booking_id: b_wadi.id)
 
 puts 'Create booking of Amandine...'
 b_amandine = Booking.create(user_id: amandine.id, start_datetime: DateTime.new(2021, 7, 4, 15, 30), end_datetime: DateTime.new(2021, 7, 3, 16, 30), total_amount: 40)
-BookingService.create(booking_id: b_amandine.id, shop_service_id: shop_rasage_crane_lazerus.id)
-Review.create(rating: 4, comment: "Super ! Hate d'y retourner 😁 ", user_id: amandine.id, booking_id: b_amandine.id)
+BookingService.create(booking_id: b_amandine.id, shop_service_id: shop_rasage_crane_street.id)
+Review.create(rating: 5, comment: "Super ! Hate d'y retourner 😁 ", user_id: amandine.id, booking_id: b_amandine.id)
+
 
 puts 'Create booking of Lydia...'
-b_lydia = Booking.create(user_id: lydia.id, start_datetime: DateTime.new(2021, 8, 4, 14, 30), end_datetime: DateTime.new(2021, 8, 3, 15, 30), total_amount: 40)
+b_lydia = Booking.create(user_id: lydia.id, start_datetime: DateTime.new(2021, 8, 4, 14, 30), end_datetime: DateTime.new(2021, 6, 30, 15, 30), total_amount: 40)
 BookingService.create(booking_id: b_lydia.id, shop_service_id: shop_rasage_crane_loft.id)
-Review.create(rating: 5, comment: "Très bon salon, je recommande ! 👌", user_id: lydia.id, booking_id: b_lydia.id)
+Review.create(rating: 4, comment: "Très bon salon, je recommande ! 👌", user_id: lydia.id, booking_id: b_lydia.id)
+
+
+puts 'Create booking of Ricardo...'
+b_ricardo = Booking.create(user_id: ricardo.id, start_datetime: DateTime.new(2021, 6, 6, 10, 30), end_datetime: DateTime.new(2021, 6, 6, 11, 30), total_amount: 15)
+BookingService.create(booking_id: b_ricardo.id, shop_service_id: shop_degrade_barbes.id)
+Review.create(rating: 5, comment: "High Top au max ! 2.6.ZERO 🚃 ", user_id: ricardo.id, booking_id: b_ricardo.id)
+
 
 Review.create(rating: 5, comment: "Très pro, je recommande 🧘", user_id: benoit.id, booking_id: b_daniela.id)
 Review.create(rating: 4, comment: "Je recommande vivement 🧘", user_id: daniela.id, booking_id: b_daniela)
