@@ -1,22 +1,25 @@
-h1 {
+#title-new {
   color:white;
   font-size: 30px;
-
+  text-align: center;
+  padding-top: 25px;
 }
+
 p {
   color: white
 }
 
 .button-book {
+  position: fixed;
+  bottom: 90px;
+  width: 90vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  color: $brown;
+  background: #d0ab84;
+  border-radius: 30px;
   color: white;
-  padding: 6px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: $brown;
-  transition: background 0.3s ease;
-  font-size: 10px;
-  border: none;
-  width: 300px;
 }
 
 .service-details {
@@ -25,8 +28,40 @@ p {
   }
 }
 
+.service-details-new {
+  border-radius: 8px;
+  margin: 25px 15px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px;
+  background-color: #413e39;
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.service-details-new h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d0ab84;
+}
+
+.service-details-new p {
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: lighter;
+  width: 100px;
+}
+
+#book-description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
 #book-description h3 {
   margin-left: 0px;
+  font-size: 19px;
 }
 #title-book h5{
   text-align: center;
@@ -50,6 +85,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
+  margin-bottom: 40px;
 }
 
 .category-selector-book {
@@ -73,6 +109,19 @@ p {
 }
 .form-group label {
   padding-left: 10px !important;
+}
+
+
+#calendar {
+  width: 325px !important;
+}
+
+#back-new {
+  margin-top: 20px;
+}
+
+.form-check-label {
+  width: 80%;
 }
 
 .container-rating-page {

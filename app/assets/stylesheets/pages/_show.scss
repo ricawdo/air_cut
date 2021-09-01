@@ -10,7 +10,6 @@
 }
 
 .show-services {
-  display: flex;
   margin-top: 0;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +23,6 @@
   align-items: center;
   padding: 13px;
   background-color: #413e39;
-  width: 100%;
 }
 
 .service-details h3 {
@@ -186,7 +184,7 @@
   transform: translateX(-50%);
   font-size: 30px;
   color: $brown;
-  background: #c8a767;
+  background: #d0ab84;
   border-radius: 30px;
   color: white;
 }

@@ -10,7 +10,7 @@
         item_wrapper_class: 'category-item-book',
         input_html: {class: 'category-selector-book'},
         collection: open_schedules,
-        label_method: ->(schedule) { "#{schedule.hour}:#{schedule.minute}"}%>
+        label_method: ->(schedule) { "#{schedule.hour}:#{schedule.minute.to_s.rjust(2, "0")}"}%>
     <% end %>
   </div>
   <%= f.submit class: "button-book"%>
