@@ -3,12 +3,12 @@
   padding: 6px 8px;
   border-radius: 4px;
   font-weight: bold;
-  background: linear-gradient($yellow, $brown);
+  background-color: $brown;
   transition: background 0.3s ease;
   font-size: 10px;
 }
 
 .btn-brown:hover {
-  background: linear-gradient(#9c8163, #806b36);
+  background-color: $brown;
   color: white;
 }

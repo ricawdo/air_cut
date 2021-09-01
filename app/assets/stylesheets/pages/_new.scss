@@ -61,20 +61,22 @@ p {
 
 #book-description h3 {
   margin-left: 0px;
-  font-size: 19px;
+  font-size: 30px;
+  font-weight: bold;
 }
 #title-book h5{
   text-align: center;
   margin-left: 0px;
-  font-size: 30px;
+  font-size: 33px;
   color: $brown;
+  margin-top: 38px;
 }
 #book-services {
   margin-top: 0px;
 }
 
 #title-book {
-    margin-top: 90px;
+    margin-top: 10px;
 }
 
 #available-days {
@@ -132,6 +134,7 @@ p {
   margin: 0 auto;
   padding-bottom: 20px;
   border: 2px solid $brown;
+  height: 59vh;
 }
 
 .review_rating label, .review_comment label {
@@ -140,5 +143,25 @@ p {
 }
 
 #new_review input {
-  margin-left: 114px;
+  color: white;
+  padding: 9px 30px;
+  border-radius: 22px;
+  font-weight: bold;
+  background-color: #d0ab84;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+#new_review .btn-brown {
+  margin: 39px 70px;
+}
+
+.container-booking-final {
+  background-color: #4242429e;
+  border: 2px solid #D0AB84;
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin: 25px 8px;
+  height: 53vh;
 }
