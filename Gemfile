@@ -32,6 +32,8 @@ gem 'devise-i18n', '~> 1.2'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
+
+
 # gem for secret key cloudinary:
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
@@ -41,8 +43,8 @@ gem 'devise'
 gem 'pundit'
 #gem for geocoder
 gem 'geocoder'
-# gem for calendar
-gem "simple_calendar", "~> 2.4"
+
+
 
 group :development, :test do
   gem 'pry-byebug'

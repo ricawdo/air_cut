@@ -11,12 +11,6 @@
   border-bottom: 1px solid $brown;
 }
 
-.booking-prestation h3, .booking-shop h3 {
-  margin-top: 5px;
-  font-size: 20px;
-  color: #d0ab84;
-  text-transform: uppercase;
-}
 
 .title-reservation {
   text-align: center;
@@ -45,12 +39,13 @@
 }
 
 .booking-prestation h3, .booking-shop h3 {
-  margin-top: 5px;
-  font-size: 30px;
+  margin-top: 10px;
+  font-size: 20px;
   color: #d0ab84;
   text-transform: uppercase;
   font-weight: bold;
 }
+
 
 .booking-prestation p, .booking-shop p {
   margin-top: 5px;
@@ -65,4 +60,14 @@
   border-bottom: 1px solid $brown;
   text-decoration: none;
 }
-  
+
+#total-reservation {
+  color: white;
+  font-size: 21px;
+}
+
+.booking-shop {
+  padding: 2px 10px;
+  margin: 10px 0px;
+  border-top: 1px solid $brown;
+}
