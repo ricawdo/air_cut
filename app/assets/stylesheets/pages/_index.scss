@@ -175,10 +175,8 @@ a img {
   margin-top: 8px;
   border-radius: 50px;
   width: 333px;
-}
-
-.algolia-places {
-  width: 70%;
+  display: flex;
+  align-items: center;
 }
 
 .btn-search-index button {
@@ -200,8 +198,9 @@ a img {
 
 #resultat {
   color: white;
-  text-align: center;
+  text-align: left;
   font-style: italic;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin-left: 10px;
 }

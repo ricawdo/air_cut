@@ -13,7 +13,9 @@ export default class extends Controller {
     setTimeout(() => {
       this.servicefemmeTarget.classList.remove("inactive")
       this.genderTarget.classList.add("inactive")
-      document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+      // if (document.getElementById('gender')) {
+      //   document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+      // }
     }, 300)
   }
 
@@ -22,7 +24,9 @@ export default class extends Controller {
     setTimeout(() => {
       this.servicehommeTarget.classList.remove("inactive")
       this.genderTarget.classList.add("inactive")
-      document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+      // if (document.getElementById('gender')) {
+      //   document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+      // }
     }, 300)
   }
 
@@ -32,7 +36,7 @@ export default class extends Controller {
     e.currentTarget.classList.add('active');
     document.getElementById('service').value = e.currentTarget.getAttribute('id');
     setTimeout(() => {
-      document.getElementById('submit_search').click()
+      document.getElementById('super-search-form').submit();
     }, 300);
   }
 }

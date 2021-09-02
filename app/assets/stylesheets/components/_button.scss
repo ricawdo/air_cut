@@ -12,3 +12,22 @@
   background-color: $brown;
   color: white;
 }
+
+#booking-btn {
+  position: absolute;
+  bottom: -70px;
+  transition: all .4s ease;
+
+  &.active {
+    bottom: 81px;
+  }
+}
+
+#validate-btn {
+  bottom: -70px;
+  transition: all .4s ease;
+
+  &.active {
+    bottom: 81px;
+  }
+}

@@ -2,7 +2,6 @@
   color:white;
   font-size: 30px;
   text-align: center;
-  padding-top: 25px;
 }
 
 p {
@@ -108,10 +107,6 @@ p {
   background-color: $brown !important;
 }
 
-.form-group {
-  margin-bottom: 5rem;
-}
-
 .form-group label {
   padding-left: 10px !important;
 }
@@ -120,10 +115,6 @@ p {
 #calendar {
   width: 325px !important;
   margin: 90px;
-}
-
-#back-new {
-  margin-top: 20px;
 }
 
 .form-check-label {
@@ -200,11 +191,17 @@ p {
 }
 
 
-.booking_start_schedule_time input {
+.booking_start_schedule_time {
+  input {
   -webkit-appearance: none;
   opacity: 0;
   display: none;
+  }
+  .flatpickr-current-month input {
+    opacity: 1;
+  }
 }
+
 
 input[type='date'] {
   -webkit-appearance: textfield;
@@ -215,12 +212,24 @@ input[type='date'] {
 .flatpickr-current-month .flatpickr-monthDropdown-months {
   background: transparent !important;
   -webkit-appearance: none !important;
-.form-wrapper {
-  h3 {
+}
+
+#calendar h3 {
     color: white;
-    margin-bottom: -30px;
     font-size: 14px;
     font-style: italic;
+}
+
+.new-book-title {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  i {
+    margin-right: 1em;
   }
 }
+
+.back-arrow i {
+  color: $brown;
+  font-size: 18px;
 }

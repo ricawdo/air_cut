@@ -104,6 +104,7 @@ label img {
   margin-right: -137px;
   position: absolute;
   width: 217px;
+
 }
 
 .btn-search {
@@ -117,13 +118,6 @@ label img {
   margin-bottom: 120px;
   width: 150%;
   font-size: 35px;
-}
-
-.fa-arrow-left {
-  color: $brown;
-  font-size: 18px;
-  position: absolute;
-  top: 0px;
 }
 
 #femme p, #homme p {
@@ -152,8 +146,8 @@ label img {
   color: white;
 }
 
-.category-item-service:active {
-  label {
+.category-item-service {
+  label.active {
     background-color: $brown !important;
   }
 }

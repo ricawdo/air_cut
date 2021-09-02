@@ -22,16 +22,10 @@ body {
   margin: 1em 0px;
 }
 
-
-.algolia-places {
-  width: 70%;
-}
-
 #address {
-  position: relative;
-  vertical-align: top;
-  margin-left: 21px;
+  margin: 0px 5px;
   border: none;
+  width: 90%;
   &:focus {
       outline: none;
   }
@@ -46,13 +40,15 @@ body {
 .btn-search-home {
   background-color: white;
   margin: 20px 0px;
+  padding: 20px 0px;
   border-radius: 50px;
   display: flex;
   align-items: center;
 }
 
 .btn-search-home button {
-  margin-left: 44px;
+  position: absolute;
+  right: 60px;
 }
 
 .ap-input-icon svg {

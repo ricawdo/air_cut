@@ -1,8 +1,10 @@
 <div class ="container book">
-  <%= link_to url_for(:back) do %>
-    <i class="fas fa-arrow-left" id="back-new"></i>
-  <% end %>
-  <h1 id="title-new"><%= @barber_shop.name %></h1>
+  <div class="new-book-title">
+    <%= link_to url_for(:back), class: "back-arrow" do %>
+      <i class="fas fa-arrow-left" id="back-new"></i>
+    <% end %>
+    <h1 id="title-new"><%= @barber_shop.name %></h1>
+  </div>
   <div class="show-services" id="book-services">
 
     <div class="service-details-new">
