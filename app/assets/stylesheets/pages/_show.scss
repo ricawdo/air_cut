@@ -23,6 +23,7 @@
   align-items: center;
   padding: 13px;
   background-color: #413e39;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .service-details h3 {
@@ -30,6 +31,7 @@
   font-weight: bold;
   text-transform: uppercase;
   color: #d0ab84;
+  font-family: 'Inter', sans-serif;
 }
 
 .service-details p {
@@ -57,6 +59,7 @@
 
 .nav-link {
   color: #f0dbc5;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -64,6 +67,7 @@
   padding: 7px;
   border-bottom: 1px solid #c8a767;
   background-color: $gray;
+
 }
 
 .carousel-item img {
@@ -170,6 +174,7 @@
 
 .info-barber p {
   color: black;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .checkbox-service:checked + label .service-details {
@@ -187,6 +192,7 @@
   background: #d0ab84;
   border-radius: 30px;
   color: white;
+  font-family: 'Inter', sans-serif;
 }
 
 .fa-phone-alt {
@@ -205,4 +211,9 @@
 
 #note-moyenne-gras {
   font-size: 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.main-wrapper {
+  font-family: 'Open Sans', sans-serif;
 }
