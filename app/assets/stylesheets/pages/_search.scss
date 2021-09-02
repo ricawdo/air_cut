@@ -83,6 +83,12 @@ label img {
   }
 }
 
+#services_femme, #services_homme {
+  &.active {
+    background-color: $brown !important;
+  }
+}
+
 .inactive {
   opacity: 0;
   pointer-events: none;

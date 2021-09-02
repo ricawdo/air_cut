@@ -174,8 +174,6 @@ p {
   margin: 25px 8px;
   height: 53vh;
 }
-
-
 .opacity-0 {
   opacity: 0;
 }
@@ -183,18 +181,24 @@ p {
   background: rgb(63, 62, 62) !important;
 }
 
-.form-control {
-  margin-top: -50px;
-}
-
 .flatpickr-day.selected {
   background: $brown !important;
   border-color: $brown !important;
   font-weight: bolder;
   font-size: 20px;
+}
 
-.description-new {
+  .description-new {
   font-size: 18px;
   font-weight: bold;
   color: #d0ab84;
+}
+
+.form-wrapper {
+  h3 {
+    color: white;
+    margin-bottom: -30px;
+    font-size: 14px;
+    font-style: italic;
+  }
 }

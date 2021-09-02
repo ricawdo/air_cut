@@ -29,7 +29,10 @@ export default class extends Controller {
   showSearch(e) {
     // this.searchTarget.classList.remove("inactive")
     // this.serviceTarget.classList.add("inactive")
+    e.currentTarget.classList.add('active');
     document.getElementById('service').value = e.currentTarget.getAttribute('id');
-    document.getElementById('submit_search').click()
+    setTimeout(() => {
+      document.getElementById('submit_search').click()
+    }, 300);
   }
 }
