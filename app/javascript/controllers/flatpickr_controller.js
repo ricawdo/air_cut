@@ -8,6 +8,7 @@ export default class extends Controller {
     const closingDays = JSON.parse(this.datepickrTarget.dataset.closingDays);
 
     flatpickr(".datepicker", {
+      inline: true,
       enableTime: false,
       allowInput: true,
       altInput: true,

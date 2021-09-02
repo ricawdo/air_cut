@@ -26,11 +26,12 @@
     position: absolute;
     right: -2px;
     top: 0px;
-    background-color: $brown;
+    background-color: #957573;
     border-radius: 15px;
     color: white;
     padding: 1px 7px;
     margin: 10px;
+    font-family: 'Open Sans', sans-serif;
   }
       #rating-bs {
         font-size: 19px;
@@ -41,7 +42,8 @@
         font-size: 8px;
       }
       i{
-        color: white;
+        color: #d0ab84;
+        font-size: 15px;
       }
 }
 
@@ -81,6 +83,7 @@ a img {
 }
 #name-barbershop, #address-barbershop {
   color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #address-barbershop {
@@ -109,13 +112,14 @@ a img {
   font-weight: lighter;
   background: white;
   position: fixed;
-  bottom: 120px;
-  right: 12px;
+  bottom: 90px;
+  right: 26px;
   height: 70px;
   width: 70px;
   border-radius: 50%;
   z-index: 999;
   border: none;
+  font-family: 'Open Sans', sans-serif;
     i {
     width: 23;
     color: $brown;
@@ -191,4 +195,11 @@ a img {
   font-weight: bold;
   font-size: 21px;
   background-color: white;
+}
+
+#resultat {
+  color: white;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
 }
