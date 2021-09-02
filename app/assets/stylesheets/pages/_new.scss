@@ -179,3 +179,21 @@ p {
   font-weight: bold;
   color: #d0ab84;
 }
+
+
+.booking_start_schedule_time input {
+  -webkit-appearance: none;
+  opacity: 0;
+  display: none;
+}
+
+input[type='date'] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  background: transparent !important;
+  -webkit-appearance: none !important;
+}

@@ -23,6 +23,7 @@
   align-items: center;
   padding: 13px;
   background-color: #444040;
+  border: 1px solid transparent;
 }
 
 .service-details h3 {
@@ -184,16 +185,15 @@
 
 .btn-brown2 {
   position: fixed;
-  bottom: 90px;
-  width: 90vw;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 30px;
-  color: $brown;
+  padding: 10px 0px 8px 0px;
+  bottom: 80px;
+  width: 100%;
+  left: 0;
   background: #d0ab84;
-  border-radius: 30px;
   color: white;
-  font-family: 'Inter', sans-serif;
+  font-family: $headers-font;
+  text-transform: uppercase;
+  font-size: 1.6em;
 }
 
 .fa-phone-alt {

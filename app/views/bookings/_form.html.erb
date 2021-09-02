@@ -1,4 +1,3 @@
-<h1>Sélectionnez une date</h1>
 <%= simple_form_for booking, html: {data: {controller: "flatpickr" }} do |f| %>
   <%= f.input :start_schedule_time, as: :string, required: false, label: false,
   input_html: {value: chosen_date ? chosen_date : "", class: "datepicker", data: { flatpickr_target: "datepickr", closing_days: barber_shop.closing_days, action: "change->available-hours#showHours", available_hours_target: "dateUser"}}%>
