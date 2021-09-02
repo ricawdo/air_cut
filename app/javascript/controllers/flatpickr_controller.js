@@ -14,6 +14,7 @@ export default class extends Controller {
       enableTime: false,
       allowInput: true,
       altInput: true,
+      disableMobile: true,
       disable: [
         function (date) {
           return closingDays.includes(date.getDay());
