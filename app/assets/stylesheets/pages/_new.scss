@@ -52,6 +52,7 @@ p {
   font-size: 14px;
   font-weight: lighter;
   width: 100px;
+  margin-left: 5px;
 }
 
 #book-description {
@@ -84,7 +85,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .category-selector-book {
@@ -113,6 +114,7 @@ p {
 
 #calendar {
   width: 325px !important;
+  margin: 90px;
 }
 
 #back-new {
@@ -172,7 +174,6 @@ p {
   margin: 25px 8px;
   height: 53vh;
 }
-
 .opacity-0 {
   opacity: 0;
 }
@@ -189,7 +190,9 @@ p {
   border-color: $brown !important;
   font-weight: bolder;
   font-size: 20px;
-.description-new {
+}
+
+  .description-new {
   font-size: 18px;
   font-weight: bold;
   color: #d0ab84;

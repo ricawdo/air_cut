@@ -10,7 +10,7 @@
 }
 
 .show-services {
-  margin-top: 5pxs;
+  margin-top: 5px;
   justify-content: space-between;
   align-items: center;
 }
@@ -24,7 +24,7 @@
   padding: 13px;
   background-color: rgb(63, 62, 62);
   font-family: 'Open Sans', sans-serif;
-
+}
 .service-details h3 {
   font-size: 22px;
   font-weight: bold;
@@ -66,7 +66,7 @@
   padding: 7px;
   border-bottom: 1px solid #c8a767;
   background-color: $gray;
-
+  -webkit-appearance: none;
 }
 
 .carousel-item img {
@@ -218,4 +218,12 @@
 
 .main-wrapper {
   font-family: 'Open Sans', sans-serif;
+}
+
+.info-barber h2 {
+  font-size: 26px;
+}
+
+.tab-pane {
+  padding-bottom: 50px;
 }
