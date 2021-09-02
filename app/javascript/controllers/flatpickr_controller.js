@@ -1,5 +1,7 @@
 import { Controller } from "stimulus";
 import flatpickr from "flatpickr";
+require("flatpickr/dist/themes/dark.css");
+
 
 export default class extends Controller {
   static targets = ["datepickr"]

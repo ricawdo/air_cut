@@ -8,7 +8,6 @@ export default class extends Controller {
 
   showHours() {
     const url = `${window.location.pathname}${window.location.search}&date_validate=${this.dateUserTarget.value}`;
-    console.log(url);
     const outerElement = this.element;
     fetch(url, {
       headers: { 'Accept': 'text/plain' }
@@ -16,6 +15,7 @@ export default class extends Controller {
     .then(response => response.text())
     .then((data) => {
       outerElement.innerHTML = data;
+      document.querySelector(".main-wrapper").scrollTo({ top: document.querySelector(".main-wrapper").scrollHeight, behavior: 'smooth' })
     })
  }
 }

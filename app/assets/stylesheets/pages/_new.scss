@@ -175,3 +175,10 @@ p {
   margin: 25px 8px;
   height: 53vh;
 }
+
+.opacity-0 {
+  opacity: 0;
+}
+.flatpickr-innerContainer, .flatpickr-current-month, .flatpickr-monthDropdown-months, .flatpickr-months .flatpickr-month, span.flatpickr-weekday {
+  background: red !important;
+}

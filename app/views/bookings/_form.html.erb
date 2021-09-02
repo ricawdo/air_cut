@@ -1,7 +1,7 @@
 <h1>Sélectionnez une date</h1>
 <%= simple_form_for booking, html: {data: {controller: "flatpickr" }} do |f| %>
   <%= f.input :start_schedule_time, as: :string, required: false, label: false,
-  input_html: {value: chosen_date ? chosen_date : "", class: "datepicker", data: { flatpickr_target: "datepickr", closing_days: barber_shop.closing_days, action: "change->available-hours#showHours", available_hours_target: "dateUser"}}%>
+  input_html: {value: chosen_date ? chosen_date : "", class: "datepicker opacity-0", data: { flatpickr_target: "datepickr", closing_days: barber_shop.closing_days, action: "change->available-hours#showHours", available_hours_target: "dateUser"}}%>
   <div data-available-hours-target="scheduleHours">
     <% if open_schedules  %>
       <%= f.input :start_datetime, as: :radio_buttons,
@@ -13,7 +13,7 @@
         label_method: ->(schedule) { "#{schedule.hour}:#{schedule.minute.to_s.rjust(2, "0")}"}%>
     <% end %>
   </div>
-  <%= f.submit "Reserver", class: "button-book"%>
+  <%= f.submit "Réserver", class: "button-book"%>
   <%= f.hidden_field :shop_service_id, value: params[:shop_service_id] %>
   <% shop_services.each do |shop_service| %>
     <%= hidden_field_tag 'booking_services[]', shop_service.id %>
