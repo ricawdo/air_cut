@@ -9,15 +9,21 @@ export default class extends Controller {
   // }
 
   showServicefemme(e) {
-    this.servicefemmeTarget.classList.remove("inactive")
-    this.genderTarget.classList.add("inactive")
-    document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+    e.currentTarget.classList.add('active');
+    setTimeout(() => {
+      this.servicefemmeTarget.classList.remove("inactive")
+      this.genderTarget.classList.add("inactive")
+      document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+    }, 300)
   }
 
   showServicehomme(e) {
-    this.servicehommeTarget.classList.remove("inactive")
-    this.genderTarget.classList.add("inactive")
-    document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+    e.currentTarget.classList.add('active');
+    setTimeout(() => {
+      this.servicehommeTarget.classList.remove("inactive")
+      this.genderTarget.classList.add("inactive")
+      document.getElementById('gender').value = e.currentTarget.getAttribute('id');
+    }, 300)
   }
 
   showSearch(e) {

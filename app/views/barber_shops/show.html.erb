@@ -5,8 +5,10 @@
       <i class="fas fa-arrow-left" id="arrow-back"></i>
     <% end %>
   <div class="info-barber">
-    <h2><%= @barber_shop.name %></h2>
-    <p><i class="fas fa-home"></i> <%= @barber_shop.address %></p>
+    <div class="text-left">
+      <h2><%= @barber_shop.name %></h2>
+      <p><i class="fas fa-map-marker-alt"></i> <%= @barber_shop.address %></p>
+    </div>
   </div>
 </div>
 
@@ -68,14 +70,21 @@
       <div class="moyenne-rating">
         <div class="moyenne">
           <p>Note moyenne</p>
-          <p id="note-moyenne-gras"> <%= (@barber_shop.reviews.pluck(:rating).sum / @barber_shop.reviews.pluck(:rating).count.to_f).round(1)%>/5</p>
+            <div class="note-moyenne-average">
+              <p id="note-moyenne-gras"> <%= (@barber_shop.reviews.pluck(:rating).sum / @barber_shop.reviews.pluck(:rating).count.to_f).round(1)%></p><p id="small-rate">/5</p>
+            </div>
           <p> <%= @barber_shop.reviews.pluck(:rating).count %> <i class="far fa-comment-dots"></i></p>
 
         </div>
         <div class="star-ratings">
           <% [5, 4, 3, 2, 1, 0].each do |i| %>
           <div class="star-rating">
-              <p><%= i %>  <i class="fas fa-star"></i></p>
+            <div class="star-rating-number">
+             <p><%= i %> </p>
+            </div>
+            <div>
+              <i class="fas fa-star" id="star-rate"></i>
+            </div>
             <div class="progress">
               <div class="progress-bar" role="progressbar" style="width: <%= @barber_shop.rating_count_percent(i)  %>%" aria-valuenow="<%= @barber_shop.rating_count_percent(4)  %>" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
@@ -108,7 +117,7 @@
     </div>
     <p class="underline"></p>
     <div class="btn-service d-flex">
-      <p><i class="fas fa-phone-alt"> </i> - <%= @barber_shop.phone_number %> </p>
+      <p><i class="fas fa-phone-alt"> </i>  <%= @barber_shop.phone_number %> </p>
       <a class="btn btn-flat" href="#"> Appeler</a>
     </div>
     <p class="underline"></p>

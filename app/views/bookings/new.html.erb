@@ -8,7 +8,7 @@
     <div class="service-details-new">
       <% @shop_services.each do |shop_service| %>
         <div id="book-description">
-          <h3><%= shop_service.service.name %></h3>
+          <div class="description-new"><%= shop_service.service.name %></div>
         <div class="text-right">
           <p><strong><%= shop_service.price %> €</strong>  |  <i class="far fa-clock"></i>  <%= shop_service.duration %>mn</p>
         </div>
