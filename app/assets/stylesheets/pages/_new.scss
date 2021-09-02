@@ -60,11 +60,7 @@ p {
   margin-bottom: 25px;
 }
 
-#book-description h3 {
-  margin-left: 0px;
-  font-size: 30px;
-  font-weight: bold;
-}
+
 #title-book h5{
   text-align: center;
   margin-left: 0px;
@@ -177,6 +173,7 @@ p {
   height: 53vh;
 }
 
+
 .opacity-0 {
   opacity: 0;
 }
@@ -193,4 +190,9 @@ p {
   border-color: $brown !important;
   font-weight: bolder;
   font-size: 20px;
+
+.description-new {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d0ab84;
 }

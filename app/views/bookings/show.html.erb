@@ -1,16 +1,17 @@
 <div class="container"id="title-book" >
   <h5 >Votre rendez-vous est confirmé pour le <%= @booking.start_datetime.strftime("%d/%m/%Y") %> à  <%=  @booking.start_datetime.strftime("%H:%M")  %></h5>
   <div class="show-services" id="book-services">
-      <div id="book-description">
-          <div class="container-booking-final">
-            <div class="booking-prestation">
-              <% @booking.booking_services.each do |booking_service| %>
-                <div class="prestation-reservation">
-                  <h3><%= booking_service.shop_service.service.name %></h3>
-                </div>
-              <% end %>
-              <p><i class="far fa-clock"></i>  <%= @booking.duration_in_minutes %>mn</p>
-              <p>Total:  <%= @booking.total_amount %> €</p>
+    <div id="book-description">
+      <div class="container-booking-final">
+        <div class="booking-prestation">
+          <% @booking.booking_services.each do |booking_service| %>
+            <div class="prestation-reservation">
+              <h3><%= booking_service.shop_service.service.name %></h3>
+            </div>
+            <% end %>
+            <div class="total-new">
+              <div class="total-price-duration" id="total-reservation">Total : </div>
+              <div class="total-price-duration"><p><%= @booking.total_amount %> € | <i class="far fa-clock"></i>  <%= @booking.duration_in_minutes %>mn</p></div>
             </div>
             <div class="booking-shop">
                 <h3><%= @booking.barber_shop.name %></h3>

@@ -77,6 +77,12 @@ label img {
   }
 }
 
+#homme, #femme {
+  &.active {
+    background-color: $brown !important;
+  }
+}
+
 .inactive {
   opacity: 0;
   pointer-events: none;
