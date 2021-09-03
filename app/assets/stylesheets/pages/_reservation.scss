@@ -59,6 +59,7 @@
 .nav-link-reservation.active {
   border-bottom: 1px solid $brown;
   text-decoration: none;
+  -webkit-appearance: none;
 }
 
 #total-reservation {
