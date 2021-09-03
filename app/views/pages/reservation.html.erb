@@ -1,23 +1,23 @@
-<div class="title-reservation">
+<div class="title-dashboard">
   <h1>Mes reservations</h1>
 </div>
 
 <ul class="nav nav-pills mb-1 d-flex justify-content-around" id="pills-tab" role="tablist">
-  <li class="nav-item-reservation">
-    <a class="nav-link-reservation" id="pills-venir-tab" data-toggle="pill" href="#pills-venir" role="tab" aria-controls="pills-venir" aria-selected="false">À venir</a>
+  <li class="nav-item-dashboard">
+    <a class="nav-link-dashboard" id="pills-venir-tab" data-toggle="pill" href="#pills-venir" type="button" role="tab" aria-controls="pills-venir" aria-selected="false">À venir</a>
   </li>
-  <li class="nav-item-reservation">
-    <a class="nav-link-reservation active" id="pills-passé-tab" data-toggle="pill" href="#pills-passé" role="tab" aria-controls="pills-passé" aria-selected="true">Passé</a>
+  <li class="nav-item-dashboard">
+    <a class="nav-link-dashboard active" id="pills-passé-tab" data-toggle="pill" href="#pills-passé" type="button" role="tab" aria-controls="pills-passé" aria-selected="true">Passé</a>
   </li>
 </ul>
 
 <div class="tab-content" id="pills-tabContent">
   <div class="tab-pane fade show active" id="pills-passé" role="tabpanel" aria-labelledby="pills-passé-tab">
     <% @user.bookings.past.each do |booking| %>
-        <div class="container-booking">
-          <div class="booking-prestation">
+        <div class="container-dashboard">
+          <div class="dashboard-prestation">
             <% booking.booking_services.each do |booking_service| %>
-              <div class="prestation-reservation">
+              <div class="prestation-dashboard">
                 <h3><%= booking_service.shop_service.service.name %></h3>
                 <p><i class="far fa-clock"></i>  <%= booking_service.shop_service.duration %>mn</p>
               </div>
@@ -25,11 +25,11 @@
             <p><%= booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking.start_datetime.strftime("%R") %></p>
             <p>Total : <%= booking.total_amount %> €</p>
           </div>
-          <div class="booking-shop">
+          <div class="dashboard-shop">
               <h3><%= booking.barber_shop.name %></h3>
               <p><%= booking.barber_shop.address %></p>
               <p> <i class="fas fa-phone-alt"> </i><%= booking.barber_shop.phone_number %>  </p>
-              <p class="btn-reservation"><%= link_to 'Ajouter un avis', new_booking_review_path(booking), class: "btn-brown"%></p>
+              <p class="btn-dashboard"><%= link_to 'Ajouter un avis', new_booking_review_path(booking), class: "btn-brown"%></p>
           </div>
         </div>
     <% end %>
@@ -37,10 +37,10 @@
   <div class="tab-pane fade" id="pills-venir" role="tabpanel" aria-labelledby="pills-venir-tab">
     <div class="portfolio_wrap">
     <% @user.bookings.upcoming.each do |booking| %>
-        <div class="container-booking">
-          <div class="booking-prestation">
+        <div class="container-dashboard">
+          <div class="dashboard-prestation">
             <% booking.booking_services.each do |booking_service| %>
-              <div class="prestation-reservation">
+              <div class="prestation-dashboard">
                 <h3><%= booking_service.shop_service.service.name %></h3>
                 <p><i class="far fa-clock"></i>  <%= booking_service.shop_service.duration %>mn</p>
               </div>
@@ -48,7 +48,7 @@
             <p><%= booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking.start_datetime.strftime("%R") %></p>
             <p>Total :  <%= booking.total_amount %> €</p>
           </div>
-          <div class="booking-shop">
+          <div class="dashboard-shop">
               <h3><%= booking.barber_shop.name %></h3>
               <p><%= booking.barber_shop.address %></p>
               <p> <i class="fas fa-phone-alt"> </i> <%= booking.barber_shop.phone_number %></p>
