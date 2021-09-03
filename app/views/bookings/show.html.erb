@@ -10,8 +10,8 @@
             </div>
             <% end %>
             <div class="total-new">
-              <div class="total-price-duration" id="total-reservation">Total : </div>
-              <div class="total-price-duration"><p><%= @booking.total_amount %> € | <i class="far fa-clock"></i>  <%= @booking.duration_in_minutes %>mn</p></div>
+              <div class="total-reservation">Total : </div>
+              <div class="total-reservation"><p><%= @booking.total_amount %> € | <i class="far fa-clock"></i>  <%= @booking.duration_in_minutes %>mn</p></div>
             </div>
             <div class="booking-shop">
                 <h3><%= @booking.barber_shop.name %></h3>
