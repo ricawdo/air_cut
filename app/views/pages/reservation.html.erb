@@ -23,7 +23,7 @@
               </div>
             <% end %>
             <p><%= booking.start_datetime.strftime("%d/%m/%y") %> - <%= booking.start_datetime.strftime("%R") %></p>
-            <p>Total : <%= booking.total_amount %> €</p>
+            <p>Total :  <%= booking.total_amount %> €</p>
           </div>
           <div class="booking-shop">
               <h3><%= booking.barber_shop.name %></h3>
