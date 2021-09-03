@@ -1,0 +1,76 @@
+.container-dashboard {
+  background-color: #4242429e;
+  border: 2px solid #D0AB84;
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin: 25px 23px;
+}
+
+.dashboard-prestation {
+  border-bottom: 1px solid $brown;
+}
+
+
+.title-dashboard {
+  text-align: center;
+  color: $brown;
+}
+
+.prestation-dashboard {
+  border-bottom: 1px solid $brown;
+  padding: 2px 3px;
+  margin: 10px 0px;
+}
+
+.btn-dashboard .btn-brown {
+  color: white;
+  padding: 9px 30px;
+  border-radius: 22px;
+  font-weight: bold;
+  background-color: $brown;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.title-dashboard h1 {
+  margin: 27px 0px;
+}
+
+.dashboard-prestation h3, .dashboard-shop h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #d0ab84;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+.dashboard-prestation p, .dashboard-shop p {
+  margin-top: 5px;
+  font-size: 21px;
+}
+
+.nav-item-dashboard  a {
+  font-size: 23px;
+  color: white;
+}
+.nav-link-dashboard.active {
+  border-bottom: 1px solid $brown;
+  text-decoration: none;
+}
+
+#total-dashboard {
+  color: white;
+  font-size: 21px;
+}
+
+.dashboard-shop {
+  padding: 2px 3px;
+  margin: 10px 0px;
+}
+
+
+#pills-venir .portfolio_wrap {
+  margin-left: 0px;
+}
