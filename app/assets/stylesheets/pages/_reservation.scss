@@ -40,7 +40,7 @@
 
 .booking-prestation h3, .booking-shop h3 {
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #d0ab84;
   text-transform: uppercase;
   font-weight: bold;
@@ -62,9 +62,11 @@
   -webkit-appearance: none;
 }
 
-#total-reservation {
+.total-reservation {
   color: white;
   font-size: 21px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .booking-shop {
