@@ -393,7 +393,7 @@ lazerus.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/p
 file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/26066759_377137346031913_7887130856924381184_n_i738d2.jpg')
 lazerus.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 
-puts 'Ok Barbershops ! 💈' # *******************************************************************************************
+puts 'Ok Barbershops! 💈' # *******************************************************************************************
 
 puts 'Create Services, ShopServices and link to BarberShops...' # ******************************************************
 puts 'Create Services for gender:homme' # ******************************************************************************
