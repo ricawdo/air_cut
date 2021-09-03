@@ -44,11 +44,12 @@ body {
   border-radius: 50px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .btn-search-home button {
   position: absolute;
-  right: 60px;
+  right: 15px;
 }
 
 .ap-input-icon svg {
