@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_one_attached :photo
   has_many :bookings
   has_many :reviews
+  has_many :barber_shops
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 end

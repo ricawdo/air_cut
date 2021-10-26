@@ -118,8 +118,8 @@ estelle = User.create(first_name: "estelle", last_name: "Cirilo", email: "estell
 
 puts 'Create Daniela ...'
 daniela = User.create(first_name: "Daniela", last_name: "Mock-Zubia", email: "daniela@gmail.com", phone_number: "0638393714", password: "123456", gender: "femme", role: "client")
-daniela_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193955/PortraitsLeWagon_0721_By_BenoitBillard-734_drvdkw.jpg')
-daniela.photo.attach(io: daniela_photo, filename: 'daniela.png', content_type: 'image/png')
+# daniela_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193955/PortraitsLeWagon_0721_By_BenoitBillard-734_drvdkw.jpg')
+# daniela.photo.attach(io: daniela_photo, filename: 'daniela.png', content_type: 'image/png')
 
 puts 'Create Jean ...'
 jean = User.create(first_name: "Jean", last_name: "Thomassin", email: "jean@gmail.com", phone_number: "0638393714", password: "123456", gender: "homme", role: "client")
@@ -176,18 +176,18 @@ puts '>> Owner...' # ***********************************************************
 
 puts 'Create Bruno...'
 bruno = User.create(first_name: "Bruno", last_name: "Goncalves", email: "bruno@aircut.fr", phone_number: "0648593714", password: "123456", gender: "homme", role: "barber")
-bruno_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193567/Capture_d_e%CC%81cran_2021-08-29_a%CC%80_01.32.43_wio9av.png')
+bruno_photo = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635254026/PortraitsLeWagon_0721_By_BenoitBillard-600_kb2u2c.jpg')
 bruno.photo.attach(io: bruno_photo, filename: 'bruno.png', content_type: 'image/png')
 
 puts 'Create Ricardo...'
 ricardo = User.create(first_name: "Ricardo", last_name: "Dupot", email: "ricardo@aircut.fr", phone_number: "0648593714", password: "123456", gender: "homme", role: "barber")
-ricardo_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630193247/PortraitsLeWagon_0721_By_BenoitBillard-600_hhfpnb.jpg')
+ricardo_photo = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635254026/PortraitsLeWagon_0721_By_BenoitBillard-600_kb2u2c.jpg')
 ricardo.photo.attach(io: ricardo_photo, filename: 'ricardo.png', content_type: 'image/png')
 
 puts 'Create Gwen...'
 gwen = User.create(first_name: "Gwen", last_name: "Marie", email: "gwen@aircut.fr", phone_number: "0648593714", password: "123456", gender: "homme", role: "barber")
-gwen_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630190701/PortraitsLeWagon_0721_By_BenoitBillard-413_m4dfxv.jpg')
-gwen.photo.attach(io: gwen_photo, filename: 'gwen.png', content_type: 'image/png')
+# gwen_photo = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630190701/PortraitsLeWagon_0721_By_BenoitBillard-413_m4dfxv.jpg')
+# gwen.photo.attach(io: gwen_photo, filename: 'gwen.png', content_type: 'image/png')
 
 puts "Create O'neal..."
 oneal = User.create(first_name: "O'neal", last_name: "Maoukola", email: "oneal@aircut.fr", phone_number: "0673869727", password: "123456", gender: "homme", role: "barber")
@@ -245,57 +245,57 @@ puts '>> Ok Users!' # **********************************************************
 puts '>> Create BarberShops...' # **************************************************************************************
 
 puts 'Create Le Loft...'
-le_loft = BarberShop.create(name: "Le Loft", address: "193 Rue de Crimée, 75019 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: bruno)
-file0 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196333/60281895_118647909109104_2390819617547872176_n_hlpo7p.jpg')
+le_loft = BarberShop.create(name: "Le Loft", address: "20 rue Ernest Léardée, 97200 Fort-de-France", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+file0 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253309/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.09_lcvott.png')
 le_loft.photos.attach(io: file0, filename: 'nes.png', content_type: 'image/png')
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196333/83421820_819504878552350_2528735426499366713_n_zwfl8d.jpg')
+file1 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.22_qbzyuv.png')
 le_loft.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196333/218374274_548773342946295_6084259345117551727_n_su8xij.jpg')
+file2 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.13_bziewj.png')
 le_loft.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196333/159865214_1509000059439458_6007221951981237019_n_ke2no0.jpg')
+file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.25_fvhr9a.png')
 le_loft.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196332/60065867_593471184481992_7244846480578544616_n_h5rmll.jpg')
+file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.07_iapped.png')
 le_loft.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196333/100087145_109854883928670_4987477385418618609_n_irofnc.jpg')
+file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.58.59_cky6gh.png')
 le_loft.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196332/94890959_1837902099676681_6532988507996967766_n_iv6rev.jpg')
-le_loft.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196332/94890959_1837902099676681_6532988507996967766_n_iv6rev.jpg')
+# le_loft.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 le_loft.save!
 
 puts 'Create Barbes BarberShop...'
-barbes_barber = BarberShop.create(name: "Barbes Barber Shop", address: "36 rue de la Charbonnière 75018 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: oneal)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/85043998_630044161131752_6086941935936272674_n_mngbcr.jpg')
-barbes_barber.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/159461383_467113237872322_4740289791941848095_n_gamlvv.jpg')
-barbes_barber.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/121091299_1123487628045283_2724903855974735926_n_q4xaaa.jpg')
-barbes_barber.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/139957480_910281366462231_4776562938135045990_n_f0mjer.jpg')
-barbes_barber.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/89359244_120151569570206_8674898000823805656_n_mkkf1v.jpg')
-barbes_barber.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/239429834_524334472191336_9206666044595112166_n_lzvgds.jpg')
-barbes_barber.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/121010353_975764699593149_5295583209495846083_n_zkknpi.jpg')
-barbes_barber.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+barbes_barber = BarberShop.create(name: "Barbes Barber Shop", address: "36 rue de la Charbonnière 75018 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/85043998_630044161131752_6086941935936272674_n_mngbcr.jpg')
+# barbes_barber.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/159461383_467113237872322_4740289791941848095_n_gamlvv.jpg')
+# barbes_barber.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/121091299_1123487628045283_2724903855974735926_n_q4xaaa.jpg')
+# barbes_barber.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/139957480_910281366462231_4776562938135045990_n_f0mjer.jpg')
+# barbes_barber.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/89359244_120151569570206_8674898000823805656_n_mkkf1v.jpg')
+# barbes_barber.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/239429834_524334472191336_9206666044595112166_n_lzvgds.jpg')
+# barbes_barber.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/121010353_975764699593149_5295583209495846083_n_zkknpi.jpg')
+# barbes_barber.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 barbes_barber.save!
 
 puts 'Create 235th Barberstreet...'
-barber_street = BarberShop.create(name: "235th Barber Street", address: "25 boulevard du temple, Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: gwen)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/e000e950f397110d534cdc0375418ff7_kfkxos.png')
-barber_street.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/123850089_120299963020303_2174107557210075674_n_s4ciux.jpg')
-barber_street.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/106013823_644366949621133_3042054075000774073_n_c95bmi.jpg')
-barber_street.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/119995554_324429502179320_4124826931189148647_n_z4mhwe.jpg')
-barber_street.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/118690910_605410806816034_4806375566724745166_n_iyourl.jpg')
-barber_street.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/127711971_374090853673247_3240304744496115590_n_gqc2lu.jpg')
-barber_street.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/131977598_891393731604872_7348389368098985683_n_uo8xrk.jpg')
-barber_street.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+barber_street = BarberShop.create(name: "235th Barber Street", address: "25 boulevard du temple, Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/e000e950f397110d534cdc0375418ff7_kfkxos.png')
+# barber_street.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/123850089_120299963020303_2174107557210075674_n_s4ciux.jpg')
+# barber_street.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/106013823_644366949621133_3042054075000774073_n_c95bmi.jpg')
+# barber_street.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/119995554_324429502179320_4124826931189148647_n_z4mhwe.jpg')
+# barber_street.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/118690910_605410806816034_4806375566724745166_n_iyourl.jpg')
+# barber_street.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/127711971_374090853673247_3240304744496115590_n_gqc2lu.jpg')
+# barber_street.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/131977598_891393731604872_7348389368098985683_n_uo8xrk.jpg')
+# barber_street.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 barber_street.save!
 
 # puts 'Create Chez Ginette...'
@@ -335,21 +335,21 @@ barber_street.save!
 # fabrique_barbier.save!
 
 puts 'Create Groomers Lab...'
-groomers_lab = BarberShop.create(name: "Groomers Lab", address: "22 rue Saint-Sauveur, 75002 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user: ricardo)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/160665572_960878401322082_7387677801624201175_n_shzf9p.jpg')
-groomers_lab.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235198/179079625_211068043834476_7442340714166392203_n_aoayv3.jpg')
-groomers_lab.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/97359280_132747875056062_5820397732163643495_n_yys1au.jpg')
-groomers_lab.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/181066701_468315437737552_1675293365656050071_n_b2vjzf.jpg')
-groomers_lab.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/116427765_341663010568593_7699962659529081065_n_kdzztc.jpg')
-groomers_lab.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/89842911_769674213556408_1816740328245539122_n_grcndc.jpg')
-groomers_lab.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/173869637_496622548317515_5019961998707017519_n_tacxlk.jpg')
-groomers_lab.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+groomers_lab = BarberShop.create(name: "Groomers Lab", address: "22 rue Saint-Sauveur, 75002 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/160665572_960878401322082_7387677801624201175_n_shzf9p.jpg')
+# groomers_lab.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235198/179079625_211068043834476_7442340714166392203_n_aoayv3.jpg')
+# groomers_lab.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/97359280_132747875056062_5820397732163643495_n_yys1au.jpg')
+# groomers_lab.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/181066701_468315437737552_1675293365656050071_n_b2vjzf.jpg')
+# groomers_lab.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/116427765_341663010568593_7699962659529081065_n_kdzztc.jpg')
+# groomers_lab.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/89842911_769674213556408_1816740328245539122_n_grcndc.jpg')
+# groomers_lab.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630235197/173869637_496622548317515_5019961998707017519_n_tacxlk.jpg')
+# groomers_lab.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 groomers_lab.save!
 
 # puts 'Create Les Muses de Paris...'
@@ -377,21 +377,21 @@ groomers_lab.save!
 # muses_paris.save!
 
 puts 'Lazerus...'
-lazerus = BarberShop.create(name: "Le Lazerus", address: "75 Rue Oberkampf, 75011 Paris", remote: true, opening_days: [5, 6, 0], closing_days: [1, 2, 3, 4], opening_hours: ["17:00", "21:00"], phone_number: "0643578420", user: rahim)
-file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/22159093_353860515062143_2483913212299313152_n_x083ge.jpg')
-lazerus.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/31104024_852019971668068_424075862397157376_n_tovwk8.jpg')
-lazerus.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/54277521_622707781523583_5386538906267363310_n_hs42t1.jpg')
-lazerus.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/50583823_332272904287240_1620614940717667837_n_lmyspn.jpg')
-lazerus.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/31421684_2044155005799750_5067805880200724480_n_whz9li.jpg')
-lazerus.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/53584940_2235062263428002_440338835359031880_n_g6k4xs.jpg')
-lazerus.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/26066759_377137346031913_7887130856924381184_n_i738d2.jpg')
-lazerus.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+lazerus = BarberShop.create(name: "Le Lazerus", address: "75 Rue Oberkampf, 75011 Paris", remote: true, opening_days: [5, 6, 0], closing_days: [1, 2, 3, 4], opening_hours: ["17:00", "21:00"], phone_number: "0643578420", user_id: bruno.id)
+# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/22159093_353860515062143_2483913212299313152_n_x083ge.jpg')
+# lazerus.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/31104024_852019971668068_424075862397157376_n_tovwk8.jpg')
+# lazerus.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/54277521_622707781523583_5386538906267363310_n_hs42t1.jpg')
+# lazerus.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/50583823_332272904287240_1620614940717667837_n_lmyspn.jpg')
+# lazerus.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/31421684_2044155005799750_5067805880200724480_n_whz9li.jpg')
+# lazerus.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/53584940_2235062263428002_440338835359031880_n_g6k4xs.jpg')
+# lazerus.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630256669/26066759_377137346031913_7887130856924381184_n_i738d2.jpg')
+# lazerus.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 
 puts 'Ok Barbershops! 💈' # *******************************************************************************************
 
@@ -531,7 +531,7 @@ Review.create(rating: 5, comment: "Très bon salon, je recommande ! 👌", user_
 puts 'Create booking of Ricardo...'
 b_ricardo = Booking.create(user_id: ricardo.id, start_datetime: DateTime.new(2021, 6, 6, 10, 30), end_datetime: DateTime.new(2021, 6, 6, 11, 30), total_amount: 15)
 BookingService.create(booking_id: b_ricardo.id, shop_service_id: shop_degrade_barbes.id)
-Review.create(rating: 5, comment: "High Top au max ! 2.6.ZERO 🚃 ", user_id: ricardo.id, booking_id: b_ricardo.id)
+# Review.create(rating: 5, comment: "High Top au max ! 2.6.ZERO 🚃 ", user_id: ricardo.id, booking_id: b_ricardo.id)
 
 
 Review.create(rating: 5, comment: "Très pro, je recommande 🧘", user_id: benoit.id, booking_id: b_lydia.id)
