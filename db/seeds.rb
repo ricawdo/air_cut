@@ -245,51 +245,57 @@ puts '>> Ok Users!' # **********************************************************
 puts '>> Create BarberShops...' # **************************************************************************************
 
 puts 'Create Le Loft...'
-le_loft = BarberShop.create(name: "Le Loft", address: "20 rue Ernest Léardée, 97200 Fort-de-France", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+le_loft = BarberShop.create(name: "French Barber", address: "Rue Martin Luther King, Fort-de-France 97200, Martinique", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
 file0 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253309/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.09_lcvott.png')
 le_loft.photos.attach(io: file0, filename: 'nes.png', content_type: 'image/png')
 file1 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.22_qbzyuv.png')
 le_loft.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-file2 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.13_bziewj.png')
+file2 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635342817/243932066_881013809477683_3750375507642508714_n_b04pxn.jpg')
 le_loft.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.25_fvhr9a.png')
+file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.13_bziewj.png')
 le_loft.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.07_iapped.png')
 le_loft.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
 file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.58.59_cky6gh.png')
 le_loft.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196332/94890959_1837902099676681_6532988507996967766_n_iv6rev.jpg')
-# le_loft.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253309/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.09_lcvott.png')
+le_loft.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+file7 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.22_qbzyuv.png')
+le_loft.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+file8 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.13_bziewj.png')
+le_loft.portfolios.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
+file9 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.25_fvhr9a.png')
+le_loft.portfolios.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
 le_loft.save!
 
 puts 'Create Barbes BarberShop...'
-barbes_barber = BarberShop.create(name: "Barbes Barber Shop", address: "36 rue de la Charbonnière 75018 Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
-# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/85043998_630044161131752_6086941935936272674_n_mngbcr.jpg')
-# barbes_barber.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/159461383_467113237872322_4740289791941848095_n_gamlvv.jpg')
-# barbes_barber.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/121091299_1123487628045283_2724903855974735926_n_q4xaaa.jpg')
-# barbes_barber.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/139957480_910281366462231_4776562938135045990_n_f0mjer.jpg')
-# barbes_barber.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/89359244_120151569570206_8674898000823805656_n_mkkf1v.jpg')
-# barbes_barber.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/239429834_524334472191336_9206666044595112166_n_lzvgds.jpg')
-# barbes_barber.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-# file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630196904/121010353_975764699593149_5295583209495846083_n_zkknpi.jpg')
-# barbes_barber.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
+barbes_barber = BarberShop.create(name: "The Men Barber Shop", address: "17 Rue Du Commerce, Fort-de-France 97200, Martinique", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+file1 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635254305/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.17.57_dos8tz.png')
+barbes_barber.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635254216/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.16.40_gg6bfh.png')
+barbes_barber.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253695/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.47_puuzda.png')
+barbes_barber.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635254176/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.16.06_xfcq6k.png')
+barbes_barber.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253695/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.35_gccdeu.png')
+barbes_barber.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253512/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.03.41_qym2te.png')
+barbes_barber.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+file7 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253311/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.19_sn3bra.png')
+barbes_barber.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 barbes_barber.save!
 
 puts 'Create 235th Barberstreet...'
-barber_street = BarberShop.create(name: "235th Barber Street", address: "25 boulevard du temple, Paris", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
-# file1 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/e000e950f397110d534cdc0375418ff7_kfkxos.png')
-# barber_street.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
-# file2 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/123850089_120299963020303_2174107557210075674_n_s4ciux.jpg')
-# barber_street.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-# file3 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/106013823_644366949621133_3042054075000774073_n_c95bmi.jpg')
-# barber_street.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
-# file4 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/119995554_324429502179320_4124826931189148647_n_z4mhwe.jpg')
-# barber_street.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
+barber_street = BarberShop.create(name: "Hair Star Fort-de-France", address: "40 Rue Perrinon, Fort-de-France 97200, Martinique", remote: false, opening_days: [2, 3, 4, 5, 6], closing_days: [0, 1], opening_hours: ["08:00", "19:00"], phone_number: "0143578420", user_id: bruno.id)
+file1 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253694/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.10_nyiaxk.png')
+barber_street.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
+file2 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.06.41_icz71w.png')
+barber_street.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
+file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253511/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.03.34_jgj27f.png')
+barber_street.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
+file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253311/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.19_sn3bra.png')
+barber_street.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
 # file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/118690910_605410806816034_4806375566724745166_n_iyourl.jpg')
 # barber_street.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 # file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/127711971_374090853673247_3240304744496115590_n_gqc2lu.jpg')
@@ -470,47 +476,47 @@ depart_locks_lazerus = ShopService.create(price: 120, duration: 90, description:
 puts '>> Create Bookings, BookingServices and link to Services and Reviews...' # ***************************************
 puts 'Create fakes booking for Lazerus.'
 
-b_arthur = Booking.create(user_id: arthur.id, start_datetime: DateTime.new(2021, 9, 3, 19, 0), end_datetime: DateTime.new(2021, 9, 3, 20, 0), total_amount: 40)
-BookingService.create(booking_id: b_arthur.id, shop_service_id: shop_rasage_crane_lazerus.id)
+b_arthur = Booking.create(user_id: arthur.id, start_datetime: DateTime.new(2021, 10, 28, 11, 0), end_datetime: DateTime.new(2021, 9, 3, 17, 0), total_amount: 40)
+BookingService.create(booking_id: b_arthur.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 
 puts 'Create booking of Wadi...'
-b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 9, 2, 14, 30), end_datetime: DateTime.new(2021, 9, 3, 15, 30), total_amount: 40)
-BookingService.create(booking_id: b_wadi.id, shop_service_id: shop_rasage_crane_lazerus.id)
+b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 10, 25, 14, 30), end_datetime: DateTime.new(2021, 10, 3, 25, 30), total_amount: 40)
+BookingService.create(booking_id: b_wadi.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "Ma barbe est douce, mon crane est doux 🍑 Merci pour les travaux 🚧", user_id: wadi.id, booking_id: b_wadi.id)
 
 puts 'Create booking of Benoit...'
-b_benoit = Booking.create(user_id: benoit.id, start_datetime: DateTime.new(2021, 9, 1, 14, 30), end_datetime: DateTime.new(2021, 9, 3, 14, 30), total_amount: 40)
-BookingService.create(booking_id: b_benoit.id, shop_service_id: shop_rasage_crane_lazerus.id)
+b_benoit = Booking.create(user_id: benoit.id, start_datetime: DateTime.new(2021, 10, 20, 14, 30), end_datetime: DateTime.new(2021, 10, 20, 14, 30), total_amount: 40)
+BookingService.create(booking_id: b_benoit.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "Ce magnifique dégradé va améliorer mon aérodynamisme 🏄🏾‍♂️ ", user_id: benoit.id, booking_id: b_benoit.id)
 
 puts 'Create booking of Gwen...'
 b_gwen = Booking.create(user_id: gwen.id, start_datetime: DateTime.new(2021, 9, 2, 14, 30), end_datetime: DateTime.new(2021, 8, 25, 14, 30), total_amount: 40)
-BookingService.create(booking_id: b_gwen.id, shop_service_id: shop_rasage_crane_lazerus.id)
+BookingService.create(booking_id: b_gwen.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 4, comment: "Maintenant direction la Thaïlande 😎 !", user_id: gwen.id, booking_id: b_gwen.id)
 
 puts 'Create booking of Bruno...'
 b_bruno = Booking.create(user_id: bruno.id, start_datetime: DateTime.new(2021, 9, 1, 14, 30), end_datetime: DateTime.new(2021, 8, 25, 14, 30), total_amount: 40)
-BookingService.create(booking_id: b_bruno.id, shop_service_id: shop_rasage_crane_lazerus.id)
+BookingService.create(booking_id: b_bruno.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "Le roi des dégradés ! 👑 ", user_id: bruno.id, booking_id: b_bruno.id)
 
 puts 'Create booking of Andréa...'
 b_aandrea = Booking.create(user_id: aandrea.id, start_datetime: DateTime.new(2021, 8, 31, 9, 30), end_datetime: DateTime.new(2021, 7, 20, 10, 30), total_amount: 40)
-BookingService.create(booking_id: b_aandrea.id, shop_service_id: massage_cranien_lazerus.id)
+BookingService.create(booking_id: b_aandrea.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "Que dire de plus ... la perfection #Ellii ♥️ ! ", user_id: aandrea.id, booking_id: b_aandrea.id)
 
 puts 'Create booking of Rahim...'
 b_rahim = Booking.create(user_id: rahim.id, start_datetime: DateTime.new(2021, 8, 31, 9, 30), end_datetime: DateTime.new(2021, 7, 15, 10, 30), total_amount: 40)
-BookingService.create(booking_id: b_rahim.id, shop_service_id: massage_cranien_lazerus.id)
+BookingService.create(booking_id: b_rahim.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "Le roi des Boule à Z 👻 ! ", user_id: rahim.id, booking_id: b_rahim.id)
 
 puts 'Create booking of Oneal...'
 b_oneal = Booking.create(user_id: oneal.id, start_datetime: DateTime.new(2021, 8, 31, 9, 30), end_datetime: DateTime.new(2021, 7, 10, 10, 30), total_amount: 40)
-BookingService.create(booking_id: b_oneal.id, shop_service_id: massage_cranien_lazerus.id)
+BookingService.create(booking_id: b_oneal.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "High Top au max ! 2.6.ZERO 🚃 ", user_id: oneal.id, booking_id: b_oneal.id)
 
 puts 'Create booking of Dustin...'
 b_dustin = Booking.create(user_id: dustin.id, start_datetime: DateTime.new(2021, 8, 30, 9, 30), end_datetime: DateTime.new(2021, 7, 7, 10, 30), total_amount: 40)
-BookingService.create(booking_id: b_dustin.id, shop_service_id: massage_cranien_lazerus.id)
+BookingService.create(booking_id: b_dustin.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 4, comment: "I love this fade ! 💈", user_id: dustin.id, booking_id: b_dustin.id)
 
 puts 'Create booking of Daniela...'
