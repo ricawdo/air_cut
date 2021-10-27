@@ -12,7 +12,7 @@ class BarberShopsController < ApplicationController
     skip_authorization
     @user = current_user
     if params[:address].present?
-      @barber_shops = policy_scope(BarberShop).all.near(params[:address], 5)
+      @barber_shops = policy_scope(BarberShop).all.near(params[:address], 10)
       @services = Service.all
       @destination = params[:address]
     else
