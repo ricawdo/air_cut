@@ -252,7 +252,7 @@ file1 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/
 le_loft.photos.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 file2 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635342817/243932066_881013809477683_3750375507642508714_n_b04pxn.jpg')
 le_loft.photos.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
-file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.13_bziewj.png')
+file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635345575/Brooklyn-Fade-Blowout_i1w1dl.jpg')
 le_loft.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.07_iapped.png')
 le_loft.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
@@ -260,7 +260,7 @@ file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/
 le_loft.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 file6 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253309/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.00.09_lcvott.png')
 le_loft.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
-file7 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.22_qbzyuv.png')
+file7 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635342817/243932066_881013809477683_3750375507642508714_n_b04pxn.jpg')
 le_loft.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 file8 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253310/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.13_bziewj.png')
 le_loft.portfolios.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
@@ -278,8 +278,8 @@ file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253695/
 barbes_barber.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635254176/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.16.06_xfcq6k.png')
 barbes_barber.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253695/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.35_gccdeu.png')
-barbes_barber.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+# file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253695/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.35_gccdeu.png')
+# barbes_barber.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 file6 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253512/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.03.41_qym2te.png')
 barbes_barber.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 file7 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253311/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.19_sn3bra.png')
@@ -296,10 +296,10 @@ file3 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253511/
 barber_street.portfolios.attach(io: file3, filename: 'nes.png', content_type: 'image/png')
 file4 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253311/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_08.59.19_sn3bra.png')
 barber_street.portfolios.attach(io: file4, filename: 'nes.png', content_type: 'image/png')
-# file5 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197814/118690910_605410806816034_4806375566724745166_n_iyourl.jpg')
-# barber_street.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
-# file6 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/127711971_374090853673247_3240304744496115590_n_gqc2lu.jpg')
-# barber_street.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
+file5 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253696/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.06.41_icz71w.png')
+barber_street.portfolios.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
+file6 = URI.open('https://res.cloudinary.com/dwzero4t9/image/upload/v1635253694/Capture_d_e%CC%81cran_2021-10-26_a%CC%80_09.07.10_nyiaxk.png')
+barber_street.portfolios.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 # file7 = URI.open('https://res.cloudinary.com/ricawdo/image/upload/v1630197815/131977598_891393731604872_7348389368098985683_n_uo8xrk.jpg')
 # barber_street.portfolios.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 barber_street.save!
@@ -408,7 +408,7 @@ puts 'Coupe Dégradé'
 degrade = Service.create(name: "Dégradé", gender: "homme")
 shop_degrade_street = ShopService.create(price: 25, duration: 40, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barber_street.id, service_id: degrade.id )
 shop_degrade_barbes = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: barbes_barber.id, service_id: degrade.id )
-shop_degrade_loft = ShopService.create(price: 25, duration: 45, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: le_loft.id, service_id: degrade.id )
+shop_degrade_loft = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: le_loft.id, service_id: degrade.id )
 shop_degrade_groomers = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: groomers_lab.id, service_id: degrade.id )
 # shop_degrade_fabrique = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: fabrique_barbier.id, service_id: degrade.id )
 shop_degrade_lazerus = ShopService.create(price: 15, duration: 30, description: "Dégradé (haut ou bas), à la tondeuse, finition aux ciseaux.", barber_shop_id: lazerus.id, service_id: degrade.id )
@@ -442,7 +442,7 @@ rasage_crane_tondeuse_lazerus = ShopService.create(price: 10, duration: 15, desc
 
 puts 'Create Massage cranien...'
 massage_cranien = Service.create(name: "Massage cranien", gender: "homme")
-massage_cranien_loft = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: le_loft.id, service_id: massage_cranien.id )
+massage_cranien_loft = ShopService.create(price: 10, duration: 30, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: le_loft.id, service_id: massage_cranien.id )
 massage_cranien_barbes = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barbes_barber.id, service_id: massage_cranien.id )
 massage_cranien_street = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: barber_street.id, service_id: massage_cranien.id )
 massage_cranien_groomers = ShopService.create(price: 30, duration: 60, description: "Stimule le cuir chevelu, soulage les maux de tête, libère les tensions accumulées", barber_shop_id: groomers_lab.id, service_id: massage_cranien.id )
@@ -476,11 +476,11 @@ depart_locks_lazerus = ShopService.create(price: 120, duration: 90, description:
 puts '>> Create Bookings, BookingServices and link to Services and Reviews...' # ***************************************
 puts 'Create fakes booking for Lazerus.'
 
-b_arthur = Booking.create(user_id: arthur.id, start_datetime: DateTime.new(2021, 10, 28, 11, 0), end_datetime: DateTime.new(2021, 9, 3, 17, 0), total_amount: 40)
+b_arthur = Booking.create(user_id: arthur.id, start_datetime: DateTime.new(2021, 10, 28, 11, 0), end_datetime: DateTime.new(2021, 10, 28, 17, 0), total_amount: 40)
 BookingService.create(booking_id: b_arthur.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 
 puts 'Create booking of Wadi...'
-b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 10, 25, 14, 30), end_datetime: DateTime.new(2021, 10, 3, 25, 30), total_amount: 40)
+b_wadi = Booking.create(user_id: wadi.id, start_datetime: DateTime.new(2021, 10, 25, 14, 30), end_datetime: DateTime.new(2021, 10, 25, 14, 30), total_amount: 40)
 BookingService.create(booking_id: b_wadi.id, shop_service_id: rasage_crane_tondeuse_loft.id)
 Review.create(rating: 5, comment: "Ma barbe est douce, mon crane est doux 🍑 Merci pour les travaux 🚧", user_id: wadi.id, booking_id: b_wadi.id)
 
@@ -521,13 +521,13 @@ Review.create(rating: 4, comment: "I love this fade ! 💈", user_id: dustin.id,
 
 puts 'Create booking of Daniela...'
 b_daniela = Booking.create(user_id: daniela.id, start_datetime: DateTime.new(2021, 7, 7, 11, 30), end_datetime: DateTime.new(2021, 7, 7, 12, 30), total_amount: 40)
-BookingService.create(booking_id: b_daniela.id, shop_service_id: massage_cranien_groomers.id)
-Review.create(rating: 3, comment: "Bonne coupe. La prestation a durée un peu plus lontemps que prévue.", user_id: daniela.id, booking_id: b_daniela.id)
+BookingService.create(booking_id: b_daniela.id, shop_service_id: massage_cranien_barbes.id)
+Review.create(rating: 5, comment: "Bonne coupe. La prestation a durée un peu plus lontemps que prévue.", user_id: daniela.id, booking_id: b_daniela.id)
 
 puts 'Create booking of Amandine...'
 b_amandine = Booking.create(user_id: amandine.id, start_datetime: DateTime.new(2021, 7, 4, 15, 30), end_datetime: DateTime.new(2021, 7, 3, 16, 30), total_amount: 40)
 BookingService.create(booking_id: b_amandine.id, shop_service_id: shop_rasage_crane_street.id)
-Review.create(rating: 3, comment: "Sympa  😁 ", user_id: amandine.id, booking_id: b_amandine.id)
+Review.create(rating: 5, comment: "Sympa  😁 ", user_id: amandine.id, booking_id: b_amandine.id)
 
 puts 'Create booking of Lydia...'
 b_lydia = Booking.create(user_id: lydia.id, start_datetime: DateTime.new(2021, 8, 4, 14, 30), end_datetime: DateTime.new(2021, 6, 30, 15, 30), total_amount: 40)
